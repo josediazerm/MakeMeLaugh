@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="SaveSystem" load_steps=2 format=3 uid="uid://cugy0se8nhhyh"]
+
+[ext_resource type="Script" path="res://Resource/SaveSystem/savesystem.gd" id="1_u3wv7"]
+
+[resource]
+script = ExtResource("1_u3wv7")
+player_deck = ["\"button\""]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi3381u3fiadk"]
+
+[ext_resource type="PackedScene" uid="uid://dyw31t7gbhyyo" path="res://Resource/card_parent/carta.tscn" id="1_cdo7m"]
+
+[node name="tusabuelos" instance=ExtResource("1_cdo7m")]

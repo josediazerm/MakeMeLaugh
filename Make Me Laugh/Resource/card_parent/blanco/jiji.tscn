@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3mrao1n771k1"]
+
+[ext_resource type="PackedScene" uid="uid://dyw31t7gbhyyo" path="res://Resource/card_parent/carta.tscn" id="1_8hmnb"]
+
+[node name="jiji" instance=ExtResource("1_8hmnb")]
+chiste_text = "Jiji"
+chiste_type = "blanco"
