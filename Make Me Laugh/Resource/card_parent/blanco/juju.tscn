@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3rhgg82b6kgh"]
+
+[ext_resource type="PackedScene" uid="uid://dyw31t7gbhyyo" path="res://Resource/card_parent/carta.tscn" id="1_kg218"]
+
+[node name="juju" instance=ExtResource("1_kg218")]
