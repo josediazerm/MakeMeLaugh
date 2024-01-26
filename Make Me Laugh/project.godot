@@ -13,3 +13,7 @@ config_version=5
 config/name="Make Me Laugh"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Constants="*res://Resource/Autoload/constants.gd"
