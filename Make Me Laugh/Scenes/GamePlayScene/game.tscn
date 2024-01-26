@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://tag7wg5fuwp3"]
+
+[ext_resource type="PackedScene" uid="uid://cpgyws7h542d6" path="res://Scenes/Hand/hand_zone.tscn" id="1_bmj1h"]
+[ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="2_cxhq2"]
+[ext_resource type="PackedScene" uid="uid://c7riegxu5ioc8" path="res://Scenes/DropZone/DropZone.tscn" id="3_qh4u3"]
+
+[node name="Game" type="Node2D"]
+
+[node name="HandZone" parent="." node_paths=PackedStringArray("data_manager") instance=ExtResource("1_bmj1h")]
+offset_left = -2.0
+offset_top = 420.0
+offset_right = 1152.0
+offset_bottom = 580.0
+data_manager = NodePath("../DataManager")
+
+[node name="DataManager" parent="." instance=ExtResource("2_cxhq2")]
+
+[node name="DropZone" parent="." instance=ExtResource("3_qh4u3")]
+position = Vector2(490, 71)

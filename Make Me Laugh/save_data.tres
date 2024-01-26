@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_u3wv7")
-player_deck = ["\"button\""]
+player_deck = ["/absurdo/tusabuelos"]
 player_stats = {
 "Humor Absurdo": "Gracioso",
 "Humor Inteligente": "Ni fú ni fá",

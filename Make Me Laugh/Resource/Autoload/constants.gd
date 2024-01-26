@@ -21,6 +21,8 @@ const DEFAULT_IMAGE : String = "res://icon.svg"
 
 # Chistes folders
 
+const DEFAULT_CHISTES = "res://Resource/card_parent"
+
 const CHISTES_FOLDERS = [
 	"res://Resource/card_parent/absurdo/",
 	"res://Resource/card_parent/blanco/"
