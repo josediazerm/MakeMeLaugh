@@ -5,3 +5,11 @@
 [resource]
 script = ExtResource("1_u3wv7")
 player_deck = ["\"button\""]
+player_stats = {
+"Humor Absurdo": "Gracioso",
+"Humor Inteligente": "Ni fú ni fá",
+"Humor blanco": "Ni fú ni fá",
+"Humor negro": "Me parto",
+"Humor verde": "Gracioso",
+"Memes": "Ni puta gracia"
+}

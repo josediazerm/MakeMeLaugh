@@ -9,6 +9,8 @@ extends Node2D
 @export var continue_button : Button
 @export var reminder : Label
 
+@onready var data_manager : Node2D = $DataManager
+
 var selectors = []
 
 var humor_reactions = []
@@ -94,3 +96,7 @@ func _on_memes_selector_item_selected(index):
 	check_limit_selections()
 	update_button()
 
+
+
+func _on_continue_button_pressed():
+	data_manager.save_player_stats(selections)

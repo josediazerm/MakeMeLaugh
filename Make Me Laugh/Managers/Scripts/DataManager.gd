@@ -19,5 +19,10 @@ func _save_game() -> void:
 func save_player_deck(deck : Array) -> void:
 	_save_data.player_deck = deck
 	_save_data.write_savedata()
+	
+
+func save_player_stats(stats : Dictionary) -> void:
+	_save_data.player_stats = stats
+	_save_data.write_savedata()
 
 
