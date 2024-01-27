@@ -3,16 +3,17 @@ extends Node2D
 @export var data_manager : Node2D 
 @export var health_manager : Node2D 
 
-var enemy_deck = []
+@export var deck_generator : Node2D
+@export var stats_generator : Node2D
 
+@export var sprite : Sprite2D
+
+var enemy_deck = []
 var cards_played = []
 var possible_cards = []
 var card_to_play
 
-func _ready():
-	enemy_deck = data_manager.get_enemy_deck()
-	
-	
+
 func get_card_to_play():
 	if cards_played.size() <= 3:
 		cards_played = []
@@ -30,4 +31,17 @@ func play_card():
 	var card_instance =  card_load.instantiate() 
 	health_manager.apply_damage(Constants.ENEMY_NAME, card_instance.get_chiste_type())
 
+func reset_hand():
+	cards_played = []
+	possible_cards = []
+	card_to_play = null
 
+func generate_deck():
+	enemy_deck = deck_generator.generate_opponent_deck()
+
+func generate_stats():
+	data_manager.save_enemy_stats(stats_generator.create_enemy_reactions())
+
+func place_sprite():
+	sprite.texture = load(Constants.ICONS[Global.opponent_number])
+	sprite.visible = true

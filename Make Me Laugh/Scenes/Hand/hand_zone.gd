@@ -49,3 +49,8 @@ func card_played(card_humor_type):
 func destroy_hand():
 	for child in get_children():
 		child.queue_free()
+
+func reset_hand():
+	last_hand = []
+	hand = []
+	possible_hand = []

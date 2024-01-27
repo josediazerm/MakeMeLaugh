@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8ys4ijomtkaf"]
+[gd_scene load_steps=4 format=3 uid="uid://c8ys4ijomtkaf"]
 
 [ext_resource type="Script" path="res://Managers/Scripts/Enemy_Manager.gd" id="1_edmm0"]
+[ext_resource type="PackedScene" uid="uid://bou0sm54vpbj6" path="res://Managers/Scenes/deck_generator.tscn" id="2_ihhjo"]
+[ext_resource type="PackedScene" uid="uid://bwxbd2vxeme02" path="res://Managers/Scenes/enemy_stats_generator.tscn" id="3_nsrq4"]
 
-[node name="Enemy_Manager" type="Node2D"]
+[node name="Enemy_Manager" type="Node2D" node_paths=PackedStringArray("deck_generator", "stats_generator")]
 script = ExtResource("1_edmm0")
+deck_generator = NodePath("deck_generator")
+stats_generator = NodePath("enemy_stats_generator")
+
+[node name="deck_generator" parent="." instance=ExtResource("2_ihhjo")]
+
+[node name="enemy_stats_generator" parent="." instance=ExtResource("3_nsrq4")]

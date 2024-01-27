@@ -1,10 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bou0sm54vpbj6"]
+[gd_scene load_steps=2 format=3 uid="uid://bou0sm54vpbj6"]
 
 [ext_resource type="Script" path="res://Managers/Scripts/deck_generator.gd" id="1_g2j4f"]
-[ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="2_dxh5q"]
 
-[node name="deck_generator" type="Node2D" node_paths=PackedStringArray("data_manager")]
+[node name="deck_generator" type="Node2D"]
 script = ExtResource("1_g2j4f")
-data_manager = NodePath("DataManager")
-
-[node name="DataManager" parent="." instance=ExtResource("2_dxh5q")]
