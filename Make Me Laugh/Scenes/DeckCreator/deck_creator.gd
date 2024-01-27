@@ -1,10 +1,10 @@
 extends Node2D
 
-@onready var panel : Panel = $Control/Panel
-@onready var continue_button : Button = $Control/Continue
-@onready var deck_label : Label = $Control/Deck_Size
+@onready var panel : Panel = $Control/Cartas
+@onready var continue_button : Button = $Control/Panel_Información/Continue
+@onready var deck_label : Label = $Control/Panel_Información/Deck_Size
 @onready var data_manager : Node2D = $Control/DataManager
-@onready var deck_info : Label = $Control/Deck_Data
+@onready var deck_info : Label = $Control/Panel_Información/Deck_Data
 
 
 var humores_counter = {}
@@ -38,7 +38,7 @@ func _on_button_pressed(extra_arg_0):
 
 func _on_continue_pressed():
 	data_manager.save_player_deck(deck)
-	get_tree().change_scene_to_file(Constants.GAME_SCENE)
+	get_parent().add_next_child(Constants.POWER_POINT_SCENE, self)
 
 func update_label():
 	create_dict_counter()

@@ -3,68 +3,55 @@
 [ext_resource type="PackedScene" uid="uid://cpgyws7h542d6" path="res://Scenes/Hand/hand_zone.tscn" id="1_bmj1h"]
 [ext_resource type="Script" path="res://Scenes/GamePlayScene/game.gd" id="1_p45ht"]
 [ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="2_cxhq2"]
-[ext_resource type="Theme" uid="uid://da5n74cj02n0c" path="res://Theme/Game_Theme.tres" id="2_mgsx2"]
 [ext_resource type="PackedScene" uid="uid://c7riegxu5ioc8" path="res://Scenes/DropZone/DropZone.tscn" id="3_qh4u3"]
 [ext_resource type="PackedScene" uid="uid://dc1o66ugagc8r" path="res://Managers/Scenes/TurnManager.tscn" id="4_h8hs1"]
 [ext_resource type="PackedScene" uid="uid://dpbs2ttsrvhhj" path="res://Managers/Scenes/HealthManager.tscn" id="5_vlj0t"]
 [ext_resource type="PackedScene" uid="uid://c8ys4ijomtkaf" path="res://Managers/Scenes/Enemy_Manager.tscn" id="6_3una5"]
 [ext_resource type="Script" path="res://Scenes/GamePlayScene/Bocadillo.gd" id="8_6og7k"]
+[ext_resource type="PackedScene" uid="uid://b6kon4hjjlwwf" path="res://Scenes/MusicManager/music_manager.tscn" id="9_ercby"]
 
-[node name="Game" type="Node2D" node_paths=PackedStringArray("player_hand", "enemy_manager", "win_panel", "lose_panel", "health_manager", "turn_manager")]
+[node name="Game" type="Node2D" node_paths=PackedStringArray("player_hand", "enemy_manager", "win_panel", "lose_panel", "health_manager", "turn_manager", "music_manager")]
 script = ExtResource("1_p45ht")
-player_hand = NodePath("Control/HandZone")
-enemy_manager = NodePath("Control/Enemy_Manager")
-win_panel = NodePath("Control/WinPanel")
-lose_panel = NodePath("Control/LosePanel")
-health_manager = NodePath("Control/HealthManager")
-turn_manager = NodePath("Control/TurnManager")
+player_hand = NodePath("HandZone")
+enemy_manager = NodePath("Enemy_Manager")
+win_panel = NodePath("WinPanel")
+lose_panel = NodePath("LosePanel")
+health_manager = NodePath("HealthManager")
+turn_manager = NodePath("TurnManager")
+music_manager = NodePath("music_manager")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-theme = ExtResource("2_mgsx2")
-
-[node name="Background" type="Panel" parent="Control"]
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-theme_type_variation = &"Panel_BG_Unfilled_Mics"
-
-[node name="Character" type="Sprite2D" parent="Control/Background"]
-
-[node name="HandZone" parent="Control" node_paths=PackedStringArray("data_manager", "turn_manager", "health_manager", "bocadillo") instance=ExtResource("1_bmj1h")]
-layout_mode = 0
-offset_left = 0.0
-offset_top = 871.0
-offset_right = 1920.0
-offset_bottom = 1080.0
-theme_type_variation = &"Panel_HandZone"
+[node name="HandZone" parent="." node_paths=PackedStringArray("data_manager", "turn_manager", "health_manager", "bocadillo") instance=ExtResource("1_bmj1h")]
+offset_left = 16.0
+offset_top = 881.0
+offset_right = 1908.0
+offset_bottom = 1041.0
 data_manager = NodePath("../DataManager")
 turn_manager = NodePath("../TurnManager")
 health_manager = NodePath("../HealthManager")
 bocadillo = NodePath("../Bocadillo")
 
-[node name="DataManager" parent="Control" instance=ExtResource("2_cxhq2")]
+[node name="DataManager" parent="." instance=ExtResource("2_cxhq2")]
 
-[node name="DropZone" parent="Control" instance=ExtResource("3_qh4u3")]
+[node name="DropZone" parent="." instance=ExtResource("3_qh4u3")]
 position = Vector2(794, 278)
 
-[node name="TurnManager" parent="Control" node_paths=PackedStringArray("data_manager", "health_manager", "enemy_manager", "hand_zone", "win_panel", "lose_panel") instance=ExtResource("4_h8hs1")]
+[node name="TurnManager" parent="." node_paths=PackedStringArray("data_manager", "health_manager", "enemy_manager", "hand_zone", "bocadillo", "win_panel", "lose_panel", "music_manager") instance=ExtResource("4_h8hs1")]
 data_manager = NodePath("../DataManager")
 health_manager = NodePath("../HealthManager")
 enemy_manager = NodePath("../Enemy_Manager")
 hand_zone = NodePath("../HandZone")
+bocadillo = NodePath("../Bocadillo")
 win_panel = NodePath("../WinPanel")
 lose_panel = NodePath("../LosePanel")
+music_manager = NodePath("../music_manager")
 
-[node name="HealthManager" parent="Control" node_paths=PackedStringArray("data_manager", "turn_manager") instance=ExtResource("5_vlj0t")]
+[node name="HealthManager" parent="." node_paths=PackedStringArray("data_manager", "turn_manager", "music_manager") instance=ExtResource("5_vlj0t")]
 position = Vector2(23, 403)
 data_manager = NodePath("../DataManager")
 turn_manager = NodePath("../TurnManager")
+music_manager = NodePath("../music_manager")
 
-[node name="PlayerHealth" type="HSlider" parent="Control/HealthManager"]
+[node name="PlayerHealth" type="HSlider" parent="HealthManager"]
 offset_left = 40.0
 offset_top = 260.0
 offset_right = 657.0
@@ -74,7 +61,7 @@ value = 10.0
 editable = false
 scrollable = false
 
-[node name="EnemyHealth" type="HSlider" parent="Control/HealthManager"]
+[node name="EnemyHealth" type="HSlider" parent="HealthManager"]
 offset_left = 1814.0
 offset_top = 288.0
 offset_right = 2421.0
@@ -85,21 +72,19 @@ value = 10.0
 editable = false
 scrollable = false
 
-[node name="Enemy_Manager" parent="Control" node_paths=PackedStringArray("data_manager", "health_manager", "bocadillo", "sprite") instance=ExtResource("6_3una5")]
+[node name="Enemy_Manager" parent="." node_paths=PackedStringArray("data_manager", "health_manager", "bocadillo", "sprite") instance=ExtResource("6_3una5")]
 data_manager = NodePath("../DataManager")
 health_manager = NodePath("../HealthManager")
 bocadillo = NodePath("../Bocadillo")
 sprite = NodePath("../EnemySprite")
 
-[node name="WinPanel" type="Panel" parent="Control"]
-layout_mode = 0
+[node name="WinPanel" type="Panel" parent="."]
 offset_left = -1.0
 offset_top = -650.0
 offset_right = 1149.0
 offset_bottom = -65.0
-theme_type_variation = &"Panel_Textos"
 
-[node name="Label" type="Label" parent="Control/WinPanel"]
+[node name="Label" type="Label" parent="WinPanel"]
 layout_mode = 0
 offset_left = 68.0
 offset_top = 121.0
@@ -110,7 +95,7 @@ text = "HAS GANADO MAQUINOTE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="next" type="Button" parent="Control/WinPanel"]
+[node name="next" type="Button" parent="WinPanel"]
 layout_mode = 0
 offset_left = 430.0
 offset_top = 483.0
@@ -118,15 +103,13 @@ offset_right = 757.0
 offset_bottom = 551.0
 text = "Siguiente"
 
-[node name="LosePanel" type="Panel" parent="Control"]
-layout_mode = 0
+[node name="LosePanel" type="Panel" parent="."]
 offset_left = -4.0
 offset_top = 1150.0
 offset_right = 1146.0
 offset_bottom = 1735.0
-theme_type_variation = &"Panel_Textos"
 
-[node name="Label" type="Label" parent="Control/LosePanel"]
+[node name="Label" type="Label" parent="LosePanel"]
 layout_mode = 0
 offset_left = 68.0
 offset_top = 121.0
@@ -138,7 +121,7 @@ text = "PERDISTE FIERA
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="menu" type="Button" parent="Control/LosePanel"]
+[node name="menu" type="Button" parent="LosePanel"]
 layout_mode = 0
 offset_left = 254.0
 offset_top = 481.0
@@ -146,7 +129,7 @@ offset_right = 433.0
 offset_bottom = 546.0
 text = "Menu"
 
-[node name="retry" type="Button" parent="Control/LosePanel"]
+[node name="retry" type="Button" parent="LosePanel"]
 layout_mode = 0
 offset_left = 634.0
 offset_top = 469.0
@@ -154,15 +137,14 @@ offset_right = 848.0
 offset_bottom = 553.0
 text = "REINTENTAR"
 
-[node name="EnemySprite" type="Sprite2D" parent="Control"]
+[node name="EnemySprite" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(1619, 445)
 scale = Vector2(0.25, 0.25)
 
-[node name="Bocadillo" type="Panel" parent="Control" node_paths=PackedStringArray("chiste_text", "chiste_image", "timer", "turn_manager")]
+[node name="Bocadillo" type="Panel" parent="." node_paths=PackedStringArray("chiste_text", "chiste_image", "turn_manager")]
 visible = false
 modulate = Color(0.839216, 0.780392, 0.529412, 0.682353)
-layout_mode = 0
 offset_left = 658.0
 offset_top = 41.0
 offset_right = 1304.0
@@ -170,25 +152,21 @@ offset_bottom = 265.0
 script = ExtResource("8_6og7k")
 chiste_text = NodePath("BocadilloLabel")
 chiste_image = NodePath("BocadilloPicture")
-timer = NodePath("Timer")
 turn_manager = NodePath("../TurnManager")
 
-[node name="BocadilloLabel" type="Label" parent="Control/Bocadillo"]
+[node name="BocadilloLabel" type="Label" parent="Bocadillo"]
 layout_mode = 0
 offset_left = 16.0
 offset_top = 17.0
 offset_right = 629.0
 offset_bottom = 207.0
 
-[node name="BocadilloPicture" type="Sprite2D" parent="Control/Bocadillo"]
+[node name="BocadilloPicture" type="Sprite2D" parent="Bocadillo"]
 position = Vector2(316, 474)
 scale = Vector2(0.5, 0.5)
 
-[node name="Timer" type="Timer" parent="Control/Bocadillo"]
-wait_time = 3.5
-one_shot = true
+[node name="music_manager" parent="." instance=ExtResource("9_ercby")]
 
-[connection signal="pressed" from="Control/WinPanel/next" to="." method="_on_next_pressed"]
-[connection signal="pressed" from="Control/LosePanel/menu" to="." method="_on_menu_pressed"]
-[connection signal="pressed" from="Control/LosePanel/retry" to="." method="_on_retry_pressed"]
-[connection signal="timeout" from="Control/Bocadillo/Timer" to="Control/Bocadillo" method="_on_timer_timeout"]
+[connection signal="pressed" from="WinPanel/next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="LosePanel/menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="LosePanel/retry" to="." method="_on_retry_pressed"]

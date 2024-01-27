@@ -15,12 +15,18 @@ region_rect = Rect2(-0.802002, 755.058, 1571.38, 155.897)
 modulate_color = Color(0.275091, 0.275091, 0.27509, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cl5r7"]
+texture = ExtResource("1_dkaon")
+region_rect = Rect2(-0.802002, 755.058, 1571.38, 155.897)
+modulate_color = Color(1, 1, 0.615686, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nb361"]
 texture = ExtResource("1_dkaon")
 region_rect = Rect2(-0.802002, 755.058, 1571.38, 155.897)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yw3oy"]
+texture = ExtResource("1_dkaon")
+region_rect = Rect2(-0.802002, 755.058, 1571.38, 155.897)
+modulate_color = Color(1, 1, 0.313726, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wkfkj"]
 
@@ -59,7 +65,7 @@ modulate_color = Color(0.681525, 0.154282, 0.298901, 1)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_62wx3"]
 texture = ExtResource("8_j41n5")
 texture_margin_left = 326.585
-texture_margin_top = 444.307
+texture_margin_top = 668.359
 texture_margin_right = 300.003
 texture_margin_bottom = 656.967
 
