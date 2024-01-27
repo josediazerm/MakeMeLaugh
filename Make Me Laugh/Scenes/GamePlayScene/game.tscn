@@ -26,12 +26,16 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("2_mgsx2")
 
-[node name="Panel" type="Panel" parent="Control"]
+[node name="Background" type="Panel" parent="Control"]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
+theme_type_variation = &"Panel_BG_Unfilled_Mics"
+
+[node name="Character" type="Sprite2D" parent="Control/Background"]
 
 [node name="HandZone" parent="Control" node_paths=PackedStringArray("data_manager", "turn_manager", "health_manager", "bocadillo") instance=ExtResource("1_bmj1h")]
+layout_mode = 0
 offset_left = 0.0
 offset_top = 871.0
 offset_right = 1920.0
@@ -88,6 +92,7 @@ bocadillo = NodePath("../Bocadillo")
 sprite = NodePath("../EnemySprite")
 
 [node name="WinPanel" type="Panel" parent="Control"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = -650.0
 offset_right = 1149.0
@@ -114,6 +119,7 @@ offset_bottom = 551.0
 text = "Siguiente"
 
 [node name="LosePanel" type="Panel" parent="Control"]
+layout_mode = 0
 offset_left = -4.0
 offset_top = 1150.0
 offset_right = 1146.0
@@ -156,6 +162,7 @@ scale = Vector2(0.25, 0.25)
 [node name="Bocadillo" type="Panel" parent="Control" node_paths=PackedStringArray("chiste_text", "chiste_image", "timer", "turn_manager")]
 visible = false
 modulate = Color(0.839216, 0.780392, 0.529412, 0.682353)
+layout_mode = 0
 offset_left = 658.0
 offset_top = 41.0
 offset_right = 1304.0

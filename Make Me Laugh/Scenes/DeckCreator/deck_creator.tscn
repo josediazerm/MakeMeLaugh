@@ -1,8 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://d77xw2bmfh1n"]
+[gd_scene load_steps=23 format=3 uid="uid://d77xw2bmfh1n"]
 
 [ext_resource type="Script" path="res://Scenes/DeckCreator/deck_creator.gd" id="1_8ahtq"]
 [ext_resource type="Texture2D" uid="uid://qaffgirofk7j" path="res://TestingResources/DeckCreator.png" id="2_l80bo"]
-[ext_resource type="Texture2D" uid="uid://dkptq87btej62" path="res://Sprites/Background/Background.png" id="2_qkf7q"]
 [ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="3_dtjdx"]
 [ext_resource type="Theme" uid="uid://da5n74cj02n0c" path="res://Theme/Game_Theme.tres" id="3_l0ts1"]
 [ext_resource type="Texture2D" uid="uid://h175f5i4y4pr" path="res://Sprites/Cards/Absurdo_1.png" id="3_y4pjk"]
@@ -24,12 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://jhyuhm162bnp" path="res://Sprites/Cards/Verde_2.png" id="19_vt4dx"]
 [ext_resource type="Texture2D" uid="uid://bdpwa1bodjoyo" path="res://Sprites/Cards/Verde_3.png" id="20_awsa6"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_piwg8"]
-bg_color = Color(0.482353, 0.482353, 0.482353, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tn0tb"]
-texture = ExtResource("2_qkf7q")
-
 [node name="deck_creator" type="Node2D"]
 script = ExtResource("1_8ahtq")
 
@@ -40,18 +33,12 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("3_l0ts1")
 
-[node name="Luces" type="Panel" parent="Control"]
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_piwg8")
-
 [node name="Background" type="Panel" parent="Control"]
 modulate = Color(0.517647, 0.517647, 0.517647, 1)
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_tn0tb")
+theme_type_variation = &"Panel_BG_Filled"
 
 [node name="Panel" type="Panel" parent="Control"]
 layout_mode = 0
@@ -357,6 +344,7 @@ f
 "
 
 [node name="Explicacion" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 135.0
 offset_top = 27.0
 offset_right = 738.0

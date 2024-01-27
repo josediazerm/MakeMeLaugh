@@ -1,14 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbhcxwnfn5kvw"]
+[gd_scene load_steps=4 format=3 uid="uid://cbhcxwnfn5kvw"]
 
 [ext_resource type="Script" path="res://Scenes/PlayerCreator/player_creator.gd" id="1_cn44b"]
 [ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="2_3oto1"]
 [ext_resource type="Theme" uid="uid://da5n74cj02n0c" path="res://Theme/Game_Theme.tres" id="2_n05k1"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8u2b"]
-bg_color = Color(0.482353, 0.482353, 0.482353, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jbs11"]
-bg_color = Color(0.254902, 0.254902, 0.254902, 1)
 
 [node name="player_creator" type="Node2D" node_paths=PackedStringArray("humor_negro_selector", "humor_blanco_selector", "humor_verde_selector", "humor_absurdo_selector", "humor_inteligente_selector", "memes_selector", "continue_button", "reminder")]
 script = ExtResource("1_cn44b")
@@ -28,47 +22,46 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("2_n05k1")
 
-[node name="Luces" type="Panel" parent="Control"]
-offset_right = 1920.0
-offset_bottom = 1080.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_s8u2b")
-
 [node name="Background" type="Panel" parent="Control"]
 modulate = Color(0.517647, 0.517647, 0.517647, 1)
+layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
+theme_type_variation = &"Panel_BG_Filled"
 
 [node name="Explicacion" type="Panel" parent="Control"]
 layout_mode = 0
-offset_left = 200.0
-offset_top = 100.0
-offset_right = 1720.0
-offset_bottom = 980.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_jbs11")
+offset_top = -233.0
+offset_right = 1980.0
+offset_bottom = 1582.0
+theme_type_variation = &"Panel_Textos"
 
 [node name="Rules" type="Label" parent="Control/Explicacion"]
-offset_left = 78.0
-offset_top = 21.0
-offset_right = 1424.0
-offset_bottom = 195.0
+layout_mode = 0
+offset_left = 300.0
+offset_top = 382.0
+offset_right = 3032.0
+offset_bottom = 721.0
 text = "                                                Tienes que seleccionar:
 1 Humor que te parta                                         2 Humores que ni fú ni fá
 2 Humores que te parezcan graciosos           1 Humor que ni puta gracia"
 
 [node name="Reminder" type="Label" parent="Control/Explicacion"]
-offset_left = 238.0
-offset_top = 226.0
-offset_right = 1333.0
-offset_bottom = 284.0
+layout_mode = 0
+offset_left = 442.0
+offset_top = 635.0
+offset_right = 1537.0
+offset_bottom = 693.0
 text = "¡Ahora mismo no estas cumpliendo los limites! ¡Revisalos!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HumorNegro" type="Label" parent="Control/Explicacion"]
-offset_left = 91.0
-offset_top = 358.0
-offset_right = 352.0
-offset_bottom = 416.0
+layout_mode = 0
+offset_left = 267.0
+offset_top = 777.0
+offset_right = 528.0
+offset_bottom = 835.0
 text = "Humor Negro"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -81,10 +74,11 @@ offset_right = 517.0
 offset_bottom = 59.0
 
 [node name="HumorVerde" type="Label" parent="Control/Explicacion"]
-offset_left = 86.0
-offset_top = 482.0
-offset_right = 343.0
-offset_bottom = 540.0
+layout_mode = 0
+offset_left = 262.0
+offset_top = 901.0
+offset_right = 519.0
+offset_bottom = 959.0
 text = "Humor Verde"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -97,10 +91,11 @@ offset_right = 524.0
 offset_bottom = 59.0
 
 [node name="HumorAbsurdo" type="Label" parent="Control/Explicacion"]
-offset_left = 85.0
-offset_top = 601.0
-offset_right = 390.0
-offset_bottom = 659.0
+layout_mode = 0
+offset_left = 261.0
+offset_top = 1020.0
+offset_right = 566.0
+offset_bottom = 1078.0
 text = "Humor Absurdo"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -113,10 +108,11 @@ offset_right = 525.0
 offset_bottom = 59.0
 
 [node name="HumorBlanco" type="Label" parent="Control/Explicacion"]
-offset_left = 847.0
-offset_top = 365.0
-offset_right = 1120.0
-offset_bottom = 423.0
+layout_mode = 0
+offset_left = 1023.0
+offset_top = 784.0
+offset_right = 1296.0
+offset_bottom = 842.0
 text = "Humor Blanco"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -129,10 +125,11 @@ offset_right = 549.0
 offset_bottom = 51.0
 
 [node name="HumorInteligente" type="Label" parent="Control/Explicacion"]
-offset_left = 853.0
-offset_top = 491.0
-offset_right = 1204.0
-offset_bottom = 549.0
+layout_mode = 0
+offset_left = 1029.0
+offset_top = 910.0
+offset_right = 1380.0
+offset_bottom = 968.0
 text = "Humor Inteligente"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -145,10 +142,11 @@ offset_right = 546.0
 offset_bottom = 51.0
 
 [node name="Memes" type="Label" parent="Control/Explicacion"]
-offset_left = 844.0
-offset_top = 610.0
-offset_right = 1000.0
-offset_bottom = 668.0
+layout_mode = 0
+offset_left = 1020.0
+offset_top = 1029.0
+offset_right = 1176.0
+offset_bottom = 1087.0
 text = "Memes"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -161,12 +159,24 @@ offset_right = 556.0
 offset_bottom = 51.0
 
 [node name="Continue_Button" type="Button" parent="Control/Explicacion"]
-offset_left = 650.0
-offset_top = 774.0
-offset_right = 897.0
-offset_bottom = 837.0
+layout_mode = 0
+offset_left = 1991.0
+offset_top = 1215.0
+offset_right = 2691.0
+offset_bottom = 1315.0
+rotation = -3.14159
+theme_type_variation = &"Boton_Horizontal"
 disabled = true
-text = "Confirmar "
+
+[node name="Label" type="Label" parent="Control/Explicacion/Continue_Button"]
+layout_mode = 0
+offset_left = 562.0
+offset_top = 83.0
+offset_right = 757.0
+offset_bottom = 141.0
+rotation = 3.14159
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Confirmar"
 
 [node name="DataManager" parent="Control" instance=ExtResource("2_3oto1")]
 
