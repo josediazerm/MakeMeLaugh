@@ -10,10 +10,8 @@
 [node name="Game" type="Node2D"]
 
 [node name="HandZone" parent="." node_paths=PackedStringArray("data_manager", "turn_manager", "health_manager") instance=ExtResource("1_bmj1h")]
-offset_left = -2.0
-offset_top = 420.0
-offset_right = 1152.0
-offset_bottom = 580.0
+offset_top = 471.0
+offset_bottom = 631.0
 data_manager = NodePath("../DataManager")
 turn_manager = NodePath("../TurnManager")
 health_manager = NodePath("../HealthManager")
@@ -21,7 +19,7 @@ health_manager = NodePath("../HealthManager")
 [node name="DataManager" parent="." instance=ExtResource("2_cxhq2")]
 
 [node name="DropZone" parent="." instance=ExtResource("3_qh4u3")]
-position = Vector2(490, 71)
+position = Vector2(471, 19)
 
 [node name="TurnManager" parent="." node_paths=PackedStringArray("data_manager", "health_manager", "enemy_manager", "hand_zone") instance=ExtResource("4_h8hs1")]
 data_manager = NodePath("../DataManager")
@@ -32,6 +30,27 @@ hand_zone = NodePath("../HandZone")
 [node name="HealthManager" parent="." node_paths=PackedStringArray("data_manager", "turn_manager") instance=ExtResource("5_vlj0t")]
 data_manager = NodePath("../DataManager")
 turn_manager = NodePath("../TurnManager")
+
+[node name="PlayerHealth" type="HSlider" parent="HealthManager"]
+offset_left = 40.0
+offset_top = 260.0
+offset_right = 391.0
+offset_bottom = 276.0
+max_value = 10.0
+value = 10.0
+editable = false
+scrollable = false
+
+[node name="EnemyHealth" type="HSlider" parent="HealthManager"]
+offset_left = 1118.0
+offset_top = 276.0
+offset_right = 1469.0
+offset_bottom = 292.0
+rotation = 3.14159
+max_value = 10.0
+value = 10.0
+editable = false
+scrollable = false
 
 [node name="Enemy_Manager" parent="." node_paths=PackedStringArray("data_manager", "health_manager") instance=ExtResource("6_3una5")]
 data_manager = NodePath("../DataManager")
