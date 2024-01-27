@@ -3,6 +3,9 @@ extends Node2D
 @export var data_manager : Node2D
 @export var turn_manager : Node2D
 
+@onready var player_bar : HSlider = $PlayerHealth
+@onready var enemy_bar : HSlider = $EnemyHealth
+
 var player_health
 var enemy_health
 
@@ -27,10 +30,12 @@ func apply_damage(damage_dealer : String, humor_type : String):
 func apply_damage_to_player(humor_type : String):
 	damage_to_deal = Constants.REACTIONS_DAMAGES[player_stats[humor_type]]
 	player_health -= damage_to_deal
+	player_bar.value = player_health
 
 func apply_damage_to_enemy(humor_type : String):
 	damage_to_deal = Constants.REACTIONS_DAMAGES[enemy_stats[humor_type]]
 	enemy_health -= damage_to_deal
+	enemy_bar.value = enemy_health
 
 func update_status():
 	var status = {

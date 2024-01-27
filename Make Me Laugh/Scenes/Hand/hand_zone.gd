@@ -15,25 +15,24 @@ var card_index
 func _ready():
 	deck = data_manager.get_player_deck()
 
-
 func create_hand():
 	hand = []
 	possible_hand = []
-	
+
 	for card in deck:
 		if card not in last_hand:
 			possible_hand.append(card)
-	
+
 	for i in range(Constants.HAND_SIZE):
 		var index = randi() % possible_hand.size()
 		var card = possible_hand[index]
 		hand.append(card)
 		possible_hand.remove_at(index)
-	
+
 	last_hand = []
 	for card in hand:
 		last_hand.append(card)
-	
+
 	card_index = 0
 	for card in hand:
 		var string_prueba = Constants.DEFAULT_CHISTES + card + Constants.SCENE_SUFFIX
