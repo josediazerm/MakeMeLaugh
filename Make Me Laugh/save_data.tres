@@ -15,10 +15,10 @@ player_stats = {
 "Verde": "Ni fú ni fá"
 }
 enemy_stats = {
-"Absurdo": "Gracioso",
-"Blanco": "Ni fú ni fá",
+"Absurdo": "Me parto",
+"Blanco": "Ni puta gracia",
 "Inteligente": "Gracioso",
-"Meme": "Ni puta gracia",
-"Negro": "Me parto",
+"Meme": "Ni fú ni fá",
+"Negro": "Gracioso",
 "Verde": "Ni fú ni fá"
 }
