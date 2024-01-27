@@ -1,9 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://d77xw2bmfh1n"]
+[gd_scene load_steps=25 format=3 uid="uid://d77xw2bmfh1n"]
 
 [ext_resource type="Script" path="res://Scenes/DeckCreator/deck_creator.gd" id="1_8ahtq"]
 [ext_resource type="Texture2D" uid="uid://qaffgirofk7j" path="res://TestingResources/DeckCreator.png" id="2_l80bo"]
-[ext_resource type="Texture2D" path="res://Sprites/Background/Background.png" id="2_qkf7q"]
+[ext_resource type="Texture2D" uid="uid://dkptq87btej62" path="res://Sprites/Background/Background.png" id="2_qkf7q"]
 [ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="3_dtjdx"]
+[ext_resource type="Theme" uid="uid://da5n74cj02n0c" path="res://Theme/Game_Theme.tres" id="3_l0ts1"]
 [ext_resource type="Texture2D" uid="uid://h175f5i4y4pr" path="res://Sprites/Cards/Absurdo_1.png" id="3_y4pjk"]
 [ext_resource type="Texture2D" uid="uid://dkuf6t58shgca" path="res://Sprites/Cards/Absurdo_2.png" id="4_whg5u"]
 [ext_resource type="Texture2D" uid="uid://lnvde72aohsc" path="res://Sprites/Cards/Absurdo_3.png" id="5_67808"]
@@ -33,12 +34,14 @@ script = ExtResource("1_8ahtq")
 offset_right = 1920.0
 offset_bottom = 1080.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_tn0tb")
+metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 4.0
 offset_top = 438.0
 offset_right = 11677.0
 offset_bottom = 1061.0
+theme = ExtResource("3_l0ts1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel"]
 modulate = Color(0.054902, 0.054902, 0.054902, 1)
@@ -54,6 +57,7 @@ offset_right = 677.5
 offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Carta" type="Sprite2D" parent="Panel/Absurdo_1"]
 position = Vector2(300, 450)
@@ -67,6 +71,7 @@ offset_right = 1397.5
 offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Carta" type="Sprite2D" parent="Panel/Absurdo_2"]
 position = Vector2(300, 450)
@@ -80,6 +85,7 @@ offset_right = 2077.5
 offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
+metadata/_edit_use_anchors_ = true
 
 [node name="Carta" type="Sprite2D" parent="Panel/Absurdo_3"]
 position = Vector2(300, 450)
@@ -285,6 +291,7 @@ offset_left = 10.0
 offset_top = 414.0
 offset_right = 1012.0
 offset_bottom = 430.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Continue" type="Button" parent="."]
 offset_left = 954.0
@@ -293,12 +300,14 @@ offset_right = 1121.0
 offset_bottom = 393.0
 disabled = true
 text = "Confirmar"
+metadata/_edit_use_anchors_ = true
 
 [node name="Deck_Label" type="Label" parent="."]
 offset_left = 911.0
 offset_top = 68.0
 offset_right = 1081.0
 offset_bottom = 128.0
+metadata/_edit_use_anchors_ = true
 
 [node name="DataManager" parent="." instance=ExtResource("3_dtjdx")]
 
