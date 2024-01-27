@@ -136,3 +136,28 @@ const PLAYER_CREATOR_SCENE = "res://Scenes/PlayerCreator/player_creator.tscn"
 const DECK_CREATOR_SCENE = "res://Scenes/DeckCreator/deck_creator.tscn"
 const GAME_SCENE = "res://Scenes/GamePlayScene/game.tscn"
 const MAIN_MENU_SCENE = "res://Scenes/MainMenu/main_menu.tscn"
+const POWER_POINT_SCENE = "res://Scenes/powerpoint/powerpoint.tscn"
+
+# --------------------------------------------------------------------------- #
+
+const LUCHA_MUSIC = "res://Music/MakeMeLaugh_Lucha.wav"
+const MENU_COMPLEAT_MUSIC = "res://Music/MakeMeLaugh_Menu_Completo.wav"
+const MENU_SIN_INICIO_MUSIC = "res://Music/MakeMeLaugh_Menu_Sin_Inicio.wav"
+const MENU_SOLO_INICIO_MUSIC = "res://Music/MakeMeLaugh_Menu_Solo_Inicio.wav"
+
+const LOSE_EFFECT = "res://Effects/MakeMeLaugh_Lose.wav"
+const WIN_EFFECT = "res://Effects/MakeMeLaugh_Win.wav"
+const SUPER_FUNNY_EFFECT = "res://Effects/MakeMeLaugh_Super_Gracioso.wav"
+const NO_FUNNY_EFFECT = "res://Effects/MakeMeLaugh_Ni_Puta_Gracia.wav"
+const FUNNY_EFFECT = "res://Effects/MakeMeLaugh_Medianamente_Gracioso.wav"
+const KINDA_FUNNY_EFFECT = "res://Effects/MakeMeLaugh_Poco_Gracioso.wav"
+
+const FUNNY_EFFECT_DICT = {
+	BEST_REACTION: SUPER_FUNNY_EFFECT,
+	GOOD_REACTION: FUNNY_EFFECT, 
+	NORMAL_REACTION: KINDA_FUNNY_EFFECT,
+	WORST_REACTION: NO_FUNNY_EFFECT
+}
+
+const MUSIC_SIGNALS = [LUCHA_MUSIC, MENU_COMPLEAT_MUSIC, MENU_SIN_INICIO_MUSIC, MENU_SOLO_INICIO_MUSIC]
+const EFFECT_SIGNALS = [LOSE_EFFECT, WIN_EFFECT, SUPER_FUNNY_EFFECT, NO_FUNNY_EFFECT, FUNNY_EFFECT, KINDA_FUNNY_EFFECT]

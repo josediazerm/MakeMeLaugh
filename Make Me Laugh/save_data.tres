@@ -4,21 +4,21 @@
 
 [resource]
 script = ExtResource("1_u3wv7")
-player_deck = ["/Absurdo/Absurdo_1", "/Absurdo/Absurdo_2", "/Absurdo/Absurdo_3", "/Meme/Meme_2", "/Meme/Meme_3", "/Negro/Negro_1", "/Verde/Verde_1"]
+player_deck = ["/Absurdo/Absurdo_1", "/Absurdo/Absurdo_2", "/Inteligente/Inteligente_2", "/Verde/Verde_1", "/Negro/Negro_3", "/Meme/Meme_2", "/Inteligente/Inteligente_3"]
 enemy_deck = []
 player_stats = {
-"Absurdo": "Gracioso",
-"Blanco": "Ni fú ni fá",
-"Inteligente": "Ni fú ni fá",
+"Absurdo": "Ni fú ni fá",
+"Blanco": "Gracioso",
+"Inteligente": "Gracioso",
 "Meme": "Ni puta gracia",
 "Negro": "Me parto",
-"Verde": "Gracioso"
+"Verde": "Ni fú ni fá"
 }
 enemy_stats = {
 "Absurdo": "Gracioso",
 "Blanco": "Ni fú ni fá",
 "Inteligente": "Gracioso",
-"Meme": "Ni puta gracia",
-"Negro": "Me parto",
-"Verde": "Ni fú ni fá"
+"Meme": "Me parto",
+"Negro": "Ni fú ni fá",
+"Verde": "Ni puta gracia"
 }

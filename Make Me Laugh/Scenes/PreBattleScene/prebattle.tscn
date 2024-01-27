@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://ihnn6eh6as56"]
+
+[ext_resource type="Script" path="res://Scenes/PreBattleScene/prebattle.gd" id="1_jjfib"]
+[ext_resource type="PackedScene" uid="uid://nirwwb8lxyoo" path="res://Scenes/MainMenu/main_menu.tscn" id="2_misd0"]
+[ext_resource type="PackedScene" uid="uid://b6kon4hjjlwwf" path="res://Scenes/MusicManager/music_manager.tscn" id="3_nanij"]
+
+[node name="prebattle" type="Node2D" node_paths=PackedStringArray("music_manager")]
+script = ExtResource("1_jjfib")
+music_manager = NodePath("music_manager")
+
+[node name="main_menu" parent="." instance=ExtResource("2_misd0")]
+
+[node name="music_manager" parent="." instance=ExtResource("3_nanij")]
+
+[connection signal="finished" from="music_manager/music" to="." method="_on_music_finished"]
+
+[editable path="music_manager"]

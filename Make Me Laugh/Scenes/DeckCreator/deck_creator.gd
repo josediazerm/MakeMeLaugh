@@ -38,7 +38,7 @@ func _on_button_pressed(extra_arg_0):
 
 func _on_continue_pressed():
 	data_manager.save_player_deck(deck)
-	get_tree().change_scene_to_file(Constants.GAME_SCENE)
+	get_parent().add_next_child(Constants.POWER_POINT_SCENE, self)
 
 func update_label():
 	create_dict_counter()
