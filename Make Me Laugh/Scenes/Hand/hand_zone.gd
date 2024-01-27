@@ -15,6 +15,4 @@ func _ready():
 		call_deferred("add_child", card_instance)
 
 func card_played(card_humor_type):
-	#turn_manager.player_card_played()
-	print(card_humor_type.text)
 	health_manager.apply_damage(Constants.PLAYER_NAME, card_humor_type.text)

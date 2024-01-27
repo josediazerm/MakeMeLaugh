@@ -1,19 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://tag7wg5fuwp3"]
+[gd_scene load_steps=7 format=3 uid="uid://tag7wg5fuwp3"]
 
 [ext_resource type="PackedScene" uid="uid://cpgyws7h542d6" path="res://Scenes/Hand/hand_zone.tscn" id="1_bmj1h"]
 [ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="2_cxhq2"]
 [ext_resource type="PackedScene" uid="uid://c7riegxu5ioc8" path="res://Scenes/DropZone/DropZone.tscn" id="3_qh4u3"]
 [ext_resource type="PackedScene" uid="uid://dc1o66ugagc8r" path="res://Managers/Scenes/TurnManager.tscn" id="4_h8hs1"]
 [ext_resource type="PackedScene" uid="uid://dpbs2ttsrvhhj" path="res://Managers/Scenes/HealthManager.tscn" id="5_vlj0t"]
+[ext_resource type="PackedScene" uid="uid://c8ys4ijomtkaf" path="res://Managers/Scenes/Enemy_Manager.tscn" id="6_3una5"]
 
 [node name="Game" type="Node2D"]
 
-[node name="HandZone" parent="." node_paths=PackedStringArray("data_manager", "health_manager") instance=ExtResource("1_bmj1h")]
+[node name="HandZone" parent="." node_paths=PackedStringArray("data_manager", "turn_manager", "health_manager") instance=ExtResource("1_bmj1h")]
 offset_left = -2.0
 offset_top = 420.0
 offset_right = 1152.0
 offset_bottom = 580.0
 data_manager = NodePath("../DataManager")
+turn_manager = NodePath("../TurnManager")
 health_manager = NodePath("../HealthManager")
 
 [node name="DataManager" parent="." instance=ExtResource("2_cxhq2")]
@@ -21,9 +23,15 @@ health_manager = NodePath("../HealthManager")
 [node name="DropZone" parent="." instance=ExtResource("3_qh4u3")]
 position = Vector2(490, 71)
 
-[node name="TurnManager" parent="." node_paths=PackedStringArray("data_manager", "health_manager") instance=ExtResource("4_h8hs1")]
+[node name="TurnManager" parent="." node_paths=PackedStringArray("data_manager", "health_manager", "enemy_manager") instance=ExtResource("4_h8hs1")]
 data_manager = NodePath("../DataManager")
 health_manager = NodePath("../HealthManager")
+enemy_manager = NodePath("../Enemy_Manager")
 
-[node name="HealthManager" parent="." node_paths=PackedStringArray("data_manager") instance=ExtResource("5_vlj0t")]
+[node name="HealthManager" parent="." node_paths=PackedStringArray("data_manager", "turn_manager") instance=ExtResource("5_vlj0t")]
 data_manager = NodePath("../DataManager")
+turn_manager = NodePath("../TurnManager")
+
+[node name="Enemy_Manager" parent="." node_paths=PackedStringArray("data_manager", "health_manager") instance=ExtResource("6_3una5")]
+data_manager = NodePath("../DataManager")
+health_manager = NodePath("../HealthManager")

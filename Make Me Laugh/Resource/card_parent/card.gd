@@ -20,7 +20,6 @@ var scale_offset = Vector2(0, -100)
 
 func _ready():
 	chiste_label.text = chiste_text
-	print(chiste_type)
 	type_label.text = chiste_type
 
 func _on_area_2d_mouse_entered():
@@ -54,8 +53,12 @@ func _process(_delta):
 
 		if Input.is_action_just_released("Click"):
 			Global.is_dragging = false
-			var tween = get_tree().create_tween()
 			if is_in_drop_zone:
 				get_parent().card_played(type_label)
 			else:
+				var tween = get_tree().create_tween()
 				tween.tween_property(self, "global_position", initial_position - scale_offset, 0.4).set_ease(Tween.EASE_OUT)
+
+
+func get_chiste_type():
+	return chiste_type

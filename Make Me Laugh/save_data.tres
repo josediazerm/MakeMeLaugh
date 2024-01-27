@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_u3wv7")
 player_deck = ["/absurdo/tusabuelos"]
-enemy_deck = []
+enemy_deck = ["res://Resource/card_parent/blanco/jiji.tscn", "res://Resource/card_parent/absurdo/tusvivos.tscn", "res://Resource/card_parent/absurdo/tuspadres.tscn", "res://Resource/card_parent/blanco/jaja.tscn", "res://Resource/card_parent/blanco/jeje.tscn", "res://Resource/card_parent/absurdo/tusmuertos.tscn", "res://Resource/card_parent/blanco/jojo.tscn"]
 player_stats = {
 "Humor Absurdo": "Gracioso",
 "Humor Inteligente": "Ni fú ni fá",

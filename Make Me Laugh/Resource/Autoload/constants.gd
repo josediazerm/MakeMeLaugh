@@ -96,8 +96,6 @@ const ENEMY_NAME = "enemy"
 
 # FSM Turns constants
 
-const END_PLAYER_TURN_SIGNAL = "EndPlayerTurn"
-const CHECK_GAME_STATUS_SIGNAL = "CheckStatus"
 const PLAYER_TURN_SIGNAL = "PlayerTurn"
 const ENEMY_TURN_SIGNAL = "EnemyTurn"
 const END_LEVEL_SIGNAL = "EndLevel"
