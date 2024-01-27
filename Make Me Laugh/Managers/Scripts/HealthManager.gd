@@ -25,17 +25,15 @@ func apply_damage(damage_dealer : String, humor_type : String):
 func apply_damage_to_player(humor_type : String):
 	damage_to_deal = Constants.REACTIONS_DAMAGES[player_stats[humor_type]]
 	player_health -= damage_to_deal
-	if player_health <= 0:
-		lose_game()
 
 func apply_damage_to_enemy(humor_type : String):
 	damage_to_deal = Constants.REACTIONS_DAMAGES[enemy_stats[humor_type]]
 	enemy_health -= damage_to_deal
-	if enemy_health <= 0:
-		win_game()
+	print(enemy_health)
 
-func lose_game():
-	pass
-
-func win_game():
-	pass
+func check_status():
+	var status = {
+		Constants.PLAYER_NAME : player_health,
+		Constants.ENEMY_NAME : enemy_health
+	}
+	return status

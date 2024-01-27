@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SaveSystem" load_steps=2 format=3 uid="uid://cugy0se8nhhyh"]
+[gd_resource type="Resource" script_class="SaveSystem" load_steps=2 format=3 uid="uid://bkljrpsvwityj"]
 
 [ext_resource type="Script" path="res://Resource/SaveSystem/savesystem.gd" id="1_u3wv7"]
 
@@ -15,10 +15,10 @@ player_stats = {
 "Memes": "Ni puta gracia"
 }
 enemy_stats = {
-"Humor Absurdo": "Ni puta gracia",
-"Humor Inteligente": "Ni fú ni fá",
+"Humor Absurdo": "Ni fú ni fá",
+"Humor Inteligente": "Gracioso",
 "Humor blanco": "Ni fú ni fá",
-"Humor negro": "Gracioso",
-"Humor verde": "Gracioso",
-"Memes": "Ni fú ni fá"
+"Humor negro": "Ni puta gracia",
+"Humor verde": "Me parto",
+"Memes": "Gracioso"
 }
