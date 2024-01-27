@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq5yd0h66r8yl"]
+
+[ext_resource type="PackedScene" uid="uid://dyw31t7gbhyyo" path="res://Resource/card_parent/carta.tscn" id="1_2asho"]
+[ext_resource type="Texture2D" uid="uid://lnvde72aohsc" path="res://Sprites/Cards/Absurdo_3.png" id="2_pd04k"]
+
+[node name="Carta" instance=ExtResource("1_2asho")]
+chiste_text = "Soy absurdo"
+chiste_type = "Absurdo"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_pd04k")

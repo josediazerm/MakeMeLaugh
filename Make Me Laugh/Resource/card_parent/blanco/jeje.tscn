@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2x1o13u5doyg"]
-
-[ext_resource type="PackedScene" uid="uid://dyw31t7gbhyyo" path="res://Resource/card_parent/carta.tscn" id="1_qqorx"]
-
-[node name="jeje" instance=ExtResource("1_qqorx")]
-chiste_type = "Humor Blanco"

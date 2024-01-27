@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpt1tmye8w1kw"]
+
+[ext_resource type="PackedScene" uid="uid://dyw31t7gbhyyo" path="res://Resource/card_parent/carta.tscn" id="1_bncef"]
+[ext_resource type="Texture2D" uid="uid://bhdqc7ccwtriu" path="res://Sprites/Cards/Inteligente_1.png" id="2_8cl71"]
+
+[node name="Carta" instance=ExtResource("1_bncef")]
+chiste_text = "Soy humor inteligente"
+chiste_type = "Inteligente"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_8cl71")

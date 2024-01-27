@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqncpy0jdvkqg"]
+
+[ext_resource type="PackedScene" uid="uid://dyw31t7gbhyyo" path="res://Resource/card_parent/carta.tscn" id="1_5ouc0"]
+
+[node name="Carta" instance=ExtResource("1_5ouc0")]
+chiste_text = "Soy absurdo"
+chiste_type = "Absurdo"

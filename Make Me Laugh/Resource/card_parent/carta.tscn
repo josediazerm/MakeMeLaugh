@@ -1,45 +1,26 @@
 [gd_scene load_steps=4 format=3 uid="uid://dyw31t7gbhyyo"]
 
 [ext_resource type="Script" path="res://Resource/card_parent/card.gd" id="1_148yu"]
-[ext_resource type="Texture2D" uid="uid://b4ogtjanxtynp" path="res://icon.svg" id="1_ehuak"]
+[ext_resource type="Texture2D" uid="uid://h175f5i4y4pr" path="res://Sprites/Cards/Absurdo_1.png" id="2_elkve"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nd7y4"]
-size = Vector2(165, 226)
+size = Vector2(600, 900)
 
-[node name="Carta" type="Node2D" node_paths=PackedStringArray("chiste_label", "type_label", "image_holder", "background")]
+[node name="Carta" type="Node2D" node_paths=PackedStringArray("image_holder")]
 position = Vector2(0, 1)
 script = ExtResource("1_148yu")
-chiste_label = NodePath("Chiste")
-type_label = NodePath("Tipo de Humor")
 image_holder = NodePath("Sprite2D")
-background = NodePath("Fondo")
-
-[node name="Fondo" type="Panel" parent="."]
-offset_right = 166.0
-offset_bottom = 227.0
-
-[node name="Tipo de Humor" type="Label" parent="."]
-offset_top = 204.0
-offset_right = 166.0
-offset_bottom = 227.0
-text = "Tipo de Humor"
-
-[node name="Chiste" type="Label" parent="."]
-offset_left = 1.0
-offset_top = 103.0
-offset_right = 167.0
-offset_bottom = 205.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(82, 53)
-scale = Vector2(1.29688, 0.84375)
-texture = ExtResource("1_ehuak")
+position = Vector2(300, 449)
+texture = ExtResource("2_elkve")
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(300, 449)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(82.5, 113)
 shape = SubResource("RectangleShape2D_nd7y4")
+debug_color = Color(0, 0, 0, 0)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
