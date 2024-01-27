@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://tag7wg5fuwp3"]
+[gd_scene load_steps=10 format=3 uid="uid://tag7wg5fuwp3"]
 
 [ext_resource type="PackedScene" uid="uid://cpgyws7h542d6" path="res://Scenes/Hand/hand_zone.tscn" id="1_bmj1h"]
 [ext_resource type="Script" path="res://Scenes/GamePlayScene/game.gd" id="1_p45ht"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dpbs2ttsrvhhj" path="res://Managers/Scenes/HealthManager.tscn" id="5_vlj0t"]
 [ext_resource type="PackedScene" uid="uid://c8ys4ijomtkaf" path="res://Managers/Scenes/Enemy_Manager.tscn" id="6_3una5"]
 [ext_resource type="Script" path="res://Scenes/GamePlayScene/Bocadillo.gd" id="8_6og7k"]
+[ext_resource type="Texture2D" uid="uid://h175f5i4y4pr" path="res://Sprites/Cards/Absurdo_1.png" id="8_mlk3a"]
 
 [node name="Game" type="Node2D" node_paths=PackedStringArray("player_hand", "enemy_manager", "win_panel", "lose_panel", "health_manager", "turn_manager")]
 script = ExtResource("1_p45ht")
@@ -18,15 +19,14 @@ lose_panel = NodePath("LosePanel")
 health_manager = NodePath("HealthManager")
 turn_manager = NodePath("TurnManager")
 
-[node name="HandZone" parent="." node_paths=PackedStringArray("data_manager", "turn_manager", "health_manager", "bocadillo") instance=ExtResource("1_bmj1h")]
+[node name="HandZone" parent="." instance=ExtResource("1_bmj1h")]
 offset_left = 16.0
 offset_top = 881.0
 offset_right = 1908.0
 offset_bottom = 1041.0
-data_manager = NodePath("../DataManager")
-turn_manager = NodePath("../TurnManager")
-health_manager = NodePath("../HealthManager")
-bocadillo = NodePath("../Bocadillo")
+data_manager = null
+turn_manager = null
+health_manager = null
 
 [node name="DataManager" parent="." instance=ExtResource("2_cxhq2")]
 
@@ -67,17 +67,16 @@ value = 10.0
 editable = false
 scrollable = false
 
-[node name="Enemy_Manager" parent="." node_paths=PackedStringArray("data_manager", "health_manager", "bocadillo", "sprite") instance=ExtResource("6_3una5")]
+[node name="Enemy_Manager" parent="." node_paths=PackedStringArray("data_manager", "health_manager", "sprite") instance=ExtResource("6_3una5")]
 data_manager = NodePath("../DataManager")
 health_manager = NodePath("../HealthManager")
-bocadillo = NodePath("../Bocadillo")
 sprite = NodePath("../EnemySprite")
 
 [node name="WinPanel" type="Panel" parent="."]
 offset_left = -1.0
-offset_top = -650.0
+offset_top = -663.0
 offset_right = 1149.0
-offset_bottom = -65.0
+offset_bottom = -78.0
 
 [node name="Label" type="Label" parent="WinPanel"]
 layout_mode = 0
@@ -100,9 +99,9 @@ text = "Siguiente"
 
 [node name="LosePanel" type="Panel" parent="."]
 offset_left = -4.0
-offset_top = 1150.0
+offset_top = 1151.0
 offset_right = 1146.0
-offset_bottom = 1735.0
+offset_bottom = 1736.0
 
 [node name="Label" type="Label" parent="LosePanel"]
 layout_mode = 0
@@ -134,11 +133,10 @@ text = "REINTENTAR"
 
 [node name="EnemySprite" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(1619, 445)
-scale = Vector2(0.25, 0.25)
+position = Vector2(940, 143)
+scale = Vector2(0.5, 0.5)
 
-[node name="Bocadillo" type="Panel" parent="." node_paths=PackedStringArray("chiste_text", "chiste_image", "timer", "turn_manager")]
-visible = false
+[node name="Bocadillo" type="Panel" parent="." node_paths=PackedStringArray("chiste_text", "chiste_image", "timer")]
 modulate = Color(0.839216, 0.780392, 0.529412, 0.682353)
 offset_left = 658.0
 offset_top = 41.0
@@ -148,7 +146,6 @@ script = ExtResource("8_6og7k")
 chiste_text = NodePath("BocadilloLabel")
 chiste_image = NodePath("BocadilloPicture")
 timer = NodePath("Timer")
-turn_manager = NodePath("../TurnManager")
 
 [node name="BocadilloLabel" type="Label" parent="Bocadillo"]
 layout_mode = 0
@@ -160,9 +157,9 @@ offset_bottom = 207.0
 [node name="BocadilloPicture" type="Sprite2D" parent="Bocadillo"]
 position = Vector2(316, 474)
 scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_mlk3a")
 
 [node name="Timer" type="Timer" parent="Bocadillo"]
-wait_time = 3.5
 one_shot = true
 
 [connection signal="pressed" from="WinPanel/next" to="." method="_on_next_pressed"]

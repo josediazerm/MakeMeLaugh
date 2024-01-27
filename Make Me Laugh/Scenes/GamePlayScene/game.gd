@@ -17,7 +17,7 @@ func reset_panels():
 
 func reset_hp_bars():
 	health_manager.reset_hp_bars()
-	
+
 func give_turn_to_player():
 	turn_manager.its_player_turn()
 
@@ -25,7 +25,6 @@ func generate_opponent():
 	enemy_manager.generate_deck()
 	enemy_manager.generate_stats()
 	enemy_manager.place_sprite()
-
 
 func _ready():
 	reset_panels()
@@ -35,7 +34,7 @@ func _ready():
 
 func _on_next_pressed():
 	Global.opponent_number += 1
-	
+
 	if Global.opponent_number < Constants.MAX_OPPONENTES:
 		reset_panels()
 		reset_hands()
@@ -46,11 +45,11 @@ func _on_next_pressed():
 		get_tree().change_scene_to_file(Constants.WIN_SCENE)
 
 func _on_menu_pressed():
-	pass # Replace with function body.
-
+	get_tree().change_scene_to_file(Constants.MAIN_MENU_SCENE)
 
 func _on_retry_pressed():
 	reset_panels()
 	reset_hands()
 	reset_hp_bars()
 	give_turn_to_player()
+

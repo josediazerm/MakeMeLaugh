@@ -1,24 +1,24 @@
-[gd_resource type="Resource" script_class="SaveSystem" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="SaveSystem" load_steps=2 format=3 uid="uid://cdo5mu6n6ixg7"]
 
 [ext_resource type="Script" path="res://Resource/SaveSystem/savesystem.gd" id="1_u3wv7"]
 
 [resource]
 script = ExtResource("1_u3wv7")
-player_deck = ["/absurdo/tusabuelos", "/blanco/jiji", "/absurdo/tusprimos", "/absurdo/tuspadres", "/absurdo/tusmuertos", "/absurdo/tusvivos", "/blanco/jaja"]
-enemy_deck = ["res://Resource/card_parent/blanco/jiji.tscn", "res://Resource/card_parent/absurdo/tusvivos.tscn", "res://Resource/card_parent/absurdo/tuspadres.tscn", "res://Resource/card_parent/blanco/jaja.tscn", "res://Resource/card_parent/blanco/jeje.tscn", "res://Resource/card_parent/absurdo/tusmuertos.tscn", "res://Resource/card_parent/blanco/jojo.tscn"]
+player_deck = ["/Absurdo/Absurdo_1", "/Absurdo/Absurdo_2", "/Absurdo/Absurdo_3", "/Blanco/Blanco_1", "/Blanco/Blanco_2", "/Blanco/Blanco_3", "/Inteligente/Inteligente_1"]
+enemy_deck = []
 player_stats = {
-"Humor Absurdo": "Gracioso",
-"Humor Blanco": "Ni fú ni fá",
-"Humor Inteligente": "Ni fú ni fá",
-"Humor Negro": "Me parto",
-"Humor Verde": "Gracioso",
-"Memes": "Ni puta gracia"
+"Absurdo": "Gracioso",
+"Blanco": "Ni fú ni fá",
+"Inteligente": "Ni fú ni fá",
+"Meme": "Ni puta gracia",
+"Negro": "Me parto",
+"Verde": "Gracioso"
 }
 enemy_stats = {
-"Humor Absurdo": "Ni puta gracia",
-"Humor Blanco": "Ni fú ni fá",
-"Humor Inteligente": "Ni fú ni fá",
-"Humor Negro": "Gracioso",
-"Humor Verde": "Gracioso",
-"Memes": "Me parto"
+"Absurdo": "Gracioso",
+"Blanco": "Ni fú ni fá",
+"Inteligente": "Ni puta gracia",
+"Meme": "Me parto",
+"Negro": "Ni fú ni fá",
+"Verde": "Gracioso"
 }

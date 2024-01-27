@@ -2,6 +2,7 @@ extends Node2D
 
 @export var data_manager : Node2D
 @export var turn_manager : Node2D
+@export var bocadillo : Panel
 
 @onready var player_bar : HSlider = $PlayerHealth
 @onready var enemy_bar : HSlider = $EnemyHealth

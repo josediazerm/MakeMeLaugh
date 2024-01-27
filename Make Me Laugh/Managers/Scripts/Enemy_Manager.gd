@@ -5,6 +5,7 @@ extends Node2D
 
 @export var deck_generator : Node2D
 @export var stats_generator : Node2D
+@export var bocadillo : Panel
 
 @export var sprite : Sprite2D
 
@@ -29,6 +30,7 @@ func play_card():
 	get_card_to_play()
 	var card_load = load(card_to_play)	
 	var card_instance =  card_load.instantiate() 
+	bocadillo.show_joke(card_instance.get_chiste_text(), card_instance.get_chiste_sprite())
 	health_manager.apply_damage(Constants.ENEMY_NAME, card_instance.get_chiste_type())
 
 func reset_hand():
