@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://u0ge6045w8ud"]
+
+[node name="WinScene" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 309.0
+offset_top = 228.0
+offset_right = 766.0
+offset_bottom = 466.0
+text = "Maquina"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -42,5 +42,10 @@ func update_status():
 		Constants.PLAYER_NAME : player_health,
 		Constants.ENEMY_NAME : enemy_health
 	}
-	
 	turn_manager.update_status(status)
+
+func reset_hp_bars():
+	player_health = Constants.INITIAL_HEALTH
+	enemy_health = Constants.INITIAL_HEALTH
+	player_bar.value = player_health 
+	enemy_bar.value = enemy_health 

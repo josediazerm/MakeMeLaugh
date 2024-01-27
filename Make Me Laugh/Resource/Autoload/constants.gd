@@ -80,7 +80,7 @@ const MEMES = "Memes"
 
 # Health constants
 
-const INITIAL_HEALTH = 10
+const INITIAL_HEALTH = 1
 
 const REACTIONS_DAMAGES = {
 	BEST_REACTION: 4,
@@ -111,3 +111,24 @@ const NEXT_STATE = {
 
 # --------------------------------------------------------------------------- #
 
+const WIN_PANEL_DEFAULT_POSITION = -663
+const LOSE_PANEL_DEFAULT_POSITION = 727
+
+
+# --------------------------------------------------------------------------- #
+
+const ICONS = [
+	"res://TestingResources/icon1.png",
+	"res://TestingResources/icon2.png",
+	"res://TestingResources/icon3.png"
+]
+
+const MAX_OPPONENTES = 3
+
+# --------------------------------------------------------------------------- #
+
+const WIN_SCENE = "res://Scenes/WinScene.tscn"
+const PLAYER_CREATOR_SCENE = "res://Scenes/PlayerCreator/player_creator.tscn"
+const DECK_CREATOR_SCENE = "res://Scenes/DeckCreator/deck_creator.tscn"
+const GAME_SCENE = "res://Scenes/GamePlayScene/game.tscn"
+const MAIN_MENU_SCENE = "res://Scenes/MainMenu/main_menu.tscn"
