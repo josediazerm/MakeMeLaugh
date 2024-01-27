@@ -11,6 +11,8 @@ signal External_Signal
 @export var win_panel : Panel
 @export var lose_panel : Panel
 
+@export var music_manager : Node2D
+
 var last_state = ""
 var winner = ""
 
@@ -41,11 +43,13 @@ func win():
 	winner = ""
 	destroy_player_hand()
 	win_panel.position[1] = 0
+	music_manager.play(Constants.WIN_EFFECT)
 	
 func lose():
 	winner = ""
 	destroy_player_hand()
 	lose_panel.position[1] = 0
+	music_manager.play(Constants.LOSE_EFFECT)
 	
 func its_player_turn():
 	Internal_Signal.emit(Constants.PLAYER_TURN_SIGNAL)

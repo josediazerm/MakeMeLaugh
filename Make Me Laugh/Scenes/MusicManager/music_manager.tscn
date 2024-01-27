@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6kon4hjjlwwf"]
+
+[ext_resource type="Script" path="res://Scenes/MusicManager/music_manager.gd" id="1_dhx2d"]
+
+[node name="music_manager" type="Node2D" node_paths=PackedStringArray("music_player", "effect_player")]
+script = ExtResource("1_dhx2d")
+music_player = NodePath("music")
+effect_player = NodePath("effects")
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+
+[node name="effects" type="AudioStreamPlayer2D" parent="."]

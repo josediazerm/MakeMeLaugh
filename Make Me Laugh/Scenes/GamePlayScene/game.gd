@@ -6,6 +6,7 @@ extends Node2D
 @export var lose_panel : Panel
 @export var health_manager : Node2D
 @export var turn_manager : Node2D
+@export var music_manager : Node2D
 
 func reset_hands():
 	player_hand.reset_hand()
@@ -31,6 +32,7 @@ func _ready():
 	reset_hands()
 	generate_opponent()
 	Global.opponent_number = 0
+	music_manager.play(Constants.LUCHA_MUSIC)
 
 func _on_next_pressed():
 	Global.opponent_number += 1

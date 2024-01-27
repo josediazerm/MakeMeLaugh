@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://tag7wg5fuwp3"]
+[gd_scene load_steps=10 format=3 uid="uid://tag7wg5fuwp3"]
 
 [ext_resource type="PackedScene" uid="uid://cpgyws7h542d6" path="res://Scenes/Hand/hand_zone.tscn" id="1_bmj1h"]
 [ext_resource type="Script" path="res://Scenes/GamePlayScene/game.gd" id="1_p45ht"]
@@ -8,8 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://dpbs2ttsrvhhj" path="res://Managers/Scenes/HealthManager.tscn" id="5_vlj0t"]
 [ext_resource type="PackedScene" uid="uid://c8ys4ijomtkaf" path="res://Managers/Scenes/Enemy_Manager.tscn" id="6_3una5"]
 [ext_resource type="Script" path="res://Scenes/GamePlayScene/Bocadillo.gd" id="8_6og7k"]
+[ext_resource type="PackedScene" uid="uid://b6kon4hjjlwwf" path="res://Scenes/MusicManager/music_manager.tscn" id="9_ercby"]
 
-[node name="Game" type="Node2D" node_paths=PackedStringArray("player_hand", "enemy_manager", "win_panel", "lose_panel", "health_manager", "turn_manager")]
+[node name="Game" type="Node2D" node_paths=PackedStringArray("player_hand", "enemy_manager", "win_panel", "lose_panel", "health_manager", "turn_manager", "music_manager")]
 script = ExtResource("1_p45ht")
 player_hand = NodePath("HandZone")
 enemy_manager = NodePath("Enemy_Manager")
@@ -17,6 +18,7 @@ win_panel = NodePath("WinPanel")
 lose_panel = NodePath("LosePanel")
 health_manager = NodePath("HealthManager")
 turn_manager = NodePath("TurnManager")
+music_manager = NodePath("music_manager")
 
 [node name="HandZone" parent="." node_paths=PackedStringArray("data_manager", "turn_manager", "health_manager", "bocadillo") instance=ExtResource("1_bmj1h")]
 offset_left = 16.0
@@ -33,18 +35,20 @@ bocadillo = NodePath("../Bocadillo")
 [node name="DropZone" parent="." instance=ExtResource("3_qh4u3")]
 position = Vector2(794, 278)
 
-[node name="TurnManager" parent="." node_paths=PackedStringArray("data_manager", "health_manager", "enemy_manager", "hand_zone", "win_panel", "lose_panel") instance=ExtResource("4_h8hs1")]
+[node name="TurnManager" parent="." node_paths=PackedStringArray("data_manager", "health_manager", "enemy_manager", "hand_zone", "win_panel", "lose_panel", "music_manager") instance=ExtResource("4_h8hs1")]
 data_manager = NodePath("../DataManager")
 health_manager = NodePath("../HealthManager")
 enemy_manager = NodePath("../Enemy_Manager")
 hand_zone = NodePath("../HandZone")
 win_panel = NodePath("../WinPanel")
 lose_panel = NodePath("../LosePanel")
+music_manager = NodePath("../music_manager")
 
-[node name="HealthManager" parent="." node_paths=PackedStringArray("data_manager", "turn_manager") instance=ExtResource("5_vlj0t")]
+[node name="HealthManager" parent="." node_paths=PackedStringArray("data_manager", "turn_manager", "music_manager") instance=ExtResource("5_vlj0t")]
 position = Vector2(23, 403)
 data_manager = NodePath("../DataManager")
 turn_manager = NodePath("../TurnManager")
+music_manager = NodePath("../music_manager")
 
 [node name="PlayerHealth" type="HSlider" parent="HealthManager"]
 offset_left = 40.0
@@ -164,6 +168,8 @@ scale = Vector2(0.5, 0.5)
 [node name="Timer" type="Timer" parent="Bocadillo"]
 wait_time = 3.5
 one_shot = true
+
+[node name="music_manager" parent="." instance=ExtResource("9_ercby")]
 
 [connection signal="pressed" from="WinPanel/next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="LosePanel/menu" to="." method="_on_menu_pressed"]

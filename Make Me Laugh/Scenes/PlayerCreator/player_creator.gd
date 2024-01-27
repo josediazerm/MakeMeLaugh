@@ -97,7 +97,6 @@ func _on_memes_selector_item_selected(index):
 	update_button()
 
 
-
 func _on_continue_button_pressed():
 	data_manager.save_player_stats(selections)
-	get_tree().change_scene_to_file(Constants.DECK_CREATOR_SCENE)
+	get_parent().add_next_child(Constants.DECK_CREATOR_SCENE, self)
