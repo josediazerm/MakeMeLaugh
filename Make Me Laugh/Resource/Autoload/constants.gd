@@ -44,7 +44,7 @@ const CARD_POSITION = [Vector2(0,-50), Vector2(475,-50), Vector2(950, -50)]
 
 # Deck Creator constants
 const DECK_CREATOR_PANEL_MIN_POSITION = 0
-const DECK_CREATOR_PANEL_MAX_POSITION = -9700
+const DECK_CREATOR_PANEL_MAX_POSITION = -9600
 
 # --------------------------------------------------------------------------- #
 
@@ -70,12 +70,15 @@ const REACTIONS_LIMITS = {
 
 # Humor Types constants
 
+const HUMOR_ABSURDO = "Absurdo"
 const HUMOR_BLANCO = "Blanco"
+const HUMOR_INT = "Inteligente"
+const MEMES = "Meme"
 const HUMOR_NEGRO = "Negro"
 const HUMOR_VERDE = "Verde"
-const HUMOR_INT = "Inteligente"
-const HUMOR_ABSURDO = "Absurdo"
-const MEMES = "Meme"
+
+const HUMORES = [HUMOR_ABSURDO, HUMOR_BLANCO, HUMOR_INT, MEMES, HUMOR_NEGRO, HUMOR_VERDE]
+
 
 # --------------------------------------------------------------------------- #
 

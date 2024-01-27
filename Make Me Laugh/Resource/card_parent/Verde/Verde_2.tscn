@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://jhyuhm162bnp" path="res://Sprites/Cards/Verde_2.png" id="2_e3qop"]
 
 [node name="Carta" instance=ExtResource("1_k8wy3")]
-chiste_text = "Soy un verde"
+chiste_text = "-SOY UN BRÓCOLI Y PARECO UN ARBOLITO./n-SOY UNA NUEZ Y PAREZCO UN CEREBRO./n-SOY UN HONGO Y NO ME GUSTA ESTE JUEGO."
 chiste_type = "Verde"
 
 [node name="Sprite2D" parent="." index="0"]

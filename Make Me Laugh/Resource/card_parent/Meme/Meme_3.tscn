@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bwowdqfxyurbx" path="res://Sprites/Cards/Meme_3.png" id="2_8r4j2"]
 
 [node name="Carta" instance=ExtResource("1_6x53k")]
-chiste_text = "Soy un meme"
+chiste_text = "Pues toma meme."
 chiste_type = "Meme"
 
 [node name="Sprite2D" parent="." index="0"]

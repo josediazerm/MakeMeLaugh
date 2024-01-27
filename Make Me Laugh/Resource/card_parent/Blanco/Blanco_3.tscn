@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://jgewmhw5bhf2" path="res://Sprites/Cards/Blanco_3.png" id="2_uoo4j"]
 
 [node name="Carta" instance=ExtResource("1_msglc")]
-chiste_text = "-Pues toma humor blanco"
+chiste_text = "-Pues toma meme de humor blanco."
 chiste_type = "Blanco"
 
 [node name="Sprite2D" parent="." index="0"]

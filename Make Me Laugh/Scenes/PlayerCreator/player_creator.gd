@@ -9,7 +9,7 @@ extends Node2D
 @export var continue_button : Button
 @export var reminder : Label
 
-@onready var data_manager : Node2D = $DataManager
+@onready var data_manager : Node2D = $Control/DataManager
 
 var selectors = []
 

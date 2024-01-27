@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://th3y6c6plb1m" path="res://Sprites/Cards/Blanco_1.png" id="2_lqdfc"]
 
 [node name="Carta" instance=ExtResource("1_x5rwu")]
-chiste_text = "-¿Qué le dice un mar a otro? -Ola"
+chiste_text = "-¿Qué le dice un mar a otro?/n-Ola."
 chiste_type = "Blanco"
 
 [node name="Sprite2D" parent="." index="0"]
