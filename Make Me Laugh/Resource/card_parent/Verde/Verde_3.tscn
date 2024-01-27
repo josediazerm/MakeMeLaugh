@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtw3c41qw0nam"]
+
+[ext_resource type="PackedScene" uid="uid://dyw31t7gbhyyo" path="res://Resource/card_parent/carta.tscn" id="1_6e2v8"]
+[ext_resource type="Texture2D" uid="uid://bdpwa1bodjoyo" path="res://Sprites/Cards/Verde_3.png" id="2_nqrsp"]
+
+[node name="Carta" instance=ExtResource("1_6e2v8")]
+chiste_text = "Soy un verde"
+chiste_type = "Verde"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_nqrsp")

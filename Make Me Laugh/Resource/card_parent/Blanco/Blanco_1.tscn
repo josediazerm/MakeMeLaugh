@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dylwtcgqsfn5r"]
+
+[ext_resource type="PackedScene" uid="uid://dyw31t7gbhyyo" path="res://Resource/card_parent/carta.tscn" id="1_x5rwu"]
+[ext_resource type="Texture2D" uid="uid://th3y6c6plb1m" path="res://Sprites/Cards/Blanco_1.png" id="2_lqdfc"]
+
+[node name="Carta" instance=ExtResource("1_x5rwu")]
+chiste_text = "-¿Qué le dice un mar a otro? -Ola"
+chiste_type = "Blanco"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_lqdfc")

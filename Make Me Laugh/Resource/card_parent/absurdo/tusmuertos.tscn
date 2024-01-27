@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcwccqurarpar"]
-
-[ext_resource type="PackedScene" uid="uid://dyw31t7gbhyyo" path="res://Resource/card_parent/carta.tscn" id="1_fd74w"]
-
-[node name="tusmuertos" instance=ExtResource("1_fd74w")]
-chiste_type = "Humor Absurdo"
-
-[node name="Tipo de Humor" parent="." index="1"]
-text = "Humor Absurdo"

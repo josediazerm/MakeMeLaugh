@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb7xra6gwwfjt"]
+
+[ext_resource type="PackedScene" uid="uid://dyw31t7gbhyyo" path="res://Resource/card_parent/carta.tscn" id="1_t1c2l"]
+[ext_resource type="Texture2D" uid="uid://b05gge750uv3f" path="res://Sprites/Cards/Negro_2.png" id="2_fjw2i"]
+
+[node name="Carta" instance=ExtResource("1_t1c2l")]
+chiste_text = "Soy un negro"
+chiste_type = "Negro"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_fjw2i")

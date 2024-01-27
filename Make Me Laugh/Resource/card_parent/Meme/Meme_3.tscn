@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://4ws1b82x1eac"]
+
+[ext_resource type="PackedScene" uid="uid://dyw31t7gbhyyo" path="res://Resource/card_parent/carta.tscn" id="1_6x53k"]
+[ext_resource type="Texture2D" uid="uid://bwowdqfxyurbx" path="res://Sprites/Cards/Meme_3.png" id="2_8r4j2"]
+
+[node name="Carta" instance=ExtResource("1_6x53k")]
+chiste_text = "Soy un meme"
+chiste_type = "Meme"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_8r4j2")
