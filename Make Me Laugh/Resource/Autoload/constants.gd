@@ -25,7 +25,11 @@ const DEFAULT_CHISTES = "res://Resource/card_parent"
 
 const CHISTES_FOLDERS = [
 	"res://Resource/card_parent/absurdo/",
-	"res://Resource/card_parent/blanco/"
+	"res://Resource/card_parent/blanco/",
+	"res://Resource/card_parent/verde/",
+	"res://Resource/card_parent/negro/",
+	"res://Resource/card_parent/meme/",
+	"res://Resource/card_parent/inteligente/"
 ]
 
 # --------------------------------------------------------------------------- #
@@ -69,18 +73,18 @@ const REACTIONS_LIMITS = {
 
 # Humor Types constants
 
-const HUMOR_BLANCO = "Humor Blanco"
-const HUMOR_NEGRO = "Humor Negro"
-const HUMOR_VERDE = "Humor Verde"
-const HUMOR_INT = "Humor Inteligente"
-const HUMOR_ABSURDO = "Humor Absurdo"
-const MEMES = "Memes"
+const HUMOR_BLANCO = "Blanco"
+const HUMOR_NEGRO = "Negro"
+const HUMOR_VERDE = "Verde"
+const HUMOR_INT = "Inteligente"
+const HUMOR_ABSURDO = "Absurdo"
+const MEMES = "Meme"
 
 # --------------------------------------------------------------------------- #
 
 # Health constants
 
-const INITIAL_HEALTH = 1
+const INITIAL_HEALTH = 10
 
 const REACTIONS_DAMAGES = {
 	BEST_REACTION: 4,
@@ -103,6 +107,7 @@ const PLAYER_TURN_SIGNAL = "PlayerTurn"
 const ENEMY_TURN_SIGNAL = "EnemyTurn"
 const END_LEVEL_SIGNAL = "EndLevel"
 const KEEP_PLAYING_SIGNAL = "KeepPlaying"
+const WAITING_SIGNAL = "Waiting"
 
 const NEXT_STATE = {
 	PLAYER_TURN_SIGNAL : ENEMY_TURN_SIGNAL,
@@ -111,8 +116,8 @@ const NEXT_STATE = {
 
 # --------------------------------------------------------------------------- #
 
-const WIN_PANEL_DEFAULT_POSITION = -663
-const LOSE_PANEL_DEFAULT_POSITION = 727
+const WIN_PANEL_DEFAULT_POSITION = -650
+const LOSE_PANEL_DEFAULT_POSITION = 1150
 
 
 # --------------------------------------------------------------------------- #

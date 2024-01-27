@@ -4,6 +4,8 @@ extends Panel
 @export var turn_manager : Node2D 
 @export var health_manager : Node2D 
 
+@export var bocadillo : Panel
+
 var deck 
 var hand = []
 var last_hand = []
@@ -39,13 +41,14 @@ func create_hand():
 		var card_load = load(string_prueba)	
 		var card_instance =  card_load.instantiate()
 		card_instance.position = Constants.CARD_POSITION[card_index]
+		card_instance.scale = Vector2(0.25, 0.25)
 		call_deferred("add_child", card_instance)
 		card_index += 1
 
 
 func card_played(chiste_text, chiste_type, image_holder):
-	bocadillo.show_joke(chiste_text, image_holder)
-	health_manager.apply_damage(Constants.PLAYER_NAME, chiste_type.text)
+	bocadillo.show_joke(chiste_text, image_holder.texture)
+	health_manager.apply_damage(Constants.PLAYER_NAME, chiste_type)
 
 func destroy_hand():
 	for child in get_children():

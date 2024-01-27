@@ -24,11 +24,11 @@ func generate_opponent_deck():
 	get_cards()
 	possible_chistes = []
 	
-
 	for chiste in chistes:
 		possible_chistes.append(chiste)
 	
-	possible_chistes = chistes
+	print(chistes.size())
+	
 	for i in range(Constants.DECK_SIZE):
 		var chiste = possible_chistes[randi() % possible_chistes.size()]
 		deck.append(chiste)

@@ -14,13 +14,13 @@ var offset
 func _on_area_2d_mouse_entered():
 	if not Global.is_dragging:
 		draggable = true
-		scale = Vector2(1.1, 1.1)
+		scale = Vector2(0.35, 0.35)
 
 
 func _on_area_2d_mouse_exited():
 	if not Global.is_dragging:
 		draggable = false
-		scale = Vector2(1, 1)
+		scale = Vector2(0.25, 0.25)
 
 
 func _on_area_2d_body_entered(body):
@@ -56,4 +56,4 @@ func get_chiste_text():
 	return chiste_text
 
 func get_chiste_sprite():
-	return image_holder
+	return image_holder.texture

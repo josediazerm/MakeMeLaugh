@@ -14,18 +14,19 @@ signal External_Signal
 var last_state = ""
 var winner = ""
 
-func update_status(status):
+var signal_to_emit
 
+func update_status(status):
 	if status[Constants.PLAYER_NAME] <= 0:
-		winner = Constants.PLAYER_NAME
-		Internal_Signal.emit(Constants.END_LEVEL_SIGNAL)
-		lose()
-	elif status[Constants.ENEMY_NAME] <= 0:
 		winner = Constants.ENEMY_NAME
-		Internal_Signal.emit(Constants.END_LEVEL_SIGNAL)
-		win()
+		signal_to_emit = Constants.END_LEVEL_SIGNAL
+	elif status[Constants.ENEMY_NAME] <= 0:
+		winner = Constants.PLAYER_NAME
+		signal_to_emit = Constants.END_LEVEL_SIGNAL
 	else:
-		Internal_Signal.emit(Constants.KEEP_PLAYING_SIGNAL)
+		winner = ""
+		signal_to_emit = Constants.KEEP_PLAYING_SIGNAL
+	Internal_Signal.emit(Constants.WAITING_SIGNAL)
 
 func play_enemy_turn():
 	enemy_manager.play_card()
@@ -37,12 +38,23 @@ func destroy_player_hand():
 	hand_zone.destroy_hand()
 
 func win():
+	winner = ""
 	destroy_player_hand()
 	win_panel.position[1] = 0
 	
 func lose():
+	winner = ""
 	destroy_player_hand()
 	lose_panel.position[1] = 0
 	
 func its_player_turn():
 	Internal_Signal.emit(Constants.PLAYER_TURN_SIGNAL)
+
+func joke_ended():
+	Internal_Signal.emit(signal_to_emit)
+
+func enter_end_state():
+	if winner == Constants.PLAYER_NAME:
+		win()
+	else:
+		lose()

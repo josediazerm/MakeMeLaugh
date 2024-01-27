@@ -21,7 +21,7 @@ func _ready():
 	player_stats = data_manager.get_player_stats()
 	enemy_stats = data_manager.get_enemy_stats()
 
-func apply_damage(damage_dealer : String, humor_type : String, humor_sprite : String):
+func apply_damage(damage_dealer : String, humor_type : String):
 	if damage_dealer == Constants.PLAYER_NAME:
 		apply_damage_to_enemy(humor_type)
 	else:
