@@ -12,21 +12,15 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n5y20"]
 texture = ExtResource("1_dkaon")
 region_rect = Rect2(-0.802002, 755.058, 1571.38, 155.897)
-modulate_color = Color(0.27451, 0.27451, 0.27451, 1)
+modulate_color = Color(0.275091, 0.275091, 0.27509, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cl5r7"]
-texture = ExtResource("1_dkaon")
-region_rect = Rect2(-0.802002, 755.058, 1571.38, 155.897)
-modulate_color = Color(1, 1, 0.686275, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nb361"]
 texture = ExtResource("1_dkaon")
 region_rect = Rect2(-0.802002, 755.058, 1571.38, 155.897)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yw3oy"]
-texture = ExtResource("1_dkaon")
-region_rect = Rect2(-0.802002, 755.058, 1571.38, 155.897)
-modulate_color = Color(1, 1, 0.372549, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wkfkj"]
 

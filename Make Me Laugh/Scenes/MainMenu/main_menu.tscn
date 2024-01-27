@@ -81,24 +81,28 @@ frame_progress = 0.904514
 
 [node name="Nombres" type="Panel" parent="Control"]
 layout_mode = 0
-offset_left = 1040.0
-offset_top = 141.0
-offset_right = 2077.0
-offset_bottom = 1604.0
+offset_left = 1364.0
+offset_top = 362.0
+offset_right = 2516.0
+offset_bottom = 2206.0
+scale = Vector2(0.5, 0.5)
 theme_type_variation = &"Panel_Textos"
 
 [node name="Label" type="Label" parent="Control/Nombres"]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 436.0
-offset_right = 863.0
-offset_bottom = 852.0
+offset_left = 46.0
+offset_top = 412.0
+offset_right = 637.0
+offset_bottom = 891.0
+scale = Vector2(1.75, 1.75)
 text = "ChuckityChuck
 Anabel
-Luján García Escrihuela
-Juan Manuel Cabrera Cruz
+Luján
+Juanma Cabrera
 Iren
-Juanjo Garrido Bascarán"
+Pixel Juanjo"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Control/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Control/exit" to="." method="_on_exit_pressed"]
