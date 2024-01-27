@@ -89,3 +89,22 @@ const REACTIONS_DAMAGES = {
 
 # --------------------------------------------------------------------------- #
 
+const PLAYER_NAME = "player"
+const ENEMY_NAME = "enemy"
+
+# --------------------------------------------------------------------------- #
+
+# FSM Turns constants
+
+const PLAYER_TURN_SIGNAL = "PlayerTurn"
+const ENEMY_TURN_SIGNAL = "EnemyTurn"
+const END_LEVEL_SIGNAL = "EndLevel"
+const KEEP_PLAYING_SIGNAL = "KeepPlaying"
+
+const NEXT_STATE = {
+	PLAYER_TURN_SIGNAL : ENEMY_TURN_SIGNAL,
+	ENEMY_TURN_SIGNAL : PLAYER_TURN_SIGNAL
+}
+
+# --------------------------------------------------------------------------- #
+

@@ -1,6 +1,8 @@
 extends Panel
 
 @export var data_manager : Node2D 
+@export var turn_manager : Node2D 
+@export var health_manager : Node2D 
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,6 +14,5 @@ func _ready():
 		var card_instance =  card_load.instantiate() 
 		call_deferred("add_child", card_instance)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func card_played(card_humor_type):
+	health_manager.apply_damage(Constants.PLAYER_NAME, card_humor_type.text)

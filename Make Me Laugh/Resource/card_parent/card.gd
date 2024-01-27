@@ -1,7 +1,7 @@
 extends Node2D
 
-@export var chiste_text : String = "Texto"
-@export var chiste_type : String = "Tipo"
+@export var chiste_text : String
+@export var chiste_type : String
 
 @export var chiste_image : Sprite2D
 @export var chiste_label : Label
@@ -38,10 +38,10 @@ func _on_area_2d_body_entered(body):
 	if body.is_in_group('dropable'):
 		is_in_drop_zone = true
 
-func _on_area_2d_body_exited(body):
+func _on_area_2d_body_exited(_body):
 		is_in_drop_zone = false
 
-func _process(delta):
+func _process(_delta):
 	if draggable:
 		if Input.is_action_just_pressed("Click"):
 			initial_position = global_position
@@ -53,8 +53,12 @@ func _process(delta):
 
 		if Input.is_action_just_released("Click"):
 			Global.is_dragging = false
-			var tween = get_tree().create_tween()
 			if is_in_drop_zone:
-				queue_free()
+				get_parent().card_played(type_label)
 			else:
+				var tween = get_tree().create_tween()
 				tween.tween_property(self, "global_position", initial_position - scale_offset, 0.4).set_ease(Tween.EASE_OUT)
+
+
+func get_chiste_type():
+	return chiste_type
