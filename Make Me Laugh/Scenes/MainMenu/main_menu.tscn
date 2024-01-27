@@ -1,23 +1,45 @@
-[gd_scene load_steps=2 format=3 uid="uid://nirwwb8lxyoo"]
+[gd_scene load_steps=4 format=3 uid="uid://nirwwb8lxyoo"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu/main_menu.gd" id="1_qncdd"]
+[ext_resource type="Theme" uid="uid://da5n74cj02n0c" path="res://Theme/Game_Theme.tres" id="2_h5j0b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u72c5"]
+bg_color = Color(0.482353, 0.482353, 0.482353, 1)
 
 [node name="main_menu" type="Node2D"]
 script = ExtResource("1_qncdd")
 
-[node name="play" type="Button" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("2_h5j0b")
+
+[node name="Luces" type="Panel" parent="Control"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u72c5")
+
+[node name="Background" type="Panel" parent="Control"]
+modulate = Color(0.517647, 0.517647, 0.517647, 1)
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="play" type="Button" parent="Control"]
 offset_left = 101.0
-offset_top = 143.0
+offset_top = 630.0
 offset_right = 502.0
-offset_bottom = 297.0
+offset_bottom = 784.0
 text = "JUGAR"
 
-[node name="exit" type="Button" parent="."]
+[node name="exit" type="Button" parent="Control"]
 offset_left = 105.0
-offset_top = 392.0
+offset_top = 879.0
 offset_right = 506.0
-offset_bottom = 546.0
+offset_bottom = 1033.0
 text = "EXIT"
 
-[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Control/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/exit" to="." method="_on_exit_pressed"]
