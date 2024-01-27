@@ -41,7 +41,7 @@ func create_hand():
 		var card_load = load(string_prueba)
 		var card_instance =  card_load.instantiate()
 		card_instance.target_position = Constants.CARD_POSITION[card_index]
-		card_instance.position = Constants.CARD_POSITION[0]
+		card_instance.position = Constants.CARD_POSITION_DEFAULT
 		card_instance.scale = Vector2(0.25, 0.25)
 		call_deferred("add_child", card_instance)
 		card_index += 1
