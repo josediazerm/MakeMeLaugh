@@ -33,13 +33,16 @@ const CHISTES_FOLDERS = [
 # Deck constants
 
 const DECK_SIZE = 7
+const HAND_SIZE = 3
+const CARD_POSITION = [Vector2(0,-50), Vector2(475,-50), Vector2(950, -50)]
 
 # --------------------------------------------------------------------------- #
 
 # Deck Creator constants
 
 const DECK_CREATOR_PANEL_MIN_POSITION = 0
-const DECK_CREATOR_PANEL_MAX_POSITION = -1228
+const DECK_CREATOR_PANEL_MAX_POSITION = -3000
+
 
 # --------------------------------------------------------------------------- #
 
@@ -66,9 +69,9 @@ const REACTIONS_LIMITS = {
 
 # Humor Types constants
 
-const HUMOR_BLANCO = "Humor blanco"
-const HUMOR_NEGRO = "Humor negro"
-const HUMOR_VERDE = "Humor verde"
+const HUMOR_BLANCO = "Humor Blanco"
+const HUMOR_NEGRO = "Humor Negro"
+const HUMOR_VERDE = "Humor Verde"
 const HUMOR_INT = "Humor Inteligente"
 const HUMOR_ABSURDO = "Humor Absurdo"
 const MEMES = "Memes"

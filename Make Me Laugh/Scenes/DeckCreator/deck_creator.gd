@@ -23,7 +23,7 @@ func add_or_remove_from_deck(card : String):
 	
 	deck_label.text = str(deck.size())
 	
-	if deck.size() < 1 :
+	if deck.size() < Constants.DECK_SIZE :
 		continue_button.disabled = true
 	else:
 		continue_button.disabled = false
@@ -34,3 +34,5 @@ func _on_button_pressed(extra_arg_0):
 
 func _on_continue_pressed():
 	data_manager.save_player_deck(deck)
+
+

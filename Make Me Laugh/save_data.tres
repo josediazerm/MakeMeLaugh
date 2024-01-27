@@ -4,21 +4,21 @@
 
 [resource]
 script = ExtResource("1_u3wv7")
-player_deck = ["/absurdo/tusabuelos"]
+player_deck = ["/absurdo/tusabuelos", "/blanco/jiji", "/absurdo/tusprimos", "/absurdo/tuspadres", "/absurdo/tusmuertos", "/absurdo/tusvivos", "/blanco/jaja"]
 enemy_deck = ["res://Resource/card_parent/blanco/jiji.tscn", "res://Resource/card_parent/absurdo/tusvivos.tscn", "res://Resource/card_parent/absurdo/tuspadres.tscn", "res://Resource/card_parent/blanco/jaja.tscn", "res://Resource/card_parent/blanco/jeje.tscn", "res://Resource/card_parent/absurdo/tusmuertos.tscn", "res://Resource/card_parent/blanco/jojo.tscn"]
 player_stats = {
 "Humor Absurdo": "Gracioso",
+"Humor Blanco": "Ni fú ni fá",
 "Humor Inteligente": "Ni fú ni fá",
-"Humor blanco": "Ni fú ni fá",
-"Humor negro": "Me parto",
-"Humor verde": "Gracioso",
+"Humor Negro": "Me parto",
+"Humor Verde": "Gracioso",
 "Memes": "Ni puta gracia"
 }
 enemy_stats = {
-"Humor Absurdo": "Ni fú ni fá",
+"Humor Absurdo": "Gracioso",
+"Humor Blanco": "Ni fú ni fá",
 "Humor Inteligente": "Gracioso",
-"Humor blanco": "Ni fú ni fá",
-"Humor negro": "Ni puta gracia",
-"Humor verde": "Me parto",
-"Memes": "Gracioso"
+"Humor Negro": "Ni puta gracia",
+"Humor Verde": "Ni fú ni fá",
+"Memes": "Me parto"
 }

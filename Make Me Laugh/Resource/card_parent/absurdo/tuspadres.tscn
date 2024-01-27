@@ -3,3 +3,4 @@
 [ext_resource type="PackedScene" uid="uid://dyw31t7gbhyyo" path="res://Resource/card_parent/carta.tscn" id="1_864as"]
 
 [node name="tuspadres" instance=ExtResource("1_864as")]
+chiste_type = "Humor Absurdo"

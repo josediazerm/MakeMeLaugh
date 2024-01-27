@@ -6,11 +6,10 @@ signal External_Signal
 @export var data_manager : Node2D
 @export var health_manager : Node2D
 @export var enemy_manager : Node2D
+@export var hand_zone : Panel
 
 var last_state = ""
 var winner = ""
-
-
 
 func update_status(status):
 
@@ -25,3 +24,9 @@ func update_status(status):
 
 func play_enemy_turn():
 	enemy_manager.play_card()
+
+func create_player_hand():
+	hand_zone.create_hand()
+	
+func destroy_player_hand():
+	hand_zone.destroy_hand()
