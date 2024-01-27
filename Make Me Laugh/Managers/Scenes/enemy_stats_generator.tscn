@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwxbd2vxeme02"]
+
+[ext_resource type="Script" path="res://Managers/Scripts/enemy_stats_generator.gd" id="1_w3a8c"]
+[ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="2_y7v3f"]
+
+[node name="enemy_stats_generator" type="Node2D"]
+script = ExtResource("1_w3a8c")
+
+[node name="DataManager" parent="." instance=ExtResource("2_y7v3f")]

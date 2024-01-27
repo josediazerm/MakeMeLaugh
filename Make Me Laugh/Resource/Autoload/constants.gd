@@ -52,6 +52,8 @@ const WORST_REACTION = "Ni puta gracia"
 const EMPTY = ""
 
 const HUMOR_REACTIONS = [EMPTY, BEST_REACTION, GOOD_REACTION, NORMAL_REACTION, WORST_REACTION]
+const ENEMY_REACTIONS = [BEST_REACTION, GOOD_REACTION, GOOD_REACTION, NORMAL_REACTION, NORMAL_REACTION, WORST_REACTION]
+
 const REACTIONS_LIMITS = {
 	BEST_REACTION: 1,
 	GOOD_REACTION: 2, 
@@ -70,6 +72,20 @@ const HUMOR_VERDE = "Humor verde"
 const HUMOR_INT = "Humor Inteligente"
 const HUMOR_ABSURDO = "Humor Absurdo"
 const MEMES = "Memes"
+
+# --------------------------------------------------------------------------- #
+
+# Health constants
+
+const INITIAL_HEALTH = 10
+
+const REACTIONS_DAMAGES = {
+	BEST_REACTION: 4,
+	GOOD_REACTION: 2, 
+	NORMAL_REACTION: 1,
+	WORST_REACTION: 0,
+	EMPTY: 0
+}
 
 # --------------------------------------------------------------------------- #
 

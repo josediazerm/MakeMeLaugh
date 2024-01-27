@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpbs2ttsrvhhj"]
+
+[ext_resource type="Script" path="res://Managers/Scripts/HealthManager.gd" id="1_raw7b"]
+[ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="2_e1h8p"]
+
+[node name="HealthManager" type="Node2D"]
+script = ExtResource("1_raw7b")
+
+[node name="DataManager" parent="." instance=ExtResource("2_e1h8p")]
+position = Vector2(283.289, 83.5223)
