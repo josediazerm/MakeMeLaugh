@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://da5n74cj02n0c"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://da5n74cj02n0c"]
 
 [ext_resource type="Texture2D" uid="uid://dkptq87btej62" path="res://Sprites/Background/Background.png" id="1_2b5c8"]
 
@@ -10,8 +10,23 @@ shadow_size = 20
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m8gmp"]
 texture = ExtResource("1_2b5c8")
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xfd0m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y8g0h"]
+texture = SubResource("PlaceholderTexture2D_xfd0m")
+modulate_color = Color(0.681525, 0.154282, 0.298901, 1)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ri15i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_62wx3"]
+texture = SubResource("PlaceholderTexture2D_ri15i")
+
 [resource]
 Button/font_sizes/font_size = 40
 Button/styles/pressed = SubResource("StyleBoxFlat_w5g61")
 Label/font_sizes/font_size = 40
 Panel/styles/panel = SubResource("StyleBoxTexture_m8gmp")
+Panel_HandZone/base_type = &"Panel"
+Panel_HandZone/styles/panel = SubResource("StyleBoxTexture_y8g0h")
+Panel_Textos/base_type = &"Panel"
+Panel_Textos/styles/panel = SubResource("StyleBoxTexture_62wx3")
