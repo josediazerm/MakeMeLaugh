@@ -1,100 +1,284 @@
-[gd_scene load_steps=4 format=3 uid="uid://d77xw2bmfh1n"]
+[gd_scene load_steps=24 format=3 uid="uid://d77xw2bmfh1n"]
 
 [ext_resource type="Script" path="res://Scenes/DeckCreator/deck_creator.gd" id="1_8ahtq"]
 [ext_resource type="Texture2D" uid="uid://qaffgirofk7j" path="res://TestingResources/DeckCreator.png" id="2_l80bo"]
+[ext_resource type="Texture2D" path="res://Sprites/Background/Background.png" id="2_qkf7q"]
 [ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="3_dtjdx"]
+[ext_resource type="Texture2D" uid="uid://h175f5i4y4pr" path="res://Sprites/Cards/Absurdo_1.png" id="3_y4pjk"]
+[ext_resource type="Texture2D" uid="uid://dkuf6t58shgca" path="res://Sprites/Cards/Absurdo_2.png" id="4_whg5u"]
+[ext_resource type="Texture2D" uid="uid://lnvde72aohsc" path="res://Sprites/Cards/Absurdo_3.png" id="5_67808"]
+[ext_resource type="Texture2D" uid="uid://th3y6c6plb1m" path="res://Sprites/Cards/Blanco_1.png" id="6_aehno"]
+[ext_resource type="Texture2D" uid="uid://couyebu7kj0pf" path="res://Sprites/Cards/Blanco_2.png" id="7_yl58x"]
+[ext_resource type="Texture2D" uid="uid://jgewmhw5bhf2" path="res://Sprites/Cards/Blanco_3.png" id="8_dftwq"]
+[ext_resource type="Texture2D" uid="uid://bhdqc7ccwtriu" path="res://Sprites/Cards/Inteligente_1.png" id="9_cg56t"]
+[ext_resource type="Texture2D" uid="uid://rl5nwmvo1oq2" path="res://Sprites/Cards/Inteligente_2.png" id="10_4hqrq"]
+[ext_resource type="Texture2D" uid="uid://dus3wselmjxu3" path="res://Sprites/Cards/Inteligente_3.png" id="11_pse4c"]
+[ext_resource type="Texture2D" uid="uid://cbiil30t3s6ej" path="res://Sprites/Cards/Meme_1.png" id="12_hv5pl"]
+[ext_resource type="Texture2D" uid="uid://dcsmgwqhf2tg4" path="res://Sprites/Cards/Meme_2.png" id="13_7tn0d"]
+[ext_resource type="Texture2D" uid="uid://bwowdqfxyurbx" path="res://Sprites/Cards/Meme_3.png" id="14_jdl0r"]
+[ext_resource type="Texture2D" uid="uid://ngooods6cepg" path="res://Sprites/Cards/Negro_1.png" id="15_8u806"]
+[ext_resource type="Texture2D" uid="uid://b05gge750uv3f" path="res://Sprites/Cards/Negro_2.png" id="16_74ti2"]
+[ext_resource type="Texture2D" uid="uid://bhwdjwpwvi2tj" path="res://Sprites/Cards/Negro_3.png" id="17_dmtmj"]
+[ext_resource type="Texture2D" uid="uid://dwuc4sw5m4xx3" path="res://Sprites/Cards/Verde_1.png" id="18_acf8s"]
+[ext_resource type="Texture2D" uid="uid://jhyuhm162bnp" path="res://Sprites/Cards/Verde_2.png" id="19_vt4dx"]
+[ext_resource type="Texture2D" uid="uid://bdpwa1bodjoyo" path="res://Sprites/Cards/Verde_3.png" id="20_awsa6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tn0tb"]
+texture = ExtResource("2_qkf7q")
 
 [node name="deck_creator" type="Node2D"]
 script = ExtResource("1_8ahtq")
 
+[node name="Background" type="Panel" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_tn0tb")
+
 [node name="Panel" type="Panel" parent="."]
-offset_top = 444.0
-offset_right = 2378.0
-offset_bottom = 641.0
+offset_left = 4.0
+offset_top = 438.0
+offset_right = 11677.0
+offset_bottom = 1061.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel"]
-position = Vector2(2000, 99.75)
-scale = Vector2(5, 0.4)
+modulate = Color(0.054902, 0.054902, 0.054902, 1)
+position = Vector2(5836.5, 311.5)
+scale = Vector2(14.0132, 1.21918)
 texture = ExtResource("2_l80bo")
 
-[node name="Button" type="Button" parent="Panel"]
+[node name="Absurdo_1" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 8.0
-offset_right = 280.0
-offset_bottom = 190.0
-text = "Tus Abuelos"
+offset_left = 77.5
+offset_top = 47.225
+offset_right = 677.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
 
-[node name="Button2" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 762.0
-offset_right = 1024.0
-offset_bottom = 182.0
-text = "Tus Primos"
+[node name="Carta" type="Sprite2D" parent="Panel/Absurdo_1"]
+position = Vector2(300, 450)
+texture = ExtResource("3_y4pjk")
 
-[node name="Button4" type="Button" parent="Panel"]
+[node name="Absurdo_2" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 1189.0
-offset_top = 7.0
-offset_right = 1451.0
-offset_bottom = 189.0
-text = "Tus Padres"
+offset_left = 797.5
+offset_top = 47.225
+offset_right = 1397.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
 
-[node name="Button5" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 2036.0
-offset_top = 10.0
-offset_right = 2298.0
-offset_bottom = 192.0
-text = "Tus Vivos"
+[node name="Carta" type="Sprite2D" parent="Panel/Absurdo_2"]
+position = Vector2(300, 450)
+texture = ExtResource("4_whg5u")
 
-[node name="Button6" type="Button" parent="Panel"]
+[node name="Absurdo_3" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 1594.0
-offset_top = 9.0
-offset_right = 1856.0
-offset_bottom = 191.0
-text = "Tus Muertos"
+offset_left = 1477.5
+offset_top = 47.225
+offset_right = 2077.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
 
-[node name="Button3" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 362.0
-offset_top = 9.0
-offset_right = 624.0
-offset_bottom = 191.0
-text = "jiji"
+[node name="Carta" type="Sprite2D" parent="Panel/Absurdo_3"]
+position = Vector2(300, 450)
+texture = ExtResource("5_67808")
 
-[node name="Button7" type="Button" parent="Panel"]
+[node name="Blanco_1" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 2360.0
-offset_top = 12.0
-offset_right = 2622.0
-offset_bottom = 194.0
-text = "jaja"
+offset_left = 1997.5
+offset_top = 47.225
+offset_right = 2597.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
 
-[node name="Button8" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 2671.0
-offset_top = 13.0
-offset_right = 2933.0
-offset_bottom = 195.0
-text = "Carta 6"
+[node name="Carta" type="Sprite2D" parent="Panel/Blanco_1"]
+position = Vector2(300, 450)
+texture = ExtResource("6_aehno")
 
-[node name="Button9" type="Button" parent="Panel"]
+[node name="Blanco_2" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 2981.0
-offset_top = 12.0
-offset_right = 3243.0
-offset_bottom = 194.0
-text = "Carta 6"
+offset_left = 2717.5
+offset_top = 47.225
+offset_right = 3317.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
 
-[node name="Button10" type="Button" parent="Panel"]
+[node name="Carta" type="Sprite2D" parent="Panel/Blanco_2"]
+position = Vector2(300, 450)
+texture = ExtResource("7_yl58x")
+
+[node name="Blanco_3" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 3297.0
-offset_top = 13.0
-offset_right = 3559.0
-offset_bottom = 195.0
-text = "Carta 6"
+offset_left = 3397.5
+offset_top = 47.225
+offset_right = 3997.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
+
+[node name="Carta" type="Sprite2D" parent="Panel/Blanco_3"]
+position = Vector2(300, 450)
+texture = ExtResource("8_dftwq")
+
+[node name="Inteligente_1" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 3917.5
+offset_top = 47.225
+offset_right = 4517.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
+
+[node name="Carta" type="Sprite2D" parent="Panel/Inteligente_1"]
+position = Vector2(300, 450)
+texture = ExtResource("9_cg56t")
+
+[node name="Inteligente_2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 4637.5
+offset_top = 47.225
+offset_right = 5237.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
+
+[node name="Carta" type="Sprite2D" parent="Panel/Inteligente_2"]
+position = Vector2(300, 450)
+texture = ExtResource("10_4hqrq")
+
+[node name="Inteligente_3" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 5317.5
+offset_top = 47.225
+offset_right = 5917.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
+
+[node name="Carta" type="Sprite2D" parent="Panel/Inteligente_3"]
+position = Vector2(300, 450)
+texture = ExtResource("11_pse4c")
+
+[node name="Meme_1" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 5837.5
+offset_top = 47.225
+offset_right = 6437.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
+
+[node name="Carta" type="Sprite2D" parent="Panel/Meme_1"]
+position = Vector2(300, 450)
+texture = ExtResource("12_hv5pl")
+
+[node name="Meme_2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 6557.5
+offset_top = 47.225
+offset_right = 7157.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
+
+[node name="Carta" type="Sprite2D" parent="Panel/Meme_2"]
+position = Vector2(300, 450)
+texture = ExtResource("13_7tn0d")
+
+[node name="Meme_3" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 7237.5
+offset_top = 47.225
+offset_right = 7837.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
+
+[node name="Carta" type="Sprite2D" parent="Panel/Meme_3"]
+position = Vector2(300, 450)
+texture = ExtResource("14_jdl0r")
+
+[node name="Negro_1" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 7757.5
+offset_top = 47.225
+offset_right = 8357.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
+
+[node name="Carta" type="Sprite2D" parent="Panel/Negro_1"]
+position = Vector2(300, 450)
+texture = ExtResource("15_8u806")
+
+[node name="Negro_2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 8477.5
+offset_top = 47.225
+offset_right = 9077.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
+
+[node name="Carta" type="Sprite2D" parent="Panel/Negro_2"]
+position = Vector2(300, 450)
+texture = ExtResource("16_74ti2")
+
+[node name="Negro_3" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 9157.5
+offset_top = 47.225
+offset_right = 9757.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
+
+[node name="Carta" type="Sprite2D" parent="Panel/Negro_3"]
+position = Vector2(300, 450)
+texture = ExtResource("17_dmtmj")
+
+[node name="Verde_1" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 9677.5
+offset_top = 47.225
+offset_right = 10277.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
+
+[node name="Carta" type="Sprite2D" parent="Panel/Verde_1"]
+position = Vector2(300, 450)
+texture = ExtResource("18_acf8s")
+
+[node name="Verde_2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 10397.5
+offset_top = 47.225
+offset_right = 10997.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
+
+[node name="Carta" type="Sprite2D" parent="Panel/Verde_2"]
+position = Vector2(300, 450)
+texture = ExtResource("19_vt4dx")
+
+[node name="Verde_3" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 11077.5
+offset_top = 47.225
+offset_right = 11677.5
+offset_bottom = 947.225
+scale = Vector2(0.6, 0.6)
+toggle_mode = true
+
+[node name="Carta" type="Sprite2D" parent="Panel/Verde_3"]
+position = Vector2(300, 450)
+texture = ExtResource("20_awsa6")
 
 [node name="HSlider" type="HSlider" parent="."]
 offset_left = 10.0
@@ -118,12 +302,23 @@ offset_bottom = 128.0
 
 [node name="DataManager" parent="." instance=ExtResource("3_dtjdx")]
 
-[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed" binds= ["/absurdo/tusabuelos"]]
-[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_pressed" binds= ["/absurdo/tusprimos"]]
-[connection signal="pressed" from="Panel/Button4" to="." method="_on_button_pressed" binds= ["/absurdo/tuspadres"]]
-[connection signal="pressed" from="Panel/Button5" to="." method="_on_button_pressed" binds= ["/absurdo/tusvivos"]]
-[connection signal="pressed" from="Panel/Button6" to="." method="_on_button_pressed" binds= ["/absurdo/tusmuertos"]]
-[connection signal="pressed" from="Panel/Button3" to="." method="_on_button_pressed" binds= ["/blanco/jiji"]]
-[connection signal="pressed" from="Panel/Button7" to="." method="_on_button_pressed" binds= ["/blanco/jaja"]]
+[connection signal="pressed" from="Panel/Absurdo_1" to="." method="_on_button_pressed" binds= ["/Absurdo/Absurdo_1"]]
+[connection signal="pressed" from="Panel/Absurdo_2" to="." method="_on_button_pressed" binds= ["/Absurdo/Absurdo_2"]]
+[connection signal="pressed" from="Panel/Absurdo_3" to="." method="_on_button_pressed" binds= ["/Absurdo/Absurdo_3"]]
+[connection signal="pressed" from="Panel/Blanco_1" to="." method="_on_button_pressed" binds= ["/Blanco/Blanco_1"]]
+[connection signal="pressed" from="Panel/Blanco_2" to="." method="_on_button_pressed" binds= ["/Blanco/Blanco_2"]]
+[connection signal="pressed" from="Panel/Blanco_3" to="." method="_on_button_pressed" binds= ["/Blanco/Blanco_3"]]
+[connection signal="pressed" from="Panel/Inteligente_1" to="." method="_on_button_pressed" binds= ["/Inteligente/Inteligente_1"]]
+[connection signal="pressed" from="Panel/Inteligente_2" to="." method="_on_button_pressed" binds= ["/Inteligente/Inteligente_2"]]
+[connection signal="pressed" from="Panel/Inteligente_3" to="." method="_on_button_pressed" binds= ["/Inteligente/Inteligente_3"]]
+[connection signal="pressed" from="Panel/Meme_1" to="." method="_on_button_pressed" binds= ["/Meme/Meme_1"]]
+[connection signal="pressed" from="Panel/Meme_2" to="." method="_on_button_pressed" binds= ["/Meme/Meme_2"]]
+[connection signal="pressed" from="Panel/Meme_3" to="." method="_on_button_pressed" binds= ["/Meme/Meme_3"]]
+[connection signal="pressed" from="Panel/Negro_1" to="." method="_on_button_pressed" binds= ["/Negro/Negro_1"]]
+[connection signal="pressed" from="Panel/Negro_2" to="." method="_on_button_pressed" binds= ["/Negro/Negro_2"]]
+[connection signal="pressed" from="Panel/Negro_3" to="." method="_on_button_pressed" binds= ["/Negro/Negro_3"]]
+[connection signal="pressed" from="Panel/Verde_1" to="." method="_on_button_pressed" binds= ["/Verde/Verde_1"]]
+[connection signal="pressed" from="Panel/Verde_2" to="." method="_on_button_pressed" binds= ["/Verde/Verde_2"]]
+[connection signal="pressed" from="Panel/Verde_3" to="." method="_on_button_pressed" binds= ["/Verde/Verde_3"]]
 [connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
