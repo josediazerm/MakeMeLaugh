@@ -43,8 +43,9 @@ func create_hand():
 		card_index += 1
 
 
-func card_played(card_humor_type):
-	health_manager.apply_damage(Constants.PLAYER_NAME, card_humor_type.text)
+func card_played(chiste_text, chiste_type, image_holder):
+	bocadillo.show_joke(chiste_text, image_holder)
+	health_manager.apply_damage(Constants.PLAYER_NAME, chiste_type.text)
 
 func destroy_hand():
 	for child in get_children():

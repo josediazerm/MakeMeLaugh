@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://tag7wg5fuwp3"]
+[gd_scene load_steps=10 format=3 uid="uid://tag7wg5fuwp3"]
 
 [ext_resource type="PackedScene" uid="uid://cpgyws7h542d6" path="res://Scenes/Hand/hand_zone.tscn" id="1_bmj1h"]
 [ext_resource type="Script" path="res://Scenes/GamePlayScene/game.gd" id="1_p45ht"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dc1o66ugagc8r" path="res://Managers/Scenes/TurnManager.tscn" id="4_h8hs1"]
 [ext_resource type="PackedScene" uid="uid://dpbs2ttsrvhhj" path="res://Managers/Scenes/HealthManager.tscn" id="5_vlj0t"]
 [ext_resource type="PackedScene" uid="uid://c8ys4ijomtkaf" path="res://Managers/Scenes/Enemy_Manager.tscn" id="6_3una5"]
+[ext_resource type="Script" path="res://Scenes/GamePlayScene/Bocadillo.gd" id="8_6og7k"]
+[ext_resource type="Texture2D" uid="uid://h175f5i4y4pr" path="res://Sprites/Cards/Absurdo_1.png" id="8_mlk3a"]
 
 [node name="Game" type="Node2D" node_paths=PackedStringArray("player_hand", "enemy_manager", "win_panel", "lose_panel", "health_manager", "turn_manager")]
 script = ExtResource("1_p45ht")
@@ -18,8 +20,10 @@ health_manager = NodePath("HealthManager")
 turn_manager = NodePath("TurnManager")
 
 [node name="HandZone" parent="." node_paths=PackedStringArray("data_manager", "turn_manager", "health_manager") instance=ExtResource("1_bmj1h")]
-offset_top = 471.0
-offset_bottom = 631.0
+offset_left = 16.0
+offset_top = 881.0
+offset_right = 1908.0
+offset_bottom = 1041.0
 data_manager = NodePath("../DataManager")
 turn_manager = NodePath("../TurnManager")
 health_manager = NodePath("../HealthManager")
@@ -27,7 +31,7 @@ health_manager = NodePath("../HealthManager")
 [node name="DataManager" parent="." instance=ExtResource("2_cxhq2")]
 
 [node name="DropZone" parent="." instance=ExtResource("3_qh4u3")]
-position = Vector2(471, 19)
+position = Vector2(794, 278)
 
 [node name="TurnManager" parent="." node_paths=PackedStringArray("data_manager", "health_manager", "enemy_manager", "hand_zone", "win_panel", "lose_panel") instance=ExtResource("4_h8hs1")]
 data_manager = NodePath("../DataManager")
@@ -38,24 +42,25 @@ win_panel = NodePath("../WinPanel")
 lose_panel = NodePath("../LosePanel")
 
 [node name="HealthManager" parent="." node_paths=PackedStringArray("data_manager", "turn_manager") instance=ExtResource("5_vlj0t")]
+position = Vector2(23, 403)
 data_manager = NodePath("../DataManager")
 turn_manager = NodePath("../TurnManager")
 
 [node name="PlayerHealth" type="HSlider" parent="HealthManager"]
 offset_left = 40.0
 offset_top = 260.0
-offset_right = 391.0
-offset_bottom = 276.0
+offset_right = 657.0
+offset_bottom = 307.0
 max_value = 10.0
 value = 10.0
 editable = false
 scrollable = false
 
 [node name="EnemyHealth" type="HSlider" parent="HealthManager"]
-offset_left = 1118.0
-offset_top = 276.0
-offset_right = 1469.0
-offset_bottom = 292.0
+offset_left = 1814.0
+offset_top = 288.0
+offset_right = 2421.0
+offset_bottom = 304.0
 rotation = 3.14159
 max_value = 10.0
 value = 10.0
@@ -93,10 +98,10 @@ offset_bottom = 551.0
 text = "Siguiente"
 
 [node name="LosePanel" type="Panel" parent="."]
-offset_left = 7.0
-offset_top = 727.0
-offset_right = 1157.0
-offset_bottom = 1312.0
+offset_left = -4.0
+offset_top = 1151.0
+offset_right = 1146.0
+offset_bottom = 1736.0
 
 [node name="Label" type="Label" parent="LosePanel"]
 layout_mode = 0
@@ -131,6 +136,33 @@ visible = false
 position = Vector2(940, 143)
 scale = Vector2(0.5, 0.5)
 
+[node name="Bocadillo" type="Panel" parent="." node_paths=PackedStringArray("chiste_text", "chiste_image", "timer")]
+modulate = Color(0.839216, 0.780392, 0.529412, 0.682353)
+offset_left = 658.0
+offset_top = 41.0
+offset_right = 1304.0
+offset_bottom = 265.0
+script = ExtResource("8_6og7k")
+chiste_text = NodePath("BocadilloLabel")
+chiste_image = NodePath("BocadilloPicture")
+timer = NodePath("Timer")
+
+[node name="BocadilloLabel" type="Label" parent="Bocadillo"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 17.0
+offset_right = 629.0
+offset_bottom = 207.0
+
+[node name="BocadilloPicture" type="Sprite2D" parent="Bocadillo"]
+position = Vector2(316, 474)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_mlk3a")
+
+[node name="Timer" type="Timer" parent="Bocadillo"]
+one_shot = true
+
 [connection signal="pressed" from="WinPanel/next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="LosePanel/menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="LosePanel/retry" to="." method="_on_retry_pressed"]
+[connection signal="timeout" from="Bocadillo/Timer" to="Bocadillo" method="_on_timer_timeout"]

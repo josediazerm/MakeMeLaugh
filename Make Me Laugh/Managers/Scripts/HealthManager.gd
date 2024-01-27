@@ -2,6 +2,7 @@ extends Node2D
 
 @export var data_manager : Node2D
 @export var turn_manager : Node2D
+@export var bocadillo : Panel
 
 @onready var player_bar : HSlider = $PlayerHealth
 @onready var enemy_bar : HSlider = $EnemyHealth
@@ -20,7 +21,7 @@ func _ready():
 	player_stats = data_manager.get_player_stats()
 	enemy_stats = data_manager.get_enemy_stats()
 
-func apply_damage(damage_dealer : String, humor_type : String):
+func apply_damage(damage_dealer : String, humor_type : String, humor_sprite : String):
 	if damage_dealer == Constants.PLAYER_NAME:
 		apply_damage_to_enemy(humor_type)
 	else:
