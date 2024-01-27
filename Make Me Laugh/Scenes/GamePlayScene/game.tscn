@@ -35,11 +35,12 @@ bocadillo = NodePath("../Bocadillo")
 [node name="DropZone" parent="." instance=ExtResource("3_qh4u3")]
 position = Vector2(794, 278)
 
-[node name="TurnManager" parent="." node_paths=PackedStringArray("data_manager", "health_manager", "enemy_manager", "hand_zone", "win_panel", "lose_panel", "music_manager") instance=ExtResource("4_h8hs1")]
+[node name="TurnManager" parent="." node_paths=PackedStringArray("data_manager", "health_manager", "enemy_manager", "hand_zone", "bocadillo", "win_panel", "lose_panel", "music_manager") instance=ExtResource("4_h8hs1")]
 data_manager = NodePath("../DataManager")
 health_manager = NodePath("../HealthManager")
 enemy_manager = NodePath("../Enemy_Manager")
 hand_zone = NodePath("../HandZone")
+bocadillo = NodePath("../Bocadillo")
 win_panel = NodePath("../WinPanel")
 lose_panel = NodePath("../LosePanel")
 music_manager = NodePath("../music_manager")
@@ -141,7 +142,7 @@ visible = false
 position = Vector2(1619, 445)
 scale = Vector2(0.25, 0.25)
 
-[node name="Bocadillo" type="Panel" parent="." node_paths=PackedStringArray("chiste_text", "chiste_image", "timer", "turn_manager")]
+[node name="Bocadillo" type="Panel" parent="." node_paths=PackedStringArray("chiste_text", "chiste_image", "turn_manager")]
 visible = false
 modulate = Color(0.839216, 0.780392, 0.529412, 0.682353)
 offset_left = 658.0
@@ -151,7 +152,6 @@ offset_bottom = 265.0
 script = ExtResource("8_6og7k")
 chiste_text = NodePath("BocadilloLabel")
 chiste_image = NodePath("BocadilloPicture")
-timer = NodePath("Timer")
 turn_manager = NodePath("../TurnManager")
 
 [node name="BocadilloLabel" type="Label" parent="Bocadillo"]
@@ -165,13 +165,8 @@ offset_bottom = 207.0
 position = Vector2(316, 474)
 scale = Vector2(0.5, 0.5)
 
-[node name="Timer" type="Timer" parent="Bocadillo"]
-wait_time = 3.5
-one_shot = true
-
 [node name="music_manager" parent="." instance=ExtResource("9_ercby")]
 
 [connection signal="pressed" from="WinPanel/next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="LosePanel/menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="LosePanel/retry" to="." method="_on_retry_pressed"]
-[connection signal="timeout" from="Bocadillo/Timer" to="Bocadillo" method="_on_timer_timeout"]

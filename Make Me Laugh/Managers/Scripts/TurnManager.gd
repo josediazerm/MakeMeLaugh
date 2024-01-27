@@ -8,6 +8,8 @@ signal External_Signal
 @export var enemy_manager : Node2D
 @export var hand_zone : Panel
 
+@export var bocadillo : Panel
+
 @export var win_panel : Panel
 @export var lose_panel : Panel
 
@@ -62,3 +64,6 @@ func enter_end_state():
 		win()
 	else:
 		lose()
+		
+func hide_joke():
+	bocadillo.hide_joke()
