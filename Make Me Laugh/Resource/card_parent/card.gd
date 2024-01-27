@@ -11,6 +11,10 @@ var draggable = false
 var is_in_drop_zone = false
 var offset
 
+var target_position
+
+var goal_reached = false
+
 func _on_area_2d_mouse_entered():
 	if not Global.is_dragging:
 		draggable = true
@@ -31,7 +35,16 @@ func _on_area_2d_body_exited(_body):
 		is_in_drop_zone = false
 
 func _process(_delta):
-	if draggable:
+
+	if not goal_reached:
+		if position[0] < target_position[0]:
+			position[0] += 25
+		if position[0] >= target_position[0]:
+			position[0] = target_position[0]
+			goal_reached = true
+	
+	
+	if draggable and goal_reached:
 		if Input.is_action_just_pressed("Click"):
 			initial_position = global_position 
 			offset = get_global_mouse_position() - global_position 
