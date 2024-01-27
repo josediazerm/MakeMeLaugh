@@ -122,12 +122,14 @@ const LOSE_PANEL_DEFAULT_POSITION = 1150
 # --------------------------------------------------------------------------- #
 
 const ICONS = [
-	"res://TestingResources/icon1.png",
-	"res://TestingResources/icon2.png",
-	"res://TestingResources/icon3.png"
+	"res://Sprites/Enemies/Char_1.png",
+	"res://Sprites/Enemies/Char_2.png",
+	"res://Sprites/Enemies/Char_3.png",
+	"res://Sprites/Enemies/Char_4.png",
+	"res://Sprites/Enemies/Char_5.png"
 ]
 
-const MAX_OPPONENTES = 3
+const MAX_OPPONENTES = 5
 
 # --------------------------------------------------------------------------- #
 

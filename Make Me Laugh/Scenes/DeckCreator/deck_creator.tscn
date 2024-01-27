@@ -1,8 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://d77xw2bmfh1n"]
+[gd_scene load_steps=23 format=3 uid="uid://d77xw2bmfh1n"]
 
 [ext_resource type="Script" path="res://Scenes/DeckCreator/deck_creator.gd" id="1_8ahtq"]
-[ext_resource type="Texture2D" uid="uid://qaffgirofk7j" path="res://TestingResources/DeckCreator.png" id="2_l80bo"]
-[ext_resource type="Texture2D" uid="uid://dkptq87btej62" path="res://Sprites/Background/Background.png" id="2_qkf7q"]
 [ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="3_dtjdx"]
 [ext_resource type="Theme" uid="uid://da5n74cj02n0c" path="res://Theme/Game_Theme.tres" id="3_l0ts1"]
 [ext_resource type="Texture2D" uid="uid://h175f5i4y4pr" path="res://Sprites/Cards/Absurdo_1.png" id="3_y4pjk"]
@@ -24,11 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://jhyuhm162bnp" path="res://Sprites/Cards/Verde_2.png" id="19_vt4dx"]
 [ext_resource type="Texture2D" uid="uid://bdpwa1bodjoyo" path="res://Sprites/Cards/Verde_3.png" id="20_awsa6"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_piwg8"]
-bg_color = Color(0.482353, 0.482353, 0.482353, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tn0tb"]
-texture = ExtResource("2_qkf7q")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_22la8"]
+bg_color = Color(0, 0, 0, 0.396078)
 
 [node name="deck_creator" type="Node2D"]
 script = ExtResource("1_8ahtq")
@@ -40,33 +35,114 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("3_l0ts1")
 
-[node name="Luces" type="Panel" parent="Control"]
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_piwg8")
-
 [node name="Background" type="Panel" parent="Control"]
 modulate = Color(0.517647, 0.517647, 0.517647, 1)
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_tn0tb")
+theme_type_variation = &"Panel_BG_Filled"
 
-[node name="Panel" type="Panel" parent="Control"]
+[node name="Panel_Explicacion" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 1039.0
+offset_top = 548.0
+offset_right = 3147.0
+offset_bottom = 2086.0
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+theme_type_variation = &"Panel_Textos"
+
+[node name="Explicacion" type="Label" parent="Control/Panel_Explicacion"]
+layout_mode = 0
+offset_left = 1818.0
+offset_top = 898.0
+offset_right = 2819.0
+offset_bottom = 1412.0
+rotation = -3.14159
+scale = Vector2(1.5, 1.5)
+text = "Tu mazo se debe componer de 7 cartas, ni una más ni una menos.
+
+Puedes llevar de todo un poco o escoger lo que mas gracia te haga, como tú veas máquina."
+autowrap_mode = 2
+
+[node name="Panel_Información" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 1973.0
+offset_top = 557.0
+offset_right = 3991.0
+offset_bottom = 2095.0
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+theme_type_variation = &"Panel_Textos"
+
+[node name="Deck_Size" type="Label" parent="Control/Panel_Información"]
+layout_mode = 0
+offset_left = 770.0
+offset_top = 706.0
+offset_right = 1124.0
+offset_bottom = 766.0
+rotation = -3.14159
+scale = Vector2(1.5, 1.5)
+text = "0 / 7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Deck_Label" type="Label" parent="Control/Panel_Información"]
+layout_mode = 0
+offset_left = 748.0
+offset_top = 922.0
+offset_right = 1086.0
+offset_bottom = 1038.0
+rotation = -3.14159
+scale = Vector2(1.5, 1.5)
+text = "Cartas en 
+el Mazo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Deck_Data" type="Label" parent="Control/Panel_Información"]
+layout_mode = 0
+offset_left = 1718.0
+offset_top = 914.0
+offset_right = 2321.0
+offset_bottom = 1262.0
+rotation = -3.14159
+scale = Vector2(1.5, 1.5)
+text = "Absurdo: 0
+Blanco: 0
+Inteligente: 0
+Meme: 0
+Negro: 0
+Verde: 0"
+
+[node name="Continue" type="Button" parent="Control/Panel_Información"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 408.0
+offset_right = 758.0
+offset_bottom = 508.0
+theme_type_variation = &"Boton_Horizontal"
+disabled = true
+
+[node name="Label" type="Label" parent="Control/Panel_Información/Continue"]
+layout_mode = 0
+offset_left = 568.0
+offset_top = 82.0
+offset_right = 763.0
+offset_bottom = 140.0
+rotation = 3.14159
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Confirmar"
+
+[node name="Cartas" type="Panel" parent="Control"]
 layout_mode = 0
 offset_left = -9600.0
 offset_top = 438.0
 offset_right = 2073.0
 offset_bottom = 1061.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_22la8")
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/Panel"]
-modulate = Color(0.054902, 0.054902, 0.054902, 1)
-position = Vector2(5836.5, 311.5)
-scale = Vector2(14.0132, 1.21918)
-texture = ExtResource("2_l80bo")
-
-[node name="Absurdo_1" type="Button" parent="Control/Panel"]
+[node name="Absurdo_1" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 77.5
 offset_top = 47.225
@@ -76,11 +152,11 @@ scale = Vector2(0.6, 0.6)
 toggle_mode = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Absurdo_1"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Absurdo_1"]
 position = Vector2(300, 450)
 texture = ExtResource("3_y4pjk")
 
-[node name="Absurdo_2" type="Button" parent="Control/Panel"]
+[node name="Absurdo_2" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 797.5
 offset_top = 47.225
@@ -90,11 +166,11 @@ scale = Vector2(0.6, 0.6)
 toggle_mode = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Absurdo_2"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Absurdo_2"]
 position = Vector2(300, 450)
 texture = ExtResource("4_whg5u")
 
-[node name="Absurdo_3" type="Button" parent="Control/Panel"]
+[node name="Absurdo_3" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 1477.5
 offset_top = 47.225
@@ -104,11 +180,11 @@ scale = Vector2(0.6, 0.6)
 toggle_mode = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Absurdo_3"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Absurdo_3"]
 position = Vector2(300, 450)
 texture = ExtResource("5_67808")
 
-[node name="Blanco_1" type="Button" parent="Control/Panel"]
+[node name="Blanco_1" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 1997.5
 offset_top = 47.225
@@ -117,11 +193,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Blanco_1"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Blanco_1"]
 position = Vector2(300, 450)
 texture = ExtResource("6_aehno")
 
-[node name="Blanco_2" type="Button" parent="Control/Panel"]
+[node name="Blanco_2" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 2717.5
 offset_top = 47.225
@@ -130,11 +206,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Blanco_2"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Blanco_2"]
 position = Vector2(300, 450)
 texture = ExtResource("7_yl58x")
 
-[node name="Blanco_3" type="Button" parent="Control/Panel"]
+[node name="Blanco_3" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 3397.5
 offset_top = 47.225
@@ -143,11 +219,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Blanco_3"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Blanco_3"]
 position = Vector2(300, 450)
 texture = ExtResource("8_dftwq")
 
-[node name="Inteligente_1" type="Button" parent="Control/Panel"]
+[node name="Inteligente_1" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 3917.5
 offset_top = 47.225
@@ -156,11 +232,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Inteligente_1"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Inteligente_1"]
 position = Vector2(300, 450)
 texture = ExtResource("9_cg56t")
 
-[node name="Inteligente_2" type="Button" parent="Control/Panel"]
+[node name="Inteligente_2" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 4637.5
 offset_top = 47.225
@@ -169,11 +245,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Inteligente_2"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Inteligente_2"]
 position = Vector2(300, 450)
 texture = ExtResource("10_4hqrq")
 
-[node name="Inteligente_3" type="Button" parent="Control/Panel"]
+[node name="Inteligente_3" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 5317.5
 offset_top = 47.225
@@ -182,11 +258,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Inteligente_3"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Inteligente_3"]
 position = Vector2(300, 450)
 texture = ExtResource("11_pse4c")
 
-[node name="Meme_1" type="Button" parent="Control/Panel"]
+[node name="Meme_1" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 5837.5
 offset_top = 47.225
@@ -195,11 +271,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Meme_1"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Meme_1"]
 position = Vector2(300, 450)
 texture = ExtResource("12_hv5pl")
 
-[node name="Meme_2" type="Button" parent="Control/Panel"]
+[node name="Meme_2" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 6557.5
 offset_top = 47.225
@@ -208,11 +284,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Meme_2"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Meme_2"]
 position = Vector2(300, 450)
 texture = ExtResource("13_7tn0d")
 
-[node name="Meme_3" type="Button" parent="Control/Panel"]
+[node name="Meme_3" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 7237.5
 offset_top = 47.225
@@ -221,11 +297,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Meme_3"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Meme_3"]
 position = Vector2(300, 450)
 texture = ExtResource("14_jdl0r")
 
-[node name="Negro_1" type="Button" parent="Control/Panel"]
+[node name="Negro_1" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 7757.5
 offset_top = 47.225
@@ -234,11 +310,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Negro_1"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Negro_1"]
 position = Vector2(300, 450)
 texture = ExtResource("15_8u806")
 
-[node name="Negro_2" type="Button" parent="Control/Panel"]
+[node name="Negro_2" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 8477.5
 offset_top = 47.225
@@ -247,11 +323,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Negro_2"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Negro_2"]
 position = Vector2(300, 450)
 texture = ExtResource("16_74ti2")
 
-[node name="Negro_3" type="Button" parent="Control/Panel"]
+[node name="Negro_3" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 9157.5
 offset_top = 47.225
@@ -260,11 +336,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Negro_3"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Negro_3"]
 position = Vector2(300, 450)
 texture = ExtResource("17_dmtmj")
 
-[node name="Verde_1" type="Button" parent="Control/Panel"]
+[node name="Verde_1" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 9677.5
 offset_top = 47.225
@@ -273,11 +349,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Verde_1"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Verde_1"]
 position = Vector2(300, 450)
 texture = ExtResource("18_acf8s")
 
-[node name="Verde_2" type="Button" parent="Control/Panel"]
+[node name="Verde_2" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 10397.5
 offset_top = 47.225
@@ -286,11 +362,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Verde_2"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Verde_2"]
 position = Vector2(300, 450)
 texture = ExtResource("19_vt4dx")
 
-[node name="Verde_3" type="Button" parent="Control/Panel"]
+[node name="Verde_3" type="Button" parent="Control/Cartas"]
 layout_mode = 0
 offset_left = 11077.5
 offset_top = 47.225
@@ -299,92 +375,36 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Control/Panel/Verde_3"]
+[node name="Carta" type="Sprite2D" parent="Control/Cartas/Verde_3"]
 position = Vector2(300, 450)
 texture = ExtResource("20_awsa6")
 
 [node name="HSlider" type="HSlider" parent="Control"]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 414.0
-offset_right = 1012.0
-offset_bottom = 430.0
-
-[node name="Continue" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 1673.0
-offset_top = 338.0
-offset_right = 1876.0
-offset_bottom = 408.0
-disabled = true
-text = "Confirmar"
-
-[node name="Deck_Label" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 1593.0
-offset_top = 142.0
-offset_right = 1931.0
-offset_bottom = 258.0
-text = "Cartas en 
-el Mazo"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Deck_Size" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 1602.0
-offset_top = 267.0
-offset_right = 1956.0
-offset_bottom = 327.0
-text = "0 / 7"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = 475.0
+offset_top = 439.0
+offset_right = 1477.0
+offset_bottom = 455.0
 
 [node name="DataManager" parent="Control" instance=ExtResource("3_dtjdx")]
 
-[node name="Deck_Data" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 1034.0
-offset_top = 28.0
-offset_right = 1637.0
-offset_bottom = 376.0
-text = "a
-b
-c
-d
-e
-f
-"
-
-[node name="Explicacion" type="Label" parent="Control"]
-offset_left = 135.0
-offset_top = 27.0
-offset_right = 738.0
-offset_bottom = 375.0
-text = "Tu mazo se debe componer de
-7 cartas, ni una más ni una menos.
-
-Puedes llevar de todo un poco o 
-escoger lo que mas gracia te haga,
-COMO TU VEAS LOCO"
-
-[connection signal="pressed" from="Control/Panel/Absurdo_1" to="." method="_on_button_pressed" binds= ["/Absurdo/Absurdo_1"]]
-[connection signal="pressed" from="Control/Panel/Absurdo_2" to="." method="_on_button_pressed" binds= ["/Absurdo/Absurdo_2"]]
-[connection signal="pressed" from="Control/Panel/Absurdo_3" to="." method="_on_button_pressed" binds= ["/Absurdo/Absurdo_3"]]
-[connection signal="pressed" from="Control/Panel/Blanco_1" to="." method="_on_button_pressed" binds= ["/Blanco/Blanco_1"]]
-[connection signal="pressed" from="Control/Panel/Blanco_2" to="." method="_on_button_pressed" binds= ["/Blanco/Blanco_2"]]
-[connection signal="pressed" from="Control/Panel/Blanco_3" to="." method="_on_button_pressed" binds= ["/Blanco/Blanco_3"]]
-[connection signal="pressed" from="Control/Panel/Inteligente_1" to="." method="_on_button_pressed" binds= ["/Inteligente/Inteligente_1"]]
-[connection signal="pressed" from="Control/Panel/Inteligente_2" to="." method="_on_button_pressed" binds= ["/Inteligente/Inteligente_2"]]
-[connection signal="pressed" from="Control/Panel/Inteligente_3" to="." method="_on_button_pressed" binds= ["/Inteligente/Inteligente_3"]]
-[connection signal="pressed" from="Control/Panel/Meme_1" to="." method="_on_button_pressed" binds= ["/Meme/Meme_1"]]
-[connection signal="pressed" from="Control/Panel/Meme_2" to="." method="_on_button_pressed" binds= ["/Meme/Meme_2"]]
-[connection signal="pressed" from="Control/Panel/Meme_3" to="." method="_on_button_pressed" binds= ["/Meme/Meme_3"]]
-[connection signal="pressed" from="Control/Panel/Negro_1" to="." method="_on_button_pressed" binds= ["/Negro/Negro_1"]]
-[connection signal="pressed" from="Control/Panel/Negro_2" to="." method="_on_button_pressed" binds= ["/Negro/Negro_2"]]
-[connection signal="pressed" from="Control/Panel/Negro_3" to="." method="_on_button_pressed" binds= ["/Negro/Negro_3"]]
-[connection signal="pressed" from="Control/Panel/Verde_1" to="." method="_on_button_pressed" binds= ["/Verde/Verde_1"]]
-[connection signal="pressed" from="Control/Panel/Verde_2" to="." method="_on_button_pressed" binds= ["/Verde/Verde_2"]]
-[connection signal="pressed" from="Control/Panel/Verde_3" to="." method="_on_button_pressed" binds= ["/Verde/Verde_3"]]
+[connection signal="pressed" from="Control/Panel_Información/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Control/Cartas/Absurdo_1" to="." method="_on_button_pressed" binds= ["/Absurdo/Absurdo_1"]]
+[connection signal="pressed" from="Control/Cartas/Absurdo_2" to="." method="_on_button_pressed" binds= ["/Absurdo/Absurdo_2"]]
+[connection signal="pressed" from="Control/Cartas/Absurdo_3" to="." method="_on_button_pressed" binds= ["/Absurdo/Absurdo_3"]]
+[connection signal="pressed" from="Control/Cartas/Blanco_1" to="." method="_on_button_pressed" binds= ["/Blanco/Blanco_1"]]
+[connection signal="pressed" from="Control/Cartas/Blanco_2" to="." method="_on_button_pressed" binds= ["/Blanco/Blanco_2"]]
+[connection signal="pressed" from="Control/Cartas/Blanco_3" to="." method="_on_button_pressed" binds= ["/Blanco/Blanco_3"]]
+[connection signal="pressed" from="Control/Cartas/Inteligente_1" to="." method="_on_button_pressed" binds= ["/Inteligente/Inteligente_1"]]
+[connection signal="pressed" from="Control/Cartas/Inteligente_2" to="." method="_on_button_pressed" binds= ["/Inteligente/Inteligente_2"]]
+[connection signal="pressed" from="Control/Cartas/Inteligente_3" to="." method="_on_button_pressed" binds= ["/Inteligente/Inteligente_3"]]
+[connection signal="pressed" from="Control/Cartas/Meme_1" to="." method="_on_button_pressed" binds= ["/Meme/Meme_1"]]
+[connection signal="pressed" from="Control/Cartas/Meme_2" to="." method="_on_button_pressed" binds= ["/Meme/Meme_2"]]
+[connection signal="pressed" from="Control/Cartas/Meme_3" to="." method="_on_button_pressed" binds= ["/Meme/Meme_3"]]
+[connection signal="pressed" from="Control/Cartas/Negro_1" to="." method="_on_button_pressed" binds= ["/Negro/Negro_1"]]
+[connection signal="pressed" from="Control/Cartas/Negro_2" to="." method="_on_button_pressed" binds= ["/Negro/Negro_2"]]
+[connection signal="pressed" from="Control/Cartas/Negro_3" to="." method="_on_button_pressed" binds= ["/Negro/Negro_3"]]
+[connection signal="pressed" from="Control/Cartas/Verde_1" to="." method="_on_button_pressed" binds= ["/Verde/Verde_1"]]
+[connection signal="pressed" from="Control/Cartas/Verde_2" to="." method="_on_button_pressed" binds= ["/Verde/Verde_2"]]
+[connection signal="pressed" from="Control/Cartas/Verde_3" to="." method="_on_button_pressed" binds= ["/Verde/Verde_3"]]
 [connection signal="value_changed" from="Control/HSlider" to="." method="_on_h_slider_value_changed"]
-[connection signal="pressed" from="Control/Continue" to="." method="_on_continue_pressed"]

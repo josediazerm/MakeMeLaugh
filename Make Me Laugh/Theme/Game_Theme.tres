@@ -1,6 +1,40 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://da5n74cj02n0c"]
+[gd_resource type="Theme" load_steps=25 format=3 uid="uid://da5n74cj02n0c"]
 
-[ext_resource type="Texture2D" uid="uid://dkptq87btej62" path="res://Sprites/Background/Background.png" id="1_2b5c8"]
+[ext_resource type="Texture2D" uid="uid://1pwr06yaibci" path="res://Sprites/Background/Background.png" id="1_2b5c8"]
+[ext_resource type="Texture2D" uid="uid://cefoni3jhnusd" path="res://Sprites/UI/button.PNG" id="1_dkaon"]
+[ext_resource type="Texture2D" uid="uid://diapnflukwiw6" path="res://Sprites/Background/BG_Filled_Mics.png" id="2_fk0ke"]
+[ext_resource type="Texture2D" uid="uid://cy7dk1564q4yi" path="res://Sprites/UI/button2.png" id="2_xf8jc"]
+[ext_resource type="Texture2D" uid="uid://bbu1u0h21ptf" path="res://Sprites/Background/BG_Filled.png" id="2_xu1t6"]
+[ext_resource type="Texture2D" uid="uid://bpxiokajr8dge" path="res://Sprites/Background/BG_Unfilled.png" id="3_icjdw"]
+[ext_resource type="Texture2D" uid="uid://b31x0n4vbiaa5" path="res://Sprites/Background/BG_Unfilled_Mics.png" id="4_07d7j"]
+[ext_resource type="Texture2D" uid="uid://dl0v20c8fuyk6" path="res://Sprites/UI/panel.png" id="8_j41n5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n5y20"]
+texture = ExtResource("1_dkaon")
+region_rect = Rect2(-0.802002, 755.058, 1571.38, 155.897)
+modulate_color = Color(0.275091, 0.275091, 0.27509, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cl5r7"]
+texture = ExtResource("1_dkaon")
+region_rect = Rect2(-0.802002, 755.058, 1571.38, 155.897)
+modulate_color = Color(1, 1, 0.615686, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nb361"]
+texture = ExtResource("1_dkaon")
+region_rect = Rect2(-0.802002, 755.058, 1571.38, 155.897)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yw3oy"]
+texture = ExtResource("1_dkaon")
+region_rect = Rect2(-0.802002, 755.058, 1571.38, 155.897)
+modulate_color = Color(1, 1, 0.313726, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wkfkj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1beph"]
+texture = ExtResource("2_xf8jc")
+region_rect = Rect2(1059.43, 79.0954, 210.589, 3452.8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_82325"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5g61"]
 bg_color = Color(1, 1, 1, 1)
@@ -10,22 +44,56 @@ shadow_size = 20
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m8gmp"]
 texture = ExtResource("1_2b5c8")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7t334"]
+texture = ExtResource("2_xu1t6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mo48u"]
+texture = ExtResource("2_fk0ke")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ds8g7"]
+texture = ExtResource("3_icjdw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jamy3"]
+texture = ExtResource("4_07d7j")
+
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xfd0m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y8g0h"]
 texture = SubResource("PlaceholderTexture2D_xfd0m")
 modulate_color = Color(0.681525, 0.154282, 0.298901, 1)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ri15i"]
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_62wx3"]
-texture = SubResource("PlaceholderTexture2D_ri15i")
+texture = ExtResource("8_j41n5")
+texture_margin_left = 326.585
+texture_margin_top = 668.359
+texture_margin_right = 300.003
+texture_margin_bottom = 656.967
 
 [resource]
+Boton_Horizontal/base_type = &"Button"
+Boton_Horizontal/styles/disabled = SubResource("StyleBoxTexture_n5y20")
+Boton_Horizontal/styles/hover = SubResource("StyleBoxTexture_cl5r7")
+Boton_Horizontal/styles/normal = SubResource("StyleBoxTexture_nb361")
+Boton_Horizontal/styles/pressed = SubResource("StyleBoxTexture_yw3oy")
+Boton_Vertical/base_type = &"Button"
+Boton_Vertical/styles/hover = SubResource("StyleBoxTexture_wkfkj")
+Boton_Vertical/styles/normal = SubResource("StyleBoxTexture_1beph")
+Boton_Vertical/styles/pressed = SubResource("StyleBoxTexture_82325")
 Button/font_sizes/font_size = 40
 Button/styles/pressed = SubResource("StyleBoxFlat_w5g61")
+Label/colors/font_color = Color(0, 0, 0, 1)
 Label/font_sizes/font_size = 40
+Label_Botones/base_type = &"Label"
+Label_Botones/font_sizes/font_size = 40
 Panel/styles/panel = SubResource("StyleBoxTexture_m8gmp")
+Panel_BG_Filled/base_type = &"Panel"
+Panel_BG_Filled/styles/panel = SubResource("StyleBoxTexture_7t334")
+Panel_BG_Filled_Mics/base_type = &"Panel"
+Panel_BG_Filled_Mics/styles/panel = SubResource("StyleBoxTexture_mo48u")
+Panel_BG_Unfilled/base_type = &"Panel"
+Panel_BG_Unfilled/styles/panel = SubResource("StyleBoxTexture_ds8g7")
+Panel_BG_Unfilled_Mics/base_type = &"Panel"
+Panel_BG_Unfilled_Mics/styles/panel = SubResource("StyleBoxTexture_jamy3")
 Panel_HandZone/base_type = &"Panel"
 Panel_HandZone/styles/panel = SubResource("StyleBoxTexture_y8g0h")
 Panel_Textos/base_type = &"Panel"

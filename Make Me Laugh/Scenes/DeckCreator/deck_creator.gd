@@ -1,10 +1,10 @@
 extends Node2D
 
-@onready var panel : Panel = $Control/Panel
-@onready var continue_button : Button = $Control/Continue
-@onready var deck_label : Label = $Control/Deck_Size
+@onready var panel : Panel = $Control/Cartas
+@onready var continue_button : Button = $Control/Panel_Información/Continue
+@onready var deck_label : Label = $Control/Panel_Información/Deck_Size
 @onready var data_manager : Node2D = $Control/DataManager
-@onready var deck_info : Label = $Control/Deck_Data
+@onready var deck_info : Label = $Control/Panel_Información/Deck_Data
 
 
 var humores_counter = {}
