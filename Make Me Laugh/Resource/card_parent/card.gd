@@ -22,7 +22,6 @@ func _ready():
 	chiste_label.text = chiste_text
 	type_label.text = chiste_type
 
-
 func _on_area_2d_mouse_entered():
 	if not Global.is_dragging:
 		draggable = true

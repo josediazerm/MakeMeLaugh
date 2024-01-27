@@ -27,4 +27,14 @@ func save_player_stats(stats : Dictionary) -> void:
 	_save_data.player_stats = stats
 	_save_data.write_savedata()
 
+func get_player_stats() -> Dictionary:
+	return _save_data.player_stats
+
+func save_enemy_stats(stats : Dictionary) -> void:
+	_save_data.enemy_stats = stats
+	print(_save_data.enemy_stats)
+	_save_data.write_savedata()
+
+func get_enemy_stats() -> Dictionary:
+	return _save_data.enemy_stats
 

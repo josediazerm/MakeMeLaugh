@@ -4,7 +4,10 @@ class_name SaveSystem
 const path = Constants.LOCAL_SAVE_DATA_PATH
 
 @export var player_deck : Array
+@export var enemy_deck : Array
+
 @export var player_stats : Dictionary
+@export var enemy_stats : Dictionary
 
 func write_savedata() -> void:
 	ResourceSaver.save(self, path)
