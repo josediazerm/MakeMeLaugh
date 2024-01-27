@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://d77xw2bmfh1n"]
+[gd_scene load_steps=26 format=3 uid="uid://d77xw2bmfh1n"]
 
 [ext_resource type="Script" path="res://Scenes/DeckCreator/deck_creator.gd" id="1_8ahtq"]
 [ext_resource type="Texture2D" uid="uid://qaffgirofk7j" path="res://TestingResources/DeckCreator.png" id="2_l80bo"]
@@ -24,32 +24,46 @@
 [ext_resource type="Texture2D" uid="uid://jhyuhm162bnp" path="res://Sprites/Cards/Verde_2.png" id="19_vt4dx"]
 [ext_resource type="Texture2D" uid="uid://bdpwa1bodjoyo" path="res://Sprites/Cards/Verde_3.png" id="20_awsa6"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_piwg8"]
+bg_color = Color(0.482353, 0.482353, 0.482353, 1)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tn0tb"]
 texture = ExtResource("2_qkf7q")
 
 [node name="deck_creator" type="Node2D"]
 script = ExtResource("1_8ahtq")
 
-[node name="Background" type="Panel" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("3_l0ts1")
+
+[node name="Luces" type="Panel" parent="Control"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_piwg8")
+
+[node name="Background" type="Panel" parent="Control"]
+modulate = Color(0.517647, 0.517647, 0.517647, 1)
 offset_right = 1920.0
 offset_bottom = 1080.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_tn0tb")
-metadata/_edit_use_anchors_ = true
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="Control"]
 offset_left = 4.0
 offset_top = 438.0
 offset_right = 11677.0
 offset_bottom = 1061.0
-theme = ExtResource("3_l0ts1")
 
-[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/Panel"]
 modulate = Color(0.054902, 0.054902, 0.054902, 1)
 position = Vector2(5836.5, 311.5)
 scale = Vector2(14.0132, 1.21918)
 texture = ExtResource("2_l80bo")
 
-[node name="Absurdo_1" type="Button" parent="Panel"]
+[node name="Absurdo_1" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 77.5
 offset_top = 47.225
@@ -59,11 +73,11 @@ scale = Vector2(0.6, 0.6)
 toggle_mode = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Absurdo_1"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Absurdo_1"]
 position = Vector2(300, 450)
 texture = ExtResource("3_y4pjk")
 
-[node name="Absurdo_2" type="Button" parent="Panel"]
+[node name="Absurdo_2" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 797.5
 offset_top = 47.225
@@ -73,11 +87,11 @@ scale = Vector2(0.6, 0.6)
 toggle_mode = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Absurdo_2"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Absurdo_2"]
 position = Vector2(300, 450)
 texture = ExtResource("4_whg5u")
 
-[node name="Absurdo_3" type="Button" parent="Panel"]
+[node name="Absurdo_3" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 1477.5
 offset_top = 47.225
@@ -87,11 +101,11 @@ scale = Vector2(0.6, 0.6)
 toggle_mode = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Absurdo_3"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Absurdo_3"]
 position = Vector2(300, 450)
 texture = ExtResource("5_67808")
 
-[node name="Blanco_1" type="Button" parent="Panel"]
+[node name="Blanco_1" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 1997.5
 offset_top = 47.225
@@ -100,11 +114,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Blanco_1"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Blanco_1"]
 position = Vector2(300, 450)
 texture = ExtResource("6_aehno")
 
-[node name="Blanco_2" type="Button" parent="Panel"]
+[node name="Blanco_2" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 2717.5
 offset_top = 47.225
@@ -113,11 +127,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Blanco_2"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Blanco_2"]
 position = Vector2(300, 450)
 texture = ExtResource("7_yl58x")
 
-[node name="Blanco_3" type="Button" parent="Panel"]
+[node name="Blanco_3" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 3397.5
 offset_top = 47.225
@@ -126,11 +140,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Blanco_3"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Blanco_3"]
 position = Vector2(300, 450)
 texture = ExtResource("8_dftwq")
 
-[node name="Inteligente_1" type="Button" parent="Panel"]
+[node name="Inteligente_1" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 3917.5
 offset_top = 47.225
@@ -139,11 +153,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Inteligente_1"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Inteligente_1"]
 position = Vector2(300, 450)
 texture = ExtResource("9_cg56t")
 
-[node name="Inteligente_2" type="Button" parent="Panel"]
+[node name="Inteligente_2" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 4637.5
 offset_top = 47.225
@@ -152,11 +166,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Inteligente_2"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Inteligente_2"]
 position = Vector2(300, 450)
 texture = ExtResource("10_4hqrq")
 
-[node name="Inteligente_3" type="Button" parent="Panel"]
+[node name="Inteligente_3" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 5317.5
 offset_top = 47.225
@@ -165,11 +179,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Inteligente_3"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Inteligente_3"]
 position = Vector2(300, 450)
 texture = ExtResource("11_pse4c")
 
-[node name="Meme_1" type="Button" parent="Panel"]
+[node name="Meme_1" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 5837.5
 offset_top = 47.225
@@ -178,11 +192,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Meme_1"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Meme_1"]
 position = Vector2(300, 450)
 texture = ExtResource("12_hv5pl")
 
-[node name="Meme_2" type="Button" parent="Panel"]
+[node name="Meme_2" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 6557.5
 offset_top = 47.225
@@ -191,11 +205,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Meme_2"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Meme_2"]
 position = Vector2(300, 450)
 texture = ExtResource("13_7tn0d")
 
-[node name="Meme_3" type="Button" parent="Panel"]
+[node name="Meme_3" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 7237.5
 offset_top = 47.225
@@ -204,11 +218,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Meme_3"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Meme_3"]
 position = Vector2(300, 450)
 texture = ExtResource("14_jdl0r")
 
-[node name="Negro_1" type="Button" parent="Panel"]
+[node name="Negro_1" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 7757.5
 offset_top = 47.225
@@ -217,11 +231,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Negro_1"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Negro_1"]
 position = Vector2(300, 450)
 texture = ExtResource("15_8u806")
 
-[node name="Negro_2" type="Button" parent="Panel"]
+[node name="Negro_2" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 8477.5
 offset_top = 47.225
@@ -230,11 +244,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Negro_2"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Negro_2"]
 position = Vector2(300, 450)
 texture = ExtResource("16_74ti2")
 
-[node name="Negro_3" type="Button" parent="Panel"]
+[node name="Negro_3" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 9157.5
 offset_top = 47.225
@@ -243,11 +257,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Negro_3"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Negro_3"]
 position = Vector2(300, 450)
 texture = ExtResource("17_dmtmj")
 
-[node name="Verde_1" type="Button" parent="Panel"]
+[node name="Verde_1" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 9677.5
 offset_top = 47.225
@@ -256,11 +270,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Verde_1"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Verde_1"]
 position = Vector2(300, 450)
 texture = ExtResource("18_acf8s")
 
-[node name="Verde_2" type="Button" parent="Panel"]
+[node name="Verde_2" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 10397.5
 offset_top = 47.225
@@ -269,11 +283,11 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Verde_2"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Verde_2"]
 position = Vector2(300, 450)
 texture = ExtResource("19_vt4dx")
 
-[node name="Verde_3" type="Button" parent="Panel"]
+[node name="Verde_3" type="Button" parent="Control/Panel"]
 layout_mode = 0
 offset_left = 11077.5
 offset_top = 47.225
@@ -282,52 +296,49 @@ offset_bottom = 947.225
 scale = Vector2(0.6, 0.6)
 toggle_mode = true
 
-[node name="Carta" type="Sprite2D" parent="Panel/Verde_3"]
+[node name="Carta" type="Sprite2D" parent="Control/Panel/Verde_3"]
 position = Vector2(300, 450)
 texture = ExtResource("20_awsa6")
 
-[node name="HSlider" type="HSlider" parent="."]
+[node name="HSlider" type="HSlider" parent="Control"]
 offset_left = 10.0
 offset_top = 414.0
 offset_right = 1012.0
 offset_bottom = 430.0
-metadata/_edit_use_anchors_ = true
 
-[node name="Continue" type="Button" parent="."]
-offset_left = 954.0
-offset_top = 323.0
-offset_right = 1121.0
-offset_bottom = 393.0
+[node name="Continue" type="Button" parent="Control"]
+offset_left = 1673.0
+offset_top = 338.0
+offset_right = 1876.0
+offset_bottom = 408.0
 disabled = true
 text = "Confirmar"
-metadata/_edit_use_anchors_ = true
 
-[node name="Deck_Label" type="Label" parent="."]
-offset_left = 911.0
-offset_top = 68.0
-offset_right = 1081.0
-offset_bottom = 128.0
-metadata/_edit_use_anchors_ = true
+[node name="Deck_Label" type="Label" parent="Control"]
+offset_left = 1615.0
+offset_top = 86.0
+offset_right = 1785.0
+offset_bottom = 146.0
 
-[node name="DataManager" parent="." instance=ExtResource("3_dtjdx")]
+[node name="DataManager" parent="Control" instance=ExtResource("3_dtjdx")]
 
-[connection signal="pressed" from="Panel/Absurdo_1" to="." method="_on_button_pressed" binds= ["/Absurdo/Absurdo_1"]]
-[connection signal="pressed" from="Panel/Absurdo_2" to="." method="_on_button_pressed" binds= ["/Absurdo/Absurdo_2"]]
-[connection signal="pressed" from="Panel/Absurdo_3" to="." method="_on_button_pressed" binds= ["/Absurdo/Absurdo_3"]]
-[connection signal="pressed" from="Panel/Blanco_1" to="." method="_on_button_pressed" binds= ["/Blanco/Blanco_1"]]
-[connection signal="pressed" from="Panel/Blanco_2" to="." method="_on_button_pressed" binds= ["/Blanco/Blanco_2"]]
-[connection signal="pressed" from="Panel/Blanco_3" to="." method="_on_button_pressed" binds= ["/Blanco/Blanco_3"]]
-[connection signal="pressed" from="Panel/Inteligente_1" to="." method="_on_button_pressed" binds= ["/Inteligente/Inteligente_1"]]
-[connection signal="pressed" from="Panel/Inteligente_2" to="." method="_on_button_pressed" binds= ["/Inteligente/Inteligente_2"]]
-[connection signal="pressed" from="Panel/Inteligente_3" to="." method="_on_button_pressed" binds= ["/Inteligente/Inteligente_3"]]
-[connection signal="pressed" from="Panel/Meme_1" to="." method="_on_button_pressed" binds= ["/Meme/Meme_1"]]
-[connection signal="pressed" from="Panel/Meme_2" to="." method="_on_button_pressed" binds= ["/Meme/Meme_2"]]
-[connection signal="pressed" from="Panel/Meme_3" to="." method="_on_button_pressed" binds= ["/Meme/Meme_3"]]
-[connection signal="pressed" from="Panel/Negro_1" to="." method="_on_button_pressed" binds= ["/Negro/Negro_1"]]
-[connection signal="pressed" from="Panel/Negro_2" to="." method="_on_button_pressed" binds= ["/Negro/Negro_2"]]
-[connection signal="pressed" from="Panel/Negro_3" to="." method="_on_button_pressed" binds= ["/Negro/Negro_3"]]
-[connection signal="pressed" from="Panel/Verde_1" to="." method="_on_button_pressed" binds= ["/Verde/Verde_1"]]
-[connection signal="pressed" from="Panel/Verde_2" to="." method="_on_button_pressed" binds= ["/Verde/Verde_2"]]
-[connection signal="pressed" from="Panel/Verde_3" to="." method="_on_button_pressed" binds= ["/Verde/Verde_3"]]
-[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
-[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Control/Panel/Absurdo_1" to="." method="_on_button_pressed" binds= ["/Absurdo/Absurdo_1"]]
+[connection signal="pressed" from="Control/Panel/Absurdo_2" to="." method="_on_button_pressed" binds= ["/Absurdo/Absurdo_2"]]
+[connection signal="pressed" from="Control/Panel/Absurdo_3" to="." method="_on_button_pressed" binds= ["/Absurdo/Absurdo_3"]]
+[connection signal="pressed" from="Control/Panel/Blanco_1" to="." method="_on_button_pressed" binds= ["/Blanco/Blanco_1"]]
+[connection signal="pressed" from="Control/Panel/Blanco_2" to="." method="_on_button_pressed" binds= ["/Blanco/Blanco_2"]]
+[connection signal="pressed" from="Control/Panel/Blanco_3" to="." method="_on_button_pressed" binds= ["/Blanco/Blanco_3"]]
+[connection signal="pressed" from="Control/Panel/Inteligente_1" to="." method="_on_button_pressed" binds= ["/Inteligente/Inteligente_1"]]
+[connection signal="pressed" from="Control/Panel/Inteligente_2" to="." method="_on_button_pressed" binds= ["/Inteligente/Inteligente_2"]]
+[connection signal="pressed" from="Control/Panel/Inteligente_3" to="." method="_on_button_pressed" binds= ["/Inteligente/Inteligente_3"]]
+[connection signal="pressed" from="Control/Panel/Meme_1" to="." method="_on_button_pressed" binds= ["/Meme/Meme_1"]]
+[connection signal="pressed" from="Control/Panel/Meme_2" to="." method="_on_button_pressed" binds= ["/Meme/Meme_2"]]
+[connection signal="pressed" from="Control/Panel/Meme_3" to="." method="_on_button_pressed" binds= ["/Meme/Meme_3"]]
+[connection signal="pressed" from="Control/Panel/Negro_1" to="." method="_on_button_pressed" binds= ["/Negro/Negro_1"]]
+[connection signal="pressed" from="Control/Panel/Negro_2" to="." method="_on_button_pressed" binds= ["/Negro/Negro_2"]]
+[connection signal="pressed" from="Control/Panel/Negro_3" to="." method="_on_button_pressed" binds= ["/Negro/Negro_3"]]
+[connection signal="pressed" from="Control/Panel/Verde_1" to="." method="_on_button_pressed" binds= ["/Verde/Verde_1"]]
+[connection signal="pressed" from="Control/Panel/Verde_2" to="." method="_on_button_pressed" binds= ["/Verde/Verde_2"]]
+[connection signal="pressed" from="Control/Panel/Verde_3" to="." method="_on_button_pressed" binds= ["/Verde/Verde_3"]]
+[connection signal="value_changed" from="Control/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Control/Continue" to="." method="_on_continue_pressed"]
