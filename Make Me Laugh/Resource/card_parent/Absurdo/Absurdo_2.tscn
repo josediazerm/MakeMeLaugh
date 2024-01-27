@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dkuf6t58shgca" path="res://Sprites/Cards/Absurdo_2.png" id="2_7j0wu"]
 
 [node name="Carta" instance=ExtResource("1_00ogn")]
-chiste_text = "Soy absurdo"
+chiste_text = "EsTo Era UN hOmbrE qUE cADa doS por TreS es SeiS."
 chiste_type = "Absurdo"
 
 [node name="Sprite2D" parent="." index="0"]

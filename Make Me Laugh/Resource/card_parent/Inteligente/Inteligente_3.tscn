@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dus3wselmjxu3" path="res://Sprites/Cards/Inteligente_3.png" id="2_hky1n"]
 
 [node name="Carta" instance=ExtResource("1_18e7l")]
-chiste_text = "Soy humor inteligente"
+chiste_text = "Sr. Shrödinger, su gato ha sufrido un accidente. Tengo buenas y malas noticias."
 chiste_type = "Inteligente"
 
 [node name="Sprite2D" parent="." index="0"]

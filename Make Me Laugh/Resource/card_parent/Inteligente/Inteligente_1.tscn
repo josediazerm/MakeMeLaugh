@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bhdqc7ccwtriu" path="res://Sprites/Cards/Inteligente_1.png" id="2_8cl71"]
 
 [node name="Carta" instance=ExtResource("1_bncef")]
-chiste_text = "Soy humor inteligente"
+chiste_text = "-¿Es aquí la academia de inglés \"low cost\"? -\"If, if, between, between\"."
 chiste_type = "Inteligente"
 
 [node name="Sprite2D" parent="." index="0"]
