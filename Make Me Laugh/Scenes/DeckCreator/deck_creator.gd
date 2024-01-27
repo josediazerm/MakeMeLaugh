@@ -4,6 +4,7 @@ extends Node2D
 @onready var continue_button : Button = $Continue
 @onready var deck_label : Label = $Deck_Label
 @onready var data_manager : Node2D = $DataManager
+@onready var deck_info : Label = $DeckInfo
 
 var slider_range = 0
 
@@ -30,10 +31,11 @@ func add_or_remove_from_deck(card : String):
 
 func _on_button_pressed(extra_arg_0):
 	add_or_remove_from_deck(extra_arg_0)
-
+	update_label()
 
 func _on_continue_pressed():
 	data_manager.save_player_deck(deck)
 	get_tree().change_scene_to_file(Constants.GAME_SCENE)
 
-
+func update_label():
+	

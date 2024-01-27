@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SaveSystem" load_steps=2 format=3 uid="uid://cdo5mu6n6ixg7"]
+[gd_resource type="Resource" script_class="SaveSystem" load_steps=2 format=3]
 
 [ext_resource type="Script" path="res://Resource/SaveSystem/savesystem.gd" id="1_u3wv7"]
 
@@ -16,9 +16,9 @@ player_stats = {
 }
 enemy_stats = {
 "Absurdo": "Gracioso",
-"Blanco": "Ni fú ni fá",
-"Inteligente": "Ni puta gracia",
-"Meme": "Me parto",
-"Negro": "Ni fú ni fá",
-"Verde": "Gracioso"
+"Blanco": "Gracioso",
+"Inteligente": "Ni fú ni fá",
+"Meme": "Ni fú ni fá",
+"Negro": "Ni puta gracia",
+"Verde": "Me parto"
 }

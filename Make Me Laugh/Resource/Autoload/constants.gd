@@ -43,10 +43,8 @@ const CARD_POSITION = [Vector2(0,-50), Vector2(475,-50), Vector2(950, -50)]
 # --------------------------------------------------------------------------- #
 
 # Deck Creator constants
-
 const DECK_CREATOR_PANEL_MIN_POSITION = 0
-const DECK_CREATOR_PANEL_MAX_POSITION = -3000
-
+const DECK_CREATOR_PANEL_MAX_POSITION = -9700
 
 # --------------------------------------------------------------------------- #
 
@@ -69,7 +67,6 @@ const REACTIONS_LIMITS = {
 	EMPTY: 0
 }
 # --------------------------------------------------------------------------- #
-
 
 # Humor Types constants
 
@@ -118,7 +115,6 @@ const NEXT_STATE = {
 
 const WIN_PANEL_DEFAULT_POSITION = -650
 const LOSE_PANEL_DEFAULT_POSITION = 1150
-
 
 # --------------------------------------------------------------------------- #
 
