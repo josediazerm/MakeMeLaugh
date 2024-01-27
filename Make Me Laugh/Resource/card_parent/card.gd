@@ -15,7 +15,6 @@ var initial_position : Vector2
 var draggable = false
 var is_in_drop_zone = false
 var offset
-var scale_offset = Vector2(0, -100)
 
 
 func _ready():
@@ -25,14 +24,14 @@ func _ready():
 func _on_area_2d_mouse_entered():
 	if not Global.is_dragging:
 		draggable = true
-		scale = Vector2(1.15, 1.15)
-		position += scale_offset
+		scale = Vector2(1.1, 1.1)
+
 
 func _on_area_2d_mouse_exited():
 	if not Global.is_dragging:
 		draggable = false
 		scale = Vector2(1, 1)
-		position -= scale_offset
+
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group('dropable'):
@@ -44,8 +43,8 @@ func _on_area_2d_body_exited(_body):
 func _process(_delta):
 	if draggable:
 		if Input.is_action_just_pressed("Click"):
-			initial_position = global_position
-			offset = get_global_mouse_position() - global_position
+			initial_position = global_position 
+			offset = get_global_mouse_position() - global_position 
 			Global.is_dragging = true
 
 		if Input.is_action_pressed("Click"):
@@ -57,7 +56,7 @@ func _process(_delta):
 				get_parent().card_played(type_label)
 			else:
 				var tween = get_tree().create_tween()
-				tween.tween_property(self, "global_position", initial_position - scale_offset, 0.4).set_ease(Tween.EASE_OUT)
+				tween.tween_property(self, "global_position", initial_position, 0.4).set_ease(Tween.EASE_OUT)
 
 
 func get_chiste_type():

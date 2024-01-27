@@ -23,10 +23,11 @@ health_manager = NodePath("../HealthManager")
 [node name="DropZone" parent="." instance=ExtResource("3_qh4u3")]
 position = Vector2(490, 71)
 
-[node name="TurnManager" parent="." node_paths=PackedStringArray("data_manager", "health_manager", "enemy_manager") instance=ExtResource("4_h8hs1")]
+[node name="TurnManager" parent="." node_paths=PackedStringArray("data_manager", "health_manager", "enemy_manager", "hand_zone") instance=ExtResource("4_h8hs1")]
 data_manager = NodePath("../DataManager")
 health_manager = NodePath("../HealthManager")
 enemy_manager = NodePath("../Enemy_Manager")
+hand_zone = NodePath("../HandZone")
 
 [node name="HealthManager" parent="." node_paths=PackedStringArray("data_manager", "turn_manager") instance=ExtResource("5_vlj0t")]
 data_manager = NodePath("../DataManager")
