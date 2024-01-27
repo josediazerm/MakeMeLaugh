@@ -15,10 +15,10 @@ player_stats = {
 "Memes": "Ni puta gracia"
 }
 enemy_stats = {
-"Humor Absurdo": "Ni fú ni fá",
-"Humor Blanco": "Gracioso",
+"Humor Absurdo": "Ni puta gracia",
+"Humor Blanco": "Ni fú ni fá",
 "Humor Inteligente": "Ni fú ni fá",
 "Humor Negro": "Gracioso",
-"Humor Verde": "Ni puta gracia",
+"Humor Verde": "Gracioso",
 "Memes": "Me parto"
 }
