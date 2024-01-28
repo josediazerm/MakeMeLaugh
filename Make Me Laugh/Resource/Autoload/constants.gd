@@ -129,7 +129,7 @@ const ICONS = [
 	"res://Sprites/Enemies/Char_5.png"
 ]
 
-const MAX_OPPONENTES = 1
+const MAX_OPPONENTES = 5
 
 # --------------------------------------------------------------------------- #
 
