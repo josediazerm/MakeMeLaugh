@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://tag7wg5fuwp3"]
+[gd_scene load_steps=17 format=3 uid="uid://tag7wg5fuwp3"]
 
 [ext_resource type="PackedScene" uid="uid://cpgyws7h542d6" path="res://Scenes/Hand/hand_zone.tscn" id="1_bmj1h"]
 [ext_resource type="Script" path="res://Scenes/GamePlayScene/game.gd" id="1_p45ht"]
@@ -14,6 +14,15 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qegb2"]
 bg_color = Color(0, 0, 0, 0.537255)
+
+[sub_resource type="ImageTexture" id="ImageTexture_yr3m7"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_uvbf3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_naykf"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ImageTexture" id="ImageTexture_ikqnj"]
 
 [node name="Game" type="Node2D" node_paths=PackedStringArray("player_hand", "enemy_manager", "win_panel", "lose_panel", "health_manager", "turn_manager", "music_manager")]
 script = ExtResource("1_p45ht")
@@ -81,21 +90,32 @@ turn_manager = NodePath("../TurnManager")
 music_manager = NodePath("../music_manager")
 
 [node name="PlayerHealth" type="HSlider" parent="Control/HealthManager"]
-offset_left = 40.0
-offset_top = 260.0
-offset_right = 657.0
-offset_bottom = 307.0
+z_index = -5
+offset_left = 105.0
+offset_top = 39.0
+offset_right = 130.0
+offset_bottom = 51.0
+scale = Vector2(30, 30)
+theme_override_icons/grabber = SubResource("ImageTexture_yr3m7")
+theme_override_icons/grabber_disabled = SubResource("ImageTexture_uvbf3")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_naykf")
 max_value = 10.0
 value = 10.0
 editable = false
 scrollable = false
 
 [node name="EnemyHealth" type="HSlider" parent="Control/HealthManager"]
-offset_left = 1814.0
-offset_top = 288.0
-offset_right = 2421.0
-offset_bottom = 304.0
+z_index = -5
+offset_left = 1567.0
+offset_top = 410.0
+offset_right = 1591.0
+offset_bottom = 422.0
 rotation = 3.14159
+scale = Vector2(30, 30)
+theme_override_icons/grabber = SubResource("ImageTexture_yr3m7")
+theme_override_icons/grabber_highlight = SubResource("ImageTexture_ikqnj")
+theme_override_icons/grabber_disabled = SubResource("ImageTexture_uvbf3")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_naykf")
 max_value = 10.0
 value = 10.0
 editable = false
@@ -228,6 +248,7 @@ offset_left = 95.0
 offset_top = 40.0
 offset_right = 708.0
 offset_bottom = 230.0
+theme_override_font_sizes/font_size = 35
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
