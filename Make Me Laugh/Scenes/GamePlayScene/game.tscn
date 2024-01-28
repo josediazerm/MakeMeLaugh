@@ -1,5 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://tag7wg5fuwp3"]
-
+[gd_scene load_steps=22 format=3 uid="uid://tag7wg5fuwp3"]
 
 [ext_resource type="PackedScene" uid="uid://cpgyws7h542d6" path="res://Scenes/Hand/hand_zone.tscn" id="1_bmj1h"]
 [ext_resource type="Script" path="res://Scenes/GamePlayScene/game.gd" id="1_p45ht"]

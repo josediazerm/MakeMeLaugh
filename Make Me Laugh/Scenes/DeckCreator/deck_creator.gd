@@ -16,6 +16,8 @@ var deck = []
 func _ready():
 	slider_range = Constants.DECK_CREATOR_PANEL_MAX_POSITION - Constants.DECK_CREATOR_PANEL_MIN_POSITION
 	update_label()
+	data_manager.reset_card_played_tmp_deck()
+	data_manager.reset_card_played_deck()
 
 func _on_h_slider_value_changed(value):
 	panel.position[0] = slider_range / 100 * value
