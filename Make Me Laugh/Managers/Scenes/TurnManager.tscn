@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dc1o66ugagc8r"]
+[gd_scene load_steps=8 format=3 uid="uid://dc1o66ugagc8r"]
 
 [ext_resource type="Script" path="res://Managers/Scripts/TurnManager.gd" id="1_q5xdw"]
 [ext_resource type="Script" path="res://FSM/state_machine.gd" id="2_cvov5"]
@@ -6,13 +6,14 @@
 [ext_resource type="Script" path="res://FSM/turn_manager/end_level.gd" id="5_pkpkk"]
 [ext_resource type="Script" path="res://FSM/turn_manager/enemy_turn.gd" id="5_wxc65"]
 [ext_resource type="Script" path="res://Managers/Scenes/Waiting.gd" id="6_8kcsf"]
+[ext_resource type="Script" path="res://Managers/Scenes/Antibug.gd" id="7_gi0rg"]
 
 [node name="TurnManager" type="Node2D"]
 script = ExtResource("1_q5xdw")
 
 [node name="StateMachine" type="Node2D" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_cvov5")
-initial_state = NodePath("PlayerTurn")
+initial_state = NodePath("Antibug")
 
 [node name="PlayerTurn" type="Node2D" parent="StateMachine" node_paths=PackedStringArray("turn_manager")]
 script = ExtResource("3_nappl")
@@ -40,5 +41,15 @@ timer = NodePath("Timer")
 wait_time = 0.5
 one_shot = true
 
+[node name="Antibug" type="Node2D" parent="StateMachine" node_paths=PackedStringArray("turn_manager", "timer")]
+script = ExtResource("7_gi0rg")
+turn_manager = NodePath("../..")
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="StateMachine/Antibug"]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="timeout" from="StateMachine/EnemyTurn/Timer" to="StateMachine/EnemyTurn" method="_on_timer_timeout"]
 [connection signal="timeout" from="StateMachine/Waiting/Timer" to="StateMachine/Waiting" method="_on_timer_timeout"]
+[connection signal="timeout" from="StateMachine/Antibug/Timer" to="StateMachine/Antibug" method="_on_timer_timeout"]
