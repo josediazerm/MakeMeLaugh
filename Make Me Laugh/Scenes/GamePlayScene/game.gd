@@ -41,7 +41,7 @@ func _on_next_pressed():
 		reset_hands()
 		generate_opponent()
 		reset_hp_bars()
-		give_turn_to_player()
+		go_to_antibug()
 	else:
 		get_tree().change_scene_to_file(Constants.WIN_SCENE)
 
@@ -52,5 +52,8 @@ func _on_retry_pressed():
 	reset_panels()
 	reset_hands()
 	reset_hp_bars()
-	give_turn_to_player()
+	go_to_antibug()
 
+
+func go_to_antibug():
+	turn_manager.antibug_state()

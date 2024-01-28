@@ -108,6 +108,7 @@ const ENEMY_TURN_SIGNAL = "EnemyTurn"
 const END_LEVEL_SIGNAL = "EndLevel"
 const KEEP_PLAYING_SIGNAL = "KeepPlaying"
 const WAITING_SIGNAL = "Waiting"
+const ANTIBUG_SIGNAL = "Antibug"
 
 const NEXT_STATE = {
 	PLAYER_TURN_SIGNAL : ENEMY_TURN_SIGNAL,
