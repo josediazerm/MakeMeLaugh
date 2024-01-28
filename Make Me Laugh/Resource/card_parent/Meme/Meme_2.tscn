@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dcsmgwqhf2tg4" path="res://Sprites/Cards/Meme_2.png" id="2_0glni"]
 
 [node name="Carta" instance=ExtResource("1_7nw84")]
-chiste_text = "Pues toma meme."
+chiste_text = "Mama: Como estas loli? \\n Tia Loli : Fatal gracias <3"
 chiste_type = "Meme"
 
 [node name="Sprite2D" parent="." index="0"]

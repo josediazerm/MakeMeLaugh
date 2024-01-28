@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ngooods6cepg" path="res://Sprites/Cards/Negro_1.png" id="2_bc67a"]
 
 [node name="Carta" instance=ExtResource("1_nsnbe")]
-chiste_text = "¿CUÁL ES EL COLMO DE UN LEPROSO? QUE SE LE CAIGA LA CARA DE VERGÜENZA."
+chiste_text = "Nunca el rompas el corazon a alguien \\n Solo tiene uno \\n Rompele los huesos mejor \\n Tiene pecha"
 chiste_type = "Negro"
 
 [node name="Sprite2D" parent="." index="0"]

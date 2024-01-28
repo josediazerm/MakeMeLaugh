@@ -15,6 +15,9 @@ var target_position
 
 var goal_reached = false
 
+func _ready():
+	chiste_text = chiste_text.c_unescape()
+
 func _on_area_2d_mouse_entered():
 	if not Global.is_dragging:
 		draggable = true
