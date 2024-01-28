@@ -17,4 +17,4 @@ debug_color = Color(0, 0.6, 0.701961, 0)
 [node name="ColorRect" type="ColorRect" parent="." groups=["dropable"]]
 offset_right = 362.0
 offset_bottom = 470.0
-color = Color(0, 0, 0, 0.486275)
+color = Color(0, 0, 0, 0.745098)
