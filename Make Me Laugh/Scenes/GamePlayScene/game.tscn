@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://tag7wg5fuwp3"]
+[gd_scene load_steps=19 format=3 uid="uid://tag7wg5fuwp3"]
 
 [ext_resource type="PackedScene" uid="uid://cpgyws7h542d6" path="res://Scenes/Hand/hand_zone.tscn" id="1_bmj1h"]
 [ext_resource type="Script" path="res://Scenes/GamePlayScene/game.gd" id="1_p45ht"]
@@ -11,6 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://c8ys4ijomtkaf" path="res://Managers/Scenes/Enemy_Manager.tscn" id="6_3una5"]
 [ext_resource type="Script" path="res://Scenes/GamePlayScene/Bocadillo.gd" id="8_6og7k"]
 [ext_resource type="PackedScene" uid="uid://b6kon4hjjlwwf" path="res://Scenes/MusicManager/music_manager.tscn" id="9_ercby"]
+[ext_resource type="Theme" uid="uid://ndc2qwbetv4a" path="res://Theme/Bocadillos_Theme.tres" id="10_m34ux"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxaw1"]
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qegb2"]
 bg_color = Color(0, 0, 0, 0.537255)
@@ -41,6 +45,13 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("2_i7ijf")
 
+[node name="SubBackground" type="Panel" parent="Control"]
+z_index = -2
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qxaw1")
+
 [node name="Background" type="Panel" parent="Control"]
 layout_mode = 0
 offset_right = 1920.0
@@ -59,7 +70,7 @@ scale = Vector2(0.25, 0.25)
 [node name="HandZone" parent="Control" node_paths=PackedStringArray("data_manager", "turn_manager", "health_manager", "bocadillo") instance=ExtResource("1_bmj1h")]
 layout_mode = 0
 offset_left = 0.0
-offset_top = 793.0
+offset_top = 933.0
 offset_right = 1921.0
 offset_bottom = 1079.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_qegb2")
@@ -71,7 +82,7 @@ bocadillo = NodePath("../Bocadillo")
 [node name="DataManager" parent="Control" instance=ExtResource("2_cxhq2")]
 
 [node name="DropZone" parent="Control" instance=ExtResource("3_qh4u3")]
-position = Vector2(760, 296)
+position = Vector2(760, 272)
 
 [node name="TurnManager" parent="Control" node_paths=PackedStringArray("data_manager", "health_manager", "enemy_manager", "hand_zone", "bocadillo", "win_panel", "lose_panel", "music_manager") instance=ExtResource("4_h8hs1")]
 data_manager = NodePath("../DataManager")
@@ -90,7 +101,7 @@ turn_manager = NodePath("../TurnManager")
 music_manager = NodePath("../music_manager")
 
 [node name="PlayerHealth" type="HSlider" parent="Control/HealthManager"]
-z_index = -5
+z_index = -1
 offset_left = 105.0
 offset_top = 39.0
 offset_right = 130.0
@@ -105,7 +116,7 @@ editable = false
 scrollable = false
 
 [node name="EnemyHealth" type="HSlider" parent="Control/HealthManager"]
-z_index = -5
+z_index = -1
 offset_left = 1567.0
 offset_top = 410.0
 offset_right = 1591.0
@@ -237,7 +248,8 @@ offset_left = 487.0
 offset_top = -7.0
 offset_right = 1319.0
 offset_bottom = 279.0
-theme_type_variation = &"Panel_Bocadillo_Player"
+theme = ExtResource("10_m34ux")
+theme_type_variation = &"Panel_Player"
 script = ExtResource("8_6og7k")
 chiste_text = NodePath("BocadilloLabel")
 chiste_image = NodePath("BocadilloPicture")
