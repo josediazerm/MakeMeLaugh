@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=25 format=3 uid="uid://da5n74cj02n0c"]
+[gd_resource type="Theme" load_steps=29 format=3 uid="uid://da5n74cj02n0c"]
 
 [ext_resource type="Texture2D" uid="uid://1pwr06yaibci" path="res://Sprites/Background/Background.png" id="1_2b5c8"]
 [ext_resource type="Texture2D" uid="uid://cefoni3jhnusd" path="res://Sprites/UI/button.PNG" id="1_dkaon"]
@@ -7,7 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bbu1u0h21ptf" path="res://Sprites/Background/BG_Filled.png" id="2_xu1t6"]
 [ext_resource type="Texture2D" uid="uid://bpxiokajr8dge" path="res://Sprites/Background/BG_Unfilled.png" id="3_icjdw"]
 [ext_resource type="Texture2D" uid="uid://b31x0n4vbiaa5" path="res://Sprites/Background/BG_Unfilled_Mics.png" id="4_07d7j"]
+[ext_resource type="Texture2D" uid="uid://cpemtnxllv0mv" path="res://Sprites/UI/Bocadillo_Char.png" id="8_0kv15"]
 [ext_resource type="Texture2D" uid="uid://dl0v20c8fuyk6" path="res://Sprites/UI/panel.png" id="8_j41n5"]
+[ext_resource type="Texture2D" uid="uid://barlqeqrmn3ub" path="res://Sprites/UI/Bocadillo_Player.png" id="9_asjeg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n5y20"]
 texture = ExtResource("1_dkaon")
@@ -56,6 +58,12 @@ texture = ExtResource("3_icjdw")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jamy3"]
 texture = ExtResource("4_07d7j")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gf0i6"]
+texture = ExtResource("8_0kv15")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4tlky"]
+texture = ExtResource("9_asjeg")
+
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xfd0m"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y8g0h"]
@@ -94,6 +102,10 @@ Panel_BG_Unfilled/base_type = &"Panel"
 Panel_BG_Unfilled/styles/panel = SubResource("StyleBoxTexture_ds8g7")
 Panel_BG_Unfilled_Mics/base_type = &"Panel"
 Panel_BG_Unfilled_Mics/styles/panel = SubResource("StyleBoxTexture_jamy3")
+Panel_Bocadillo_Char/base_type = &"Panel"
+Panel_Bocadillo_Char/styles/panel = SubResource("StyleBoxTexture_gf0i6")
+Panel_Bocadillo_Player/base_type = &"Panel"
+Panel_Bocadillo_Player/styles/panel = SubResource("StyleBoxTexture_4tlky")
 Panel_HandZone/base_type = &"Panel"
 Panel_HandZone/styles/panel = SubResource("StyleBoxTexture_y8g0h")
 Panel_Textos/base_type = &"Panel"

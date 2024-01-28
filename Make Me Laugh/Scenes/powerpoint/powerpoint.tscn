@@ -21,20 +21,20 @@ theme_type_variation = &"Panel_BG_Filled"
 [node name="Textos" type="Panel" parent="Background"]
 layout_mode = 0
 offset_left = -44.0
-offset_top = 601.0
+offset_top = 565.0
 offset_right = 2648.0
-offset_bottom = 2061.0
+offset_bottom = 2105.0
 scale = Vector2(0.5, 0.5)
 theme_type_variation = &"Panel_Textos"
 
 [node name="Label" type="Label" parent="Background/Textos"]
 layout_mode = 0
-offset_left = 250.0
-offset_top = 366.0
-offset_right = 1342.0
-offset_bottom = 641.0
+offset_left = 238.0
+offset_top = 386.0
+offset_right = 1330.0
+offset_bottom = 676.0
 scale = Vector2(2, 2)
-text = "Y ahora el momento que todo el mundo estaba esperando!! Comienza la batalla por descubrir a le mejor comediante del mundo!"
+text = "Y ahora el momento que todo el mundo estaba esperando!! Comienza la batalla por descubrir a le mejor comediante del mundo! Lanza tus chistes a tus rivales, y cuando lo hayas leído pulsa sobre la carta para seguir con la pelea."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
