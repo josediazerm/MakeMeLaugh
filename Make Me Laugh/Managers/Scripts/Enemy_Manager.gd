@@ -29,7 +29,8 @@ func get_card_to_play():
 func play_card():
 	get_card_to_play()
 	var card_load = load(card_to_play)	
-	var card_instance =  card_load.instantiate() 
+	var card_instance =  card_load.instantiate()
+	bocadillo.set_style(Constants.ENEMY_NAME)
 	bocadillo.show_joke(card_instance.get_chiste_text().c_unescape(), card_instance.get_chiste_sprite())
 	health_manager.apply_damage(Constants.ENEMY_NAME, card_instance.get_chiste_type())
 

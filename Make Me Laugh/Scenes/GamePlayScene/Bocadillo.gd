@@ -13,3 +13,8 @@ func show_joke(text : String, image : Texture):
 func hide_joke():
 	visible = false
 
+func set_style(who : String):
+	if who == Constants.PLAYER_NAME:
+		theme.set_type_variation("Panel_Bocadillo_Player", "Panel")
+	else:
+		theme.set_type_variation("Panel_Bocadillo_Char", "Panel")
