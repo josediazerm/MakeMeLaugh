@@ -140,6 +140,7 @@ const DECK_CREATOR_SCENE = "res://Scenes/DeckCreator/deck_creator.tscn"
 const GAME_SCENE = "res://Scenes/GamePlayScene/game.tscn"
 const MAIN_MENU_SCENE = "res://Scenes/MainMenu/main_menu.tscn"
 const POWER_POINT_SCENE = "res://Scenes/powerpoint/powerpoint.tscn"
+const PRE_BATTLE_SCENE = "res://Scenes/PreBattleScene/prebattle.tscn"
 
 # --------------------------------------------------------------------------- #
 
