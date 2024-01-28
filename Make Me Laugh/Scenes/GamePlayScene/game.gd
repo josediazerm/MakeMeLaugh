@@ -36,7 +36,6 @@ func _ready():
 
 func _on_next_pressed():
 	Global.opponent_number += 1
-
 	if Global.opponent_number < Constants.MAX_OPPONENTES:
 		reset_panels()
 		reset_hands()

@@ -56,7 +56,7 @@ func _process(_delta):
 		if Input.is_action_just_released("Click"):
 			Global.is_dragging = false
 			if is_in_drop_zone:
-				get_parent().card_played(chiste_text, chiste_type, image_holder)
+				get_parent().card_played(chiste_text, chiste_type, image_holder, self.name)
 			else:
 				var tween = get_tree().create_tween()
 				tween.tween_property(self, "global_position", initial_position, 0.4).set_ease(Tween.EASE_OUT)

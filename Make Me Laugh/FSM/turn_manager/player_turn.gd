@@ -5,6 +5,7 @@ extends State
 func Enter():
 	turn_manager.Internal_Signal.connect(signal_detected)
 	turn_manager.create_player_hand()
+	print("AAAAAAAA")
 
 func Exit():
 	turn_manager.Internal_Signal.disconnect(signal_detected)
