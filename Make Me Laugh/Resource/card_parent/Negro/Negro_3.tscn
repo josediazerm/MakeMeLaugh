@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bhwdjwpwvi2tj" path="res://Sprites/Cards/Negro_3.png" id="2_h81h2"]
 
 [node name="Carta" instance=ExtResource("1_g2wao")]
-chiste_text = "NUNCA OLVIDARÉ LAS ÚLTIMAS PALABRAS DE MI ABUELO... \"¿SIGUES SOSTENIENDO LA ESCALERA?\""
+chiste_text = "NUNCA OLVIDARÉ LAS ÚLTIMAS PALABRAS DE MI ABUELO... \\n \"¿SIGUES SOSTENIENDO LA ESCALERA?\""
 chiste_type = "Negro"
 
 [node name="Sprite2D" parent="." index="0"]

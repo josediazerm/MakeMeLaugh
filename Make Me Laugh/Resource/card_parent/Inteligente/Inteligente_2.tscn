@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://rl5nwmvo1oq2" path="res://Sprites/Cards/Inteligente_2.png" id="2_evay5"]
 
 [node name="Carta" instance=ExtResource("1_8ijsu")]
-chiste_text = "Hay 10 tipos de personas: las que saben contar en binario y las que no."
+chiste_text = "Hay 10 tipos de personas: \\n las que saben contar en binario y las que no."
 chiste_type = "Inteligente"
 
 [node name="Sprite2D" parent="." index="0"]

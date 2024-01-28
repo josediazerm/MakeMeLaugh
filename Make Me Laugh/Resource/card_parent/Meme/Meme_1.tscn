@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cbiil30t3s6ej" path="res://Sprites/Cards/Meme_1.png" id="2_lfilx"]
 
 [node name="Carta" instance=ExtResource("1_xwtel")]
-chiste_text = "Pues toma meme."
+chiste_text = "La tiroide \\n Pero luego la recojoide"
 chiste_type = "Meme"
 
 [node name="Sprite2D" parent="." index="0"]

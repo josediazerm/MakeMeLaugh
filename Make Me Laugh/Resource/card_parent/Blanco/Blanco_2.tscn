@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://couyebu7kj0pf" path="res://Sprites/Cards/Blanco_2.png" id="2_7v5uj"]
 
 [node name="Carta" instance=ExtResource("1_buo83")]
-chiste_text = "-¿Qué hace un perro con un taladro?/n-Ta ladrando."
+chiste_text = "-¿Qué hace un perro con un taladro? \\n -Ta ladrando."
 chiste_type = "Blanco"
 
 [node name="Sprite2D" parent="." index="0"]

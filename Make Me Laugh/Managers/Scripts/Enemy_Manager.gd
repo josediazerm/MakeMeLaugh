@@ -30,7 +30,7 @@ func play_card():
 	get_card_to_play()
 	var card_load = load(card_to_play)	
 	var card_instance =  card_load.instantiate() 
-	bocadillo.show_joke(card_instance.get_chiste_text(), card_instance.get_chiste_sprite())
+	bocadillo.show_joke(card_instance.get_chiste_text().c_unescape(), card_instance.get_chiste_sprite())
 	health_manager.apply_damage(Constants.ENEMY_NAME, card_instance.get_chiste_type())
 
 func reset_hand():
