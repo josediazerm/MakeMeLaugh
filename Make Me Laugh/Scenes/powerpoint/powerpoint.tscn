@@ -1,25 +1,91 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhckpfxu460wa"]
+[gd_scene load_steps=9 format=3 uid="uid://dhckpfxu460wa"]
 
 [ext_resource type="Script" path="res://Scenes/powerpoint/powerpoint.gd" id="1_s67mx"]
+[ext_resource type="Theme" uid="uid://da5n74cj02n0c" path="res://Theme/Game_Theme.tres" id="2_7litk"]
+[ext_resource type="Texture2D" uid="uid://2e2no10b5dsg" path="res://Sprites/Enemies/Char_1.png" id="3_7o7mo"]
+[ext_resource type="Texture2D" uid="uid://0xbcaonrnhbf" path="res://Sprites/Enemies/Char_2.png" id="4_5a1um"]
+[ext_resource type="Texture2D" uid="uid://clgah04b8o1ji" path="res://Sprites/Enemies/Char_3.png" id="5_lqrtf"]
+[ext_resource type="Texture2D" uid="uid://cgod0mmflxmra" path="res://Sprites/Enemies/Char_4.png" id="6_2qkdu"]
+[ext_resource type="Texture2D" uid="uid://no2wf5gjomsi" path="res://Sprites/Enemies/Char_5.png" id="7_tr203"]
+[ext_resource type="Texture2D" uid="uid://bt7rtfakxlo4g" path="res://Sprites/Character/Char_Player.png" id="8_og3do"]
 
 [node name="powerpoint" type="Node2D"]
 script = ExtResource("1_s67mx")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 182.0
-offset_top = 132.0
-offset_right = 1733.0
-offset_bottom = 853.0
-theme_override_font_sizes/font_size = 50
-text = "SOY EL POWERPOINT"
+[node name="Background" type="Panel" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("2_7litk")
+theme_type_variation = &"Panel_BG_Filled"
+
+[node name="Textos" type="Panel" parent="Background"]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 601.0
+offset_right = 2648.0
+offset_bottom = 2061.0
+scale = Vector2(0.5, 0.5)
+theme_type_variation = &"Panel_Textos"
+
+[node name="Label" type="Label" parent="Background/Textos"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 366.0
+offset_right = 1342.0
+offset_bottom = 641.0
+scale = Vector2(2, 2)
+text = "Y ahora el momento que todo el mundo estaba esperando!! Comienza la batalla por descubrir a le mejor comediante del mundo!"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
-[node name="Button" type="Button" parent="."]
-offset_left = 542.0
-offset_top = 791.0
-offset_right = 1220.0
-offset_bottom = 1063.0
-text = "BATALLA"
+[node name="Button" type="Button" parent="Background"]
+layout_mode = 0
+offset_left = 2033.0
+offset_top = 1000.0
+offset_right = 2733.0
+offset_bottom = 1100.0
+rotation = 3.14159
+theme_type_variation = &"Boton_Horizontal"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Label" type="Label" parent="Background/Button"]
+layout_mode = 0
+offset_left = 555.0
+offset_top = 81.9999
+offset_right = 746.0
+offset_bottom = 140.0
+rotation = -3.14159
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Continuar"
+
+[node name="Char_1" type="Sprite2D" parent="Background"]
+position = Vector2(1472, 338)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_7o7mo")
+
+[node name="Char_2" type="Sprite2D" parent="Background"]
+position = Vector2(1227, 316)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_5a1um")
+
+[node name="Char_3" type="Sprite2D" parent="Background"]
+position = Vector2(1021, 294)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_lqrtf")
+
+[node name="Char_4" type="Sprite2D" parent="Background"]
+position = Vector2(834, 355)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_2qkdu")
+
+[node name="Char_5" type="Sprite2D" parent="Background"]
+position = Vector2(612, 354)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_tr203")
+
+[node name="Player" type="Sprite2D" parent="Background"]
+position = Vector2(382, 441)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("8_og3do")
+
+[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]
