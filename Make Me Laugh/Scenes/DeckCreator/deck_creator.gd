@@ -6,6 +6,7 @@ extends Node2D
 @onready var data_manager : Node2D = $Control/DataManager
 @onready var deck_info : Label = $Control/Panel_Información/Deck_Data
 
+var last_button_pressed
 
 var humores_counter = {}
 var slider_range = 0
@@ -23,8 +24,10 @@ func add_or_remove_from_deck(card : String):
 	if card in deck:
 		deck.erase(card)
 	else:
-		deck.append(card)
-	
+		if deck.size() < Constants.DECK_SIZE:
+			deck.append(card)
+		else:
+			get_node(last_button_pressed).button_pressed = false
 	deck_label.text = str(deck.size())
 	
 	if deck.size() < Constants.DECK_SIZE :
@@ -33,6 +36,11 @@ func add_or_remove_from_deck(card : String):
 		continue_button.disabled = false
 
 func _on_button_pressed(extra_arg_0):
+	
+	var button = extra_arg_0.split("/")[2]
+	last_button_pressed = "Control/Cartas/%s"
+	last_button_pressed = last_button_pressed % button
+
 	add_or_remove_from_deck(extra_arg_0)
 	update_label()
 

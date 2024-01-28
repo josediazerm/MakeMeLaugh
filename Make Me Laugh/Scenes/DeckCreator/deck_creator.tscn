@@ -136,9 +136,8 @@ text = "Confirmar"
 
 [node name="Cartas" type="Panel" parent="Control"]
 layout_mode = 0
-offset_left = -9600.0
 offset_top = 438.0
-offset_right = 2073.0
+offset_right = 11673.0
 offset_bottom = 1061.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_22la8")
 
