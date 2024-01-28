@@ -10,6 +10,7 @@ const path = Constants.LOCAL_SAVE_DATA_PATH
 @export var enemy_stats : Dictionary
 
 @export var cards_played : Array = []
+@export var tmp_cards_played : Array = []
 
 func write_savedata() -> void:
 	ResourceSaver.save(self, path)

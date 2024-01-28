@@ -129,11 +129,11 @@ const ICONS = [
 	"res://Sprites/Enemies/Char_5.png"
 ]
 
-const MAX_OPPONENTES = 5
+const MAX_OPPONENTES = 1
 
 # --------------------------------------------------------------------------- #
 
-const WIN_SCENE = "res://Scenes/WinScene.tscn"
+const WIN_SCENE = "res://Scenes/Win/WinScene.tscn"
 const PLAYER_CREATOR_SCENE = "res://Scenes/PlayerCreator/player_creator.tscn"
 const DECK_CREATOR_SCENE = "res://Scenes/DeckCreator/deck_creator.tscn"
 const GAME_SCENE = "res://Scenes/GamePlayScene/game.tscn"

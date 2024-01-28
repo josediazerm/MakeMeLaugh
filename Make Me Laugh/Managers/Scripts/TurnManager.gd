@@ -46,12 +46,17 @@ func win():
 	destroy_player_hand()
 	win_panel.position[1] = 0
 	music_manager.play(Constants.WIN_EFFECT)
+	var tmp_deck = data_manager.get_tmp_cards_played()
+	for card in tmp_deck:
+		data_manager.add_card_played_deck(card)
+	data_manager.reset_card_played_tmp_deck()
 	
 func lose():
 	winner = ""
 	destroy_player_hand()
 	lose_panel.position[1] = 0
 	music_manager.play(Constants.LOSE_EFFECT)
+	data_manager.reset_card_played_tmp_deck()
 	
 func its_player_turn():
 	Internal_Signal.emit(Constants.PLAYER_TURN_SIGNAL)

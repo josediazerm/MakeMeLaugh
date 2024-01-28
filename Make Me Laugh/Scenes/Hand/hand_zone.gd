@@ -43,13 +43,15 @@ func create_hand():
 		card_instance.target_position = Constants.CARD_POSITION[card_index]
 		card_instance.position = Constants.CARD_POSITION_DEFAULT
 		card_instance.scale = Vector2(0.25, 0.25)
+		card_instance.name = card + Constants.SCENE_SUFFIX
 		call_deferred("add_child", card_instance)
 		card_index += 1
 
 
-func card_played(chiste_text, chiste_type, image_holder):
+func card_played(chiste_text, chiste_type, image_holder, card):
 	bocadillo.show_joke(chiste_text, image_holder.texture)
 	health_manager.apply_damage(Constants.PLAYER_NAME, chiste_type)
+	data_manager.add_card_played_tmp_deck(card)
 
 func destroy_hand():
 	for child in get_children():
