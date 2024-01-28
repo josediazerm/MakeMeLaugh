@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b05gge750uv3f" path="res://Sprites/Cards/Negro_2.png" id="2_fjw2i"]
 
 [node name="Carta" instance=ExtResource("1_t1c2l")]
-chiste_text = "¿QUÉ ES PEQUEÑO DA BOTES Y ECHA CHISPAS? \\n UN BEBÉ CHUPANDO UN CABLE PELADO."
+chiste_text = "¿qué es pequeño da botes y echa chispas? \\n un bebé chupando un cable pelado."
 chiste_type = "Negro"
 
 [node name="Sprite2D" parent="." index="0"]
