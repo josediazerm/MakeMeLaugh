@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://Scenes/GamePlayScene/Bocadillo.gd" id="8_6og7k"]
 [ext_resource type="PackedScene" uid="uid://b6kon4hjjlwwf" path="res://Scenes/MusicManager/music_manager.tscn" id="9_ercby"]
 [ext_resource type="Theme" uid="uid://5mookmhhrr7" path="res://Theme/Bocadillos_Theme.tres" id="10_m34ux"]
-[ext_resource type="Theme" uid="uid://bfnt1mjhhjxax" path="res://Theme/Bocadillos_Theme_char.tres" id="12_rb8ka"]
+[ext_resource type="Theme" uid="uid://bj77q8f0ou2q8" path="res://Theme/Bocadillos_Theme_char.tres" id="12_rb8ka"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxaw1"]
 bg_color = Color(0, 0, 0, 1)

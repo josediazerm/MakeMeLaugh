@@ -1,9 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://u0ge6045w8ud"]
+[gd_scene load_steps=8 format=3 uid="uid://u0ge6045w8ud"]
 
 [ext_resource type="Script" path="res://Scenes/Win/WinScene.gd" id="1_7uo3i"]
 [ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="2_6k1fi"]
 [ext_resource type="Theme" uid="uid://da5n74cj02n0c" path="res://Theme/Game_Theme.tres" id="2_pgpuj"]
 [ext_resource type="PackedScene" uid="uid://b6kon4hjjlwwf" path="res://Scenes/MusicManager/music_manager.tscn" id="4_faobo"]
+[ext_resource type="Texture2D" uid="uid://crfqkmp5grcjc" path="res://Sprites/UI/Mucha_Risa_1.png" id="4_u2auc"]
+[ext_resource type="Texture2D" uid="uid://fy5s8pu8atm3" path="res://Sprites/UI/Mucha_Risa_2.png" id="5_6fa0h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ilfu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_u2auc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6fa0h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
 
 [node name="WinScene" type="Node2D" node_paths=PackedStringArray("data_manager", "music_manager")]
 script = ExtResource("1_7uo3i")
@@ -56,6 +72,12 @@ offset_right = 554.429
 offset_bottom = 75.1428
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Continuar"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(176, 226)
+sprite_frames = SubResource("SpriteFrames_0ilfu")
+autoplay = "default"
+frame_progress = 0.608334
 
 [node name="DataManager" parent="." instance=ExtResource("2_6k1fi")]
 

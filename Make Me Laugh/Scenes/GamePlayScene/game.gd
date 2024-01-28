@@ -61,4 +61,4 @@ func go_to_antibug():
 
 func check_text():
 	if Global.opponent_number == Constants.MAX_OPPONENTES - 1:
-		win_text.text = "YA NO QUEDA NADIE QUE DUDE DE TU HUMOR, FELICIDADES"
+		win_text.text = "Ya no queda nadie que dude de tu humor, ¡¡Felicidades!!"
