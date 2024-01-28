@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://u0ge6045w8ud"]
+
+[ext_resource type="Script" path="res://Scenes/Win/WinScene.gd" id="1_7uo3i"]
+[ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="2_6k1fi"]
+
+[node name="WinScene" type="Node2D" node_paths=PackedStringArray("data_manager", "label")]
+script = ExtResource("1_7uo3i")
+data_manager = NodePath("DataManager")
+label = NodePath("Label")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 309.0
+offset_top = 228.0
+offset_right = 766.0
+offset_bottom = 466.0
+text = "Maquina"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DataManager" parent="." instance=ExtResource("2_6k1fi")]
