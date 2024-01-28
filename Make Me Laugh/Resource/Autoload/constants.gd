@@ -116,7 +116,7 @@ const NEXT_STATE = {
 
 # --------------------------------------------------------------------------- #
 
-const WIN_PANEL_DEFAULT_POSITION = -650
+const WIN_PANEL_DEFAULT_POSITION = -840
 const LOSE_PANEL_DEFAULT_POSITION = 1150
 
 # --------------------------------------------------------------------------- #
