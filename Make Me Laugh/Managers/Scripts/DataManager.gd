@@ -44,3 +44,10 @@ func save_enemy_deck(deck : Array) -> void:
 func get_enemy_deck() -> Array:
 	return _save_data.enemy_deck
 
+func add_card_played_deck(card : String) -> void:
+	_save_data.cards_played.append(card)
+	_save_data.write_savedata()
+
+func get_cards_played() -> Array:
+	return _save_data.cards_played
+
