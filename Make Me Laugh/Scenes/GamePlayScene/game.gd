@@ -54,6 +54,5 @@ func _on_retry_pressed():
 	reset_hp_bars()
 	go_to_antibug()
 
-
 func go_to_antibug():
 	turn_manager.antibug_state()

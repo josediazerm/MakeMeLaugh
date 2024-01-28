@@ -50,6 +50,7 @@ func create_hand():
 
 func card_played(chiste_text, chiste_type, image_holder, card):
 	bocadillo.show_joke(chiste_text, image_holder.texture)
+	bocadillo.set_style(Constants.PLAYER_NAME)
 	health_manager.apply_damage(Constants.PLAYER_NAME, chiste_type)
 	data_manager.add_card_played_tmp_deck(card)
 
