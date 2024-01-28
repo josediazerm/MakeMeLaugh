@@ -46,7 +46,7 @@ func _on_next_pressed():
 		get_tree().change_scene_to_file(Constants.WIN_SCENE)
 
 func _on_menu_pressed():
-	get_tree().change_scene_to_file(Constants.MAIN_MENU_SCENE)
+	get_tree().change_scene_to_file(Constants.PRE_BATTLE_SCENE)
 
 func _on_retry_pressed():
 	reset_panels()
