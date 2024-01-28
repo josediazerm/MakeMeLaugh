@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://ndc2qwbetv4a"]
+
+[ext_resource type="Texture2D" uid="uid://cpemtnxllv0mv" path="res://Sprites/UI/Bocadillo_Char.png" id="1_1namx"]
+[ext_resource type="Texture2D" uid="uid://barlqeqrmn3ub" path="res://Sprites/UI/Bocadillo_Player.png" id="2_dlfpu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_882mi"]
+texture = ExtResource("1_1namx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e1jad"]
+texture = ExtResource("2_dlfpu")
+
+[resource]
+Panel_Char/styles/panel = SubResource("StyleBoxTexture_882mi")
+Panel_Player/styles/panel = SubResource("StyleBoxTexture_e1jad")
