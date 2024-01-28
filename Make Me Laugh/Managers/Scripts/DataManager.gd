@@ -48,6 +48,11 @@ func reset_card_played_tmp_deck() -> void:
 	_save_data.tmp_cards_played = []
 	_save_data.write_savedata()
 
+func reset_card_played_deck() -> void:
+	_save_data.cards_played = []
+	_save_data.write_savedata()
+
+
 func add_card_played_tmp_deck(card : String) -> void:
 	_save_data.tmp_cards_played.append(card)
 	_save_data.write_savedata()
