@@ -24,12 +24,12 @@ const DEFAULT_IMAGE : String = "res://icon.svg"
 const DEFAULT_CHISTES = "res://Resource/card_parent"
 
 const CHISTES_FOLDERS = [
-	"res://Resource/card_parent/absurdo/",
-	"res://Resource/card_parent/blanco/",
-	"res://Resource/card_parent/verde/",
-	"res://Resource/card_parent/negro/",
-	"res://Resource/card_parent/meme/",
-	"res://Resource/card_parent/inteligente/"
+	"res://Resource/card_parent/Absurdo/",
+	"res://Resource/card_parent/Blanco/",
+	"res://Resource/card_parent/Verde/",
+	"res://Resource/card_parent/Negro/",
+	"res://Resource/card_parent/Meme/",
+	"res://Resource/card_parent/Inteligente/"
 ]
 
 # --------------------------------------------------------------------------- #

@@ -11,14 +11,16 @@ func get_cards():
 	
 	for path in paths:
 		var dir = DirAccess.open(path)
-		if not dir:
-			return
-		for file in dir.get_files():
-			if file.ends_with(Constants.REMAP_SUFFIX):
-				file = file.trim_suffix(Constants.REMAP_SUFFIX)
-			if file.ends_with(Constants.SCENE_SUFFIX):
-				chistes.append(path + file)
-
+		if dir:
+			for file in dir.get_files():
+				if file.ends_with(Constants.REMAP_SUFFIX):
+					print(file)
+					file = file.trim_suffix(Constants.REMAP_SUFFIX)
+					print(file)
+				if file.ends_with(Constants.SCENE_SUFFIX):
+					chistes.append(path + file)
+	
+	
 
 func generate_opponent_deck():
 	get_cards()
