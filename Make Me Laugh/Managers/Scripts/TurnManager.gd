@@ -61,6 +61,9 @@ func lose():
 func its_player_turn():
 	Internal_Signal.emit(Constants.PLAYER_TURN_SIGNAL)
 
+func antibug_state():
+	Internal_Signal.emit(Constants.ANTIBUG_SIGNAL)
+
 func joke_ended():
 	Internal_Signal.emit(signal_to_emit)
 
