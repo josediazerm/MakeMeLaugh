@@ -40,6 +40,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="Background"]
+layout_mode = 0
 offset_left = 2033.0
 offset_top = 1000.0
 offset_right = 2733.0
