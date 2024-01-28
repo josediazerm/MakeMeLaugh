@@ -1,4 +1,5 @@
-[gd_scene load_steps=20 format=3 uid="uid://tag7wg5fuwp3"]
+[gd_scene load_steps=21 format=3 uid="uid://tag7wg5fuwp3"]
+
 
 [ext_resource type="PackedScene" uid="uid://cpgyws7h542d6" path="res://Scenes/Hand/hand_zone.tscn" id="1_bmj1h"]
 [ext_resource type="Script" path="res://Scenes/GamePlayScene/game.gd" id="1_p45ht"]
@@ -27,7 +28,13 @@ bg_color = Color(0, 0, 0, 0.537255)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_naykf"]
 bg_color = Color(1, 1, 1, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5q1wd"]
+bg_color = Color(1, 1, 1, 1)
+
 [sub_resource type="ImageTexture" id="ImageTexture_ikqnj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5dk2q"]
+bg_color = Color(1, 1, 1, 1)
 
 [node name="Game" type="Node2D" node_paths=PackedStringArray("player_hand", "enemy_manager", "win_panel", "lose_panel", "health_manager", "turn_manager", "music_manager")]
 script = ExtResource("1_p45ht")
@@ -111,6 +118,7 @@ scale = Vector2(30, 30)
 theme_override_icons/grabber = SubResource("ImageTexture_yr3m7")
 theme_override_icons/grabber_disabled = SubResource("ImageTexture_uvbf3")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_naykf")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_5q1wd")
 max_value = 10.0
 value = 10.0
 editable = false
@@ -128,6 +136,7 @@ theme_override_icons/grabber = SubResource("ImageTexture_yr3m7")
 theme_override_icons/grabber_highlight = SubResource("ImageTexture_ikqnj")
 theme_override_icons/grabber_disabled = SubResource("ImageTexture_uvbf3")
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_naykf")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_5dk2q")
 max_value = 10.0
 value = 10.0
 editable = false

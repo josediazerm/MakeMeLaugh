@@ -41,8 +41,8 @@ region_rect = Rect2(1059.43, 79.0954, 210.589, 3452.8)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5g61"]
 bg_color = Color(1, 1, 1, 1)
-shadow_color = Color(1, 1, 1, 1)
-shadow_size = 20
+shadow_color = Color(0.298039, 1, 1, 1)
+shadow_size = 50
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_bksge"]
 
