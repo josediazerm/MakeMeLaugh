@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cpemtnxllv0mv" path="res://Sprites/UI/Bocadillo_Char.png" id="8_0kv15"]
 [ext_resource type="Texture2D" uid="uid://dl0v20c8fuyk6" path="res://Sprites/UI/panel.png" id="8_j41n5"]
 [ext_resource type="Texture2D" uid="uid://barlqeqrmn3ub" path="res://Sprites/UI/Bocadillo_Player.png" id="9_asjeg"]
-[ext_resource type="Texture2D" path="res://Sprites/Background/BG_Win.png" id="11_l1210"]
+[ext_resource type="Texture2D" uid="uid://c4nu1eeg5qiak" path="res://Sprites/Background/BG_Win.png" id="11_l1210"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n5y20"]
 texture = ExtResource("1_dkaon")
@@ -41,8 +41,8 @@ region_rect = Rect2(1059.43, 79.0954, 210.589, 3452.8)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5g61"]
 bg_color = Color(1, 1, 1, 1)
-shadow_color = Color(1, 1, 1, 1)
-shadow_size = 20
+shadow_color = Color(0.298039, 1, 1, 1)
+shadow_size = 50
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_bksge"]
 

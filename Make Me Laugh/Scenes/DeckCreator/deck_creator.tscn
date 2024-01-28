@@ -382,8 +382,9 @@ texture = ExtResource("20_awsa6")
 layout_mode = 0
 offset_left = 475.0
 offset_top = 439.0
-offset_right = 1477.0
+offset_right = 956.0
 offset_bottom = 455.0
+scale = Vector2(2, 2)
 
 [node name="DataManager" parent="Control" instance=ExtResource("3_dtjdx")]
 

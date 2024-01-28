@@ -4,10 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="2_6k1fi"]
 [ext_resource type="Theme" uid="uid://da5n74cj02n0c" path="res://Theme/Game_Theme.tres" id="2_pgpuj"]
 
-[node name="WinScene" type="Node2D" node_paths=PackedStringArray("data_manager", "label")]
+[node name="WinScene" type="Node2D" node_paths=PackedStringArray("data_manager")]
 script = ExtResource("1_7uo3i")
 data_manager = NodePath("DataManager")
-label = NodePath("")
 
 [node name="Background" type="Panel" parent="."]
 offset_right = 1920.0
