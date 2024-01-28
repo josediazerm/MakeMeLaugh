@@ -1,26 +1,26 @@
-[gd_resource type="Resource" script_class="SaveSystem" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="SaveSystem" load_steps=2 format=3 uid="uid://bfx5ee8pg6xhg"]
 
-[ext_resource type="Script" path="res://Resource/SaveSystem/savesystem.gd" id="1_5h38u"]
+[ext_resource type="Script" path="res://Resource/SaveSystem/savesystem.gd" id="1_ee65h"]
 
 [resource]
-script = ExtResource("1_5h38u")
-player_deck = ["/Absurdo/Absurdo_1", "/Absurdo/Absurdo_3", "/Absurdo/Absurdo_2", "/Meme/Meme_1", "/Meme/Meme_2", "/Inteligente/Inteligente_3", "/Negro/Negro_2"]
+script = ExtResource("1_ee65h")
+player_deck = ["/Absurdo/Absurdo_2", "/Meme/Meme_1", "/Inteligente/Inteligente_3", "/Blanco/Blanco_2", "/Blanco/Blanco_3", "/Negro/Negro_1", "/Meme/Meme_2"]
 enemy_deck = []
 player_stats = {
 "Absurdo": "Gracioso",
-"Blanco": "Ni puta gracia",
+"Blanco": "Ni fú ni fá",
 "Inteligente": "Ni fú ni fá",
-"Meme": "Ni fú ni fá",
+"Meme": "Ni puta gracia",
 "Negro": "Gracioso",
 "Verde": "Me parto"
 }
 enemy_stats = {
-"Absurdo": "Gracioso",
-"Blanco": "Gracioso",
-"Inteligente": "Ni fú ni fá",
+"Absurdo": "Ni fú ni fá",
+"Blanco": "Me parto",
+"Inteligente": "Gracioso",
 "Meme": "Ni puta gracia",
-"Negro": "Me parto",
-"Verde": "Ni fú ni fá"
+"Negro": "Ni fú ni fá",
+"Verde": "Gracioso"
 }
-cards_played = ["_Meme_Meme_2_tscn", "_Meme_Meme_2_tscn", "_Meme_Meme_1_tscn", "_Absurdo_Absurdo_2_tscn", "_Absurdo_Absurdo_1_tscn", "_Absurdo_Absurdo_3_tscn", "_Absurdo_Absurdo_3_tscn", "_Absurdo_Absurdo_2_tscn", "_Absurdo_Absurdo_2_tscn", "_Meme_Meme_2_tscn", "_Inteligente_Inteligente_3_tscn", "_Meme_Meme_1_tscn", "_Inteligente_Inteligente_3_tscn", "_Meme_Meme_1_tscn", "_Inteligente_Inteligente_3_tscn", "_Absurdo_Absurdo_1_tscn", "_Absurdo_Absurdo_3_tscn", "_Negro_Negro_2_tscn", "_Absurdo_Absurdo_1_tscn", "_Absurdo_Absurdo_2_tscn", "_Absurdo_Absurdo_2_tscn", "_Inteligente_Inteligente_3_tscn", "_Absurdo_Absurdo_3_tscn", "_Absurdo_Absurdo_2_tscn", "_Absurdo_Absurdo_1_tscn"]
+cards_played = ["_Blanco_Blanco_2_tscn", "_Meme_Meme_2_tscn", "_Negro_Negro_1_tscn", "_Inteligente_Inteligente_3_tscn", "_Absurdo_Absurdo_2_tscn", "_Inteligente_Inteligente_3_tscn"]
 tmp_cards_played = []

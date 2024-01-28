@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://u0ge6045w8ud"]
+[gd_scene load_steps=5 format=3 uid="uid://u0ge6045w8ud"]
 
 [ext_resource type="Script" path="res://Scenes/Win/WinScene.gd" id="1_7uo3i"]
 [ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="2_6k1fi"]
 [ext_resource type="Theme" uid="uid://da5n74cj02n0c" path="res://Theme/Game_Theme.tres" id="2_pgpuj"]
+[ext_resource type="PackedScene" uid="uid://b6kon4hjjlwwf" path="res://Scenes/MusicManager/music_manager.tscn" id="4_faobo"]
 
-[node name="WinScene" type="Node2D" node_paths=PackedStringArray("data_manager")]
+[node name="WinScene" type="Node2D" node_paths=PackedStringArray("data_manager", "music_manager")]
 script = ExtResource("1_7uo3i")
 data_manager = NodePath("DataManager")
+music_manager = NodePath("music_manager")
 
 [node name="Background" type="Panel" parent="."]
 offset_right = 1920.0
@@ -57,4 +59,9 @@ text = "Continuar"
 
 [node name="DataManager" parent="." instance=ExtResource("2_6k1fi")]
 
+[node name="music_manager" parent="." instance=ExtResource("4_faobo")]
+
 [connection signal="pressed" from="Background/Panel/Continuar" to="." method="_on_continuar_pressed"]
+[connection signal="finished" from="music_manager/music" to="." method="_on_music_finished"]
+
+[editable path="music_manager"]
