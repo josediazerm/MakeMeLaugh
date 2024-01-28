@@ -8,6 +8,8 @@ extends Node2D
 @export var turn_manager : Node2D
 @export var music_manager : Node2D
 
+@export var win_text : Label
+
 func reset_hands():
 	player_hand.reset_hand()
 	enemy_manager.reset_hand()
@@ -56,3 +58,7 @@ func _on_retry_pressed():
 
 func go_to_antibug():
 	turn_manager.antibug_state()
+
+func check_text():
+	if Global.opponent_number == Constants.MAX_OPPONENTES - 1:
+		win_text.text = "YA NO QUEDA NADIE QUE DUDE DE TU HUMOR, FELICIDADES"

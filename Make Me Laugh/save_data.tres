@@ -15,12 +15,12 @@ player_stats = {
 "Verde": "Me parto"
 }
 enemy_stats = {
-"Absurdo": "Ni fú ni fá",
-"Blanco": "Me parto",
-"Inteligente": "Gracioso",
-"Meme": "Ni fú ni fá",
-"Negro": "Gracioso",
-"Verde": "Ni puta gracia"
+"Absurdo": "Gracioso",
+"Blanco": "Gracioso",
+"Inteligente": "Ni fú ni fá",
+"Meme": "Ni puta gracia",
+"Negro": "Me parto",
+"Verde": "Ni fú ni fá"
 }
-cards_played = []
-tmp_cards_played = ["_Negro_Negro_2_tscn", "_Inteligente_Inteligente_3_tscn", "_Absurdo_Absurdo_3_tscn"]
+cards_played = ["_Meme_Meme_2_tscn", "_Meme_Meme_2_tscn", "_Meme_Meme_1_tscn", "_Absurdo_Absurdo_2_tscn", "_Absurdo_Absurdo_1_tscn", "_Absurdo_Absurdo_3_tscn", "_Absurdo_Absurdo_3_tscn", "_Absurdo_Absurdo_2_tscn", "_Absurdo_Absurdo_2_tscn", "_Meme_Meme_2_tscn", "_Inteligente_Inteligente_3_tscn", "_Meme_Meme_1_tscn", "_Inteligente_Inteligente_3_tscn", "_Meme_Meme_1_tscn", "_Inteligente_Inteligente_3_tscn", "_Absurdo_Absurdo_1_tscn", "_Absurdo_Absurdo_3_tscn", "_Negro_Negro_2_tscn", "_Absurdo_Absurdo_1_tscn", "_Absurdo_Absurdo_2_tscn", "_Absurdo_Absurdo_2_tscn", "_Inteligente_Inteligente_3_tscn", "_Absurdo_Absurdo_3_tscn", "_Absurdo_Absurdo_2_tscn", "_Absurdo_Absurdo_1_tscn"]
+tmp_cards_played = []

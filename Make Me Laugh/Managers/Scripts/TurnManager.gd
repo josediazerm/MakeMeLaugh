@@ -9,6 +9,7 @@ signal External_Signal
 @export var hand_zone : Panel
 
 @export var bocadillo : Panel
+@export var game : Node2D
 
 @export var win_panel : Panel
 @export var lose_panel : Panel
@@ -45,6 +46,7 @@ func win():
 	winner = ""
 	destroy_player_hand()
 	win_panel.position[1] = 0
+	game.check_text()
 	music_manager.play(Constants.WIN_EFFECT)
 	var tmp_deck = data_manager.get_tmp_cards_played()
 	for card in tmp_deck:

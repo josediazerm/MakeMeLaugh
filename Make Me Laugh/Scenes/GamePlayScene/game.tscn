@@ -35,7 +35,7 @@ bg_color = Color(1, 1, 1, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5dk2q"]
 bg_color = Color(1, 1, 1, 1)
 
-[node name="Game" type="Node2D" node_paths=PackedStringArray("player_hand", "enemy_manager", "win_panel", "lose_panel", "health_manager", "turn_manager", "music_manager")]
+[node name="Game" type="Node2D" node_paths=PackedStringArray("player_hand", "enemy_manager", "win_panel", "lose_panel", "health_manager", "turn_manager", "music_manager", "win_text")]
 script = ExtResource("1_p45ht")
 player_hand = NodePath("Control/HandZone")
 enemy_manager = NodePath("Control/Enemy_Manager")
@@ -44,6 +44,7 @@ lose_panel = NodePath("Control/LosePanel")
 health_manager = NodePath("Control/HealthManager")
 turn_manager = NodePath("Control/TurnManager")
 music_manager = NodePath("Control/music_manager")
+win_text = NodePath("Control/WinPanel/Label")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -91,12 +92,13 @@ bocadillo = NodePath("../Bocadillo")
 [node name="DropZone" parent="Control" instance=ExtResource("3_qh4u3")]
 position = Vector2(760, 272)
 
-[node name="TurnManager" parent="Control" node_paths=PackedStringArray("data_manager", "health_manager", "enemy_manager", "hand_zone", "bocadillo", "win_panel", "lose_panel", "music_manager") instance=ExtResource("4_h8hs1")]
+[node name="TurnManager" parent="Control" node_paths=PackedStringArray("data_manager", "health_manager", "enemy_manager", "hand_zone", "bocadillo", "game", "win_panel", "lose_panel", "music_manager") instance=ExtResource("4_h8hs1")]
 data_manager = NodePath("../DataManager")
 health_manager = NodePath("../HealthManager")
 enemy_manager = NodePath("../Enemy_Manager")
 hand_zone = NodePath("../HandZone")
 bocadillo = NodePath("../Bocadillo")
+game = NodePath("../..")
 win_panel = NodePath("../WinPanel")
 lose_panel = NodePath("../LosePanel")
 music_manager = NodePath("../music_manager")
@@ -168,6 +170,7 @@ text = "Has hecho reír a tu oponente!
 Mucha suerte con el siguiente, no será fácil."
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="next" type="Button" parent="Control/WinPanel"]
 layout_mode = 0
