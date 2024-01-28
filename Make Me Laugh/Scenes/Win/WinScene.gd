@@ -45,4 +45,4 @@ func find_most_played_card():
 
 
 func _on_continuar_pressed():
-	pass # Replace with function body.
+		get_tree().change_scene_to_file(Constants.PRE_BATTLE_SCENE)
