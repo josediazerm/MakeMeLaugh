@@ -39,6 +39,10 @@ func find_most_played_card():
 	
 	var card_load = load(rec_str)
 	var card_instance =  card_load.instantiate()
-	card_instance.position = Vector2 (0, 0)
-	card_instance.target_position = Vector2 (0, 0)
+	card_instance.position = Vector2 (1292, 90)
+	card_instance.target_position = Vector2 (1292, 90)
 	call_deferred("add_child", card_instance)
+
+
+func _on_continuar_pressed():
+	pass # Replace with function body.

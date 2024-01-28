@@ -1,20 +1,61 @@
-[gd_scene load_steps=3 format=3 uid="uid://u0ge6045w8ud"]
+[gd_scene load_steps=4 format=3 uid="uid://u0ge6045w8ud"]
 
 [ext_resource type="Script" path="res://Scenes/Win/WinScene.gd" id="1_7uo3i"]
 [ext_resource type="PackedScene" uid="uid://cw34kii6l1jgt" path="res://Managers/Scenes/DataManager.tscn" id="2_6k1fi"]
+[ext_resource type="Theme" uid="uid://da5n74cj02n0c" path="res://Theme/Game_Theme.tres" id="2_pgpuj"]
 
 [node name="WinScene" type="Node2D" node_paths=PackedStringArray("data_manager", "label")]
 script = ExtResource("1_7uo3i")
 data_manager = NodePath("DataManager")
-label = NodePath("Label")
+label = NodePath("")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 309.0
-offset_top = 228.0
-offset_right = 766.0
-offset_bottom = 466.0
-text = "Maquina"
+[node name="Background" type="Panel" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("2_pgpuj")
+theme_type_variation = &"Panel_Win"
+
+[node name="Panel" type="Panel" parent="Background"]
+layout_mode = 0
+offset_left = -46.0
+offset_top = 525.0
+offset_right = 2772.0
+offset_bottom = 2147.0
+scale = Vector2(0.5, 0.5)
+theme_type_variation = &"Panel_Textos"
+
+[node name="Label" type="Label" parent="Background/Panel"]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 372.0
+offset_right = 1554.0
+offset_bottom = 666.0
+scale = Vector2(1.75, 1.75)
+text = "Enhorabuena! Te has convertido en el mejor comediante del siglo!
+Tu carta favorita la tienes a la derecha, nos alegra que te hayas reído con ella.
+Esperamos que hayas disfrutado del jueguito!"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Continuar" type="Button" parent="Background/Panel"]
+layout_mode = 0
+offset_left = -308.0
+offset_top = 866.0
+offset_right = 392.0
+offset_bottom = 966.0
+scale = Vector2(1.75, 1.75)
+theme_type_variation = &"Boton_Horizontal"
+
+[node name="Label" type="Label" parent="Background/Panel/Continuar"]
+layout_mode = 0
+offset_left = 363.429
+offset_top = 17.1428
+offset_right = 554.429
+offset_bottom = 75.1428
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Continuar"
 
 [node name="DataManager" parent="." instance=ExtResource("2_6k1fi")]
+
+[connection signal="pressed" from="Background/Panel/Continuar" to="." method="_on_continuar_pressed"]

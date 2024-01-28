@@ -38,8 +38,8 @@ const CHISTES_FOLDERS = [
 
 const DECK_SIZE = 7
 const HAND_SIZE = 3
-const CARD_POSITION = [Vector2(500, -50), Vector2(910, -50), Vector2(1320, -50)]
-const CARD_POSITION_DEFAULT = Vector2(0,-50)
+const CARD_POSITION = [Vector2(500, -180), Vector2(910, -180), Vector2(1320, -180)]
+const CARD_POSITION_DEFAULT = Vector2(0, -180)
 # --------------------------------------------------------------------------- #
 
 # Deck Creator constants
