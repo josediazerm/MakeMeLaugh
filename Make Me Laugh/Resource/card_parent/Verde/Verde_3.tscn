@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bdpwa1bodjoyo" path="res://Sprites/Cards/Verde_3.png" id="2_nqrsp"]
 
 [node name="Carta" instance=ExtResource("1_6e2v8")]
-chiste_text = "M ACABAN DE OFRECER SEXO \\n A CAMBIO DE PROMOCIONAR UNA MARCA DE DETERGENTE A TODOS MIS CONTACTOS... \\n ¿LO PUEDEN CREER? ¡OBVIO QUE NO ACEPTÉ! \\n MI VOLUNTAD ES FUERTE, TAN FUERTE COMO EL NUEVO AXION LÍQUIDO, EL VERDADERO QUITA GRASAS, \\n AHORA CON AROMA A VAINILLA.\\n ¡IRRESISTIBLE!"
+chiste_text = "me acaban de ofrecer sexo a cambio de promocionar una marca de detergente a todos mis contactos... ¿lo pueden creer? ¡obvio que no acepté! mi voluntad es fuerte, tan fuerte como el nuevo axion líquido, el verdadero quita grasas, ahora con aroma a vainilla ¡irresistible!"
 chiste_type = "Verde"
 
 [node name="Sprite2D" parent="." index="0"]

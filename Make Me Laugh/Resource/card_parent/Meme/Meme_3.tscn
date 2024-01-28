@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bwowdqfxyurbx" path="res://Sprites/Cards/Meme_3.png" id="2_8r4j2"]
 
 [node name="Carta" instance=ExtResource("1_6x53k")]
-chiste_text = "Mas sabe \\n El perro Sanxe \\n Por perro \\n Que \\n por sanxe"
+chiste_text = "Mas sabe  el perro Sanxe \\n Por perro que por Sanxe"
 chiste_type = "Meme"
 
 [node name="Sprite2D" parent="." index="0"]
